@@ -1,0 +1,56 @@
+PixelCraft Studio – Website Context Document
+1. Website Overview
+PixelCraft Studio is a modern web consultancy that provides custom website development, branding, content marketing, and digital visualization services. The website should reflect a clean, modern, and professional aesthetic, with a strong dark-mode theme as the default look.
+
+2. Visual & Design Guidelines
+Overall Aesthetic
+Dark-mode by default – Deep shades of gray/black with bright, modern accent colors.
+Minimalist & modern – Clean typography, ample spacing, and clear hierarchy.
+Sleek UI elements – Smooth transitions, micro-animations, and subtle hover effects.
+Professional & creative balance – A tech-savvy yet design-forward feel.
+Color Scheme
+Primary: #181818 (Dark Gray/Black)
+Secondary: #252525 (Slightly lighter dark gray for contrast)
+Accent Colors:
+Electric Blue (#00AEEF) OR Neon Green (#00FF87) for highlights and interactive elements.
+White (#FFFFFF) for text and contrast.
+Gradient Usage: Occasional soft glows or neon-inspired gradients in CTAs and interactive elements.
+Typography
+Headings: Sans-serif, bold, modern (e.g., Montserrat, Inter, or Poppins).
+Body Text: Clean, readable sans-serif (e.g., Open Sans, Roboto, or Lato).
+Code Snippets (if applicable): Monospace (e.g., Fira Code, JetBrains Mono).
+3. Website Structure & Pages
+A. Homepage
+Hero Section:
+Large, eye-catching statement like:
+"Crafting Exceptional Digital Experiences"
+Subtext: "PixelCraft Studio builds modern, high-performance websites and digital content for businesses that need an upgrade."
+CTA: "Get Started" button leading to the contact page.
+Showcase of Services: Brief, visually appealing sections summarizing the core services.
+Why Choose Us?: Quick bullet points about expertise, experience, and service quality.
+Client Testimonials or Portfolio Highlights (if available).
+Footer: Contact info, social media links, and quick navigation.
+B. Services Page
+A detailed breakdown of what PixelCraft Studio offers:
+
+Web Development & Modernization (Custom sites, migrations, optimizations).
+Branding & Digital Content (Logos, UI/UX, design).
+Product Visualization & Photography (3D modeling, renders, video editing).
+Content Marketing & Strategy (SEO, blog content, marketing assets).
+C. Portfolio Page (If applicable—can be added later as projects are completed.)
+Showcase of past work with project descriptions, before/after comparisons, and testimonials.
+Interactive hover effects on project cards.
+D. About Us Page
+Team Introduction: Short bios and photos of the three founders.
+Our Mission & Values: Statement about why PixelCraft Studio exists.
+Tech & Tools We Use: Icons/logos for React, Laravel, Blender, WordPress, etc.
+E. Contact Page
+Contact Form: Name, email, message.
+Direct Contact Info: Email, phone (if applicable).
+Location/Timezone: General availability info.
+CTA: "Let's Build Something Awesome Together!"
+4. Functionality & Features
+Smooth Animations: Subtle fade-ins, hover effects, and scroll-triggered animations.
+Dark Mode Enhancements: Neon-glow hover effects for buttons and links.
+Responsive Design: Fully optimized for mobile, tablet, and desktop.
+SEO & Performance Optimized: Fast loading times, proper meta tags, and accessibility-friendly design.
