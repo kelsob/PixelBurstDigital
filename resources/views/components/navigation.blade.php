@@ -4,9 +4,9 @@
             <div class="flex items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <span class="text-2xl font-bold text-white">
-                        <span class="text-blue-400">Pixel</span>Craft
-                    </span>
+                    <img src="{{ asset('images/pixelcraftlogo.png') }}" 
+                         alt="PixelCraft Studio" 
+                         class="h-8 w-auto brightness-110">
                 </div>
 
                 <!-- Navigation Links -->

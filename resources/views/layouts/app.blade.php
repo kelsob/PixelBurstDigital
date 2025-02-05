@@ -26,10 +26,15 @@
 
         <footer class="bg-gray-900 border-t border-gray-800">
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                <div class="text-center text-gray-400">
-                    <p>&copy; {{ date('Y') }} PixelCraft Studio. All rights reserved.</p>
+                <div class="flex flex-col items-center">
+                    <img src="{{ asset('images/pixelcraftlogo.png') }}" 
+                         alt="PixelCraft Studio" 
+                         class="h-6 w-auto grayscale opacity-40 transition-all duration-300 hover:grayscale-0 hover:opacity-100">
+                    <p class="mt-4 text-gray-400">&copy; {{ date('Y') }} PixelCraft Studio. All rights reserved.</p>
                 </div>
             </div>
         </footer>
+
+        @vite(['resources/js/pixel-animation.js'])
     </body>
 </html>

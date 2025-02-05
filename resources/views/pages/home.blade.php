@@ -6,16 +6,15 @@
             <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
             <div class="absolute inset-0">
                 <div class="absolute inset-0 bg-gradient-radial from-transparent to-gray-900"></div>
-                <div class="absolute inset-0 opacity-10">
-                    <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"/>
-                        </pattern>
-                        <rect width="100" height="100" fill="url(#grid)" />
-                    </svg>
+                <div class="absolute inset-0 opacity-5">
+                    <div id="background-grid" class="w-full h-full grid" style="grid-template-columns: repeat(auto-fill, 20px); grid-template-rows: repeat(auto-fill, 20px);">
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Add the animated pixels overlay -->
+        <div class="absolute inset-0 z-0" id="pixel-animation"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-12 lg:gap-8">
