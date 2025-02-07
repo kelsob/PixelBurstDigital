@@ -17,7 +17,7 @@
         <!-- Add Alpine.js -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="font-sans antialiased bg-gray-900 text-gray-100 pt-16" x-data="{ mobileMenuOpen: false }">
+    <body class="font-sans antialiased bg-gray-900 text-gray-100 pt-20" x-data="{ mobileMenuOpen: false }">
         <x-navigation />
         
         <main>
@@ -36,5 +36,6 @@
         </footer>
 
         @vite(['resources/js/pixel-animation.js'])
+        @vite(['resources/js/typewriter.js'])
     </body>
 </html>

@@ -13,6 +13,9 @@ module.exports = {
         backgroundImage: {
           'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         },
+        fontFamily: {
+          sans: ['Helvetica Neue', 'Helvetica', 'Arial', ...defaultTheme.fontFamily.sans],
+        },
       },
     },
     plugins: [],
