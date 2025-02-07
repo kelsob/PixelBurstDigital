@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const CELL_SIZE = 20;
+    const CELL_SIZE = 10;
     const pixelContainer = document.getElementById('pixel-animation');
     const backgroundGrid = document.getElementById('background-grid');
     
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 left: ${j * CELL_SIZE}px;
                 top: ${i * CELL_SIZE}px;
                 opacity: 0;
-                transition: opacity 0.3s ease-in, opacity 0.9s ease-out;
+                transition: opacity 0.3s ease-in, opacity 0.6s ease-out;
             `;
             pixelContainer.appendChild(pixel);
         }
@@ -35,21 +35,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const pixels = Array.from(document.querySelectorAll('.pixel'));
     const colors = ['#00AEEF', '#FF4444', '#00FF87'];
     const totalPixels = pixels.length;
-    const maxActivePixels = Math.floor(totalPixels * 0.015); // 1.5%
+    const baseMaxPixels = Math.floor(totalPixels * 1); // Base maximum (1.5%)
     let activePixels = new Set();
+    let time = 0;
     
-    // Function to activate a pixel
+    // Function to get current max pixels based on sine wave
+    const getCurrentMaxPixels = () => {
+        // Sine wave oscillates between 0.5x and 1.5x the base max
+        const multiplier = 1;
+        return Math.floor(baseMaxPixels * multiplier);
+    };
+    
+    // Function to get current spawn interval based on sine wave
+    const getCurrentSpawnInterval = () => {
+        // Spawn interval varies between 100ms and 300ms based on position in wave
+        return 0 + Math.sin(time * 0.1 + Math.PI) * 120;
+    };
+    
     const activatePixel = (pixel) => {
-        if (!activePixels.has(pixel) && activePixels.size < maxActivePixels) {
+        const currentMax = getCurrentMaxPixels();
+        if (!activePixels.has(pixel) && activePixels.size < currentMax) {
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            // Convert hex to RGB for the glow
             const rgb = hexToRgb(randomColor);
             pixel.style.setProperty('--pixel-color', `${rgb.r}, ${rgb.g}, ${rgb.b}`);
             pixel.style.backgroundColor = randomColor;
             pixel.style.opacity = '0.4';
             activePixels.add(pixel);
             
-            const duration = 1000 + Math.random() * 4000;
+            const duration = 1000 + Math.random() * 0;
             
             setTimeout(() => {
                 pixel.style.opacity = '0';
@@ -60,16 +73,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Regular interval for activations
-    setInterval(() => {
-        if (activePixels.size < maxActivePixels) {
+    // Main animation loop
+    const animate = () => {
+        time++;
+        
+        if (activePixels.size < getCurrentMaxPixels()) {
             const availablePixels = pixels.filter(p => !activePixels.has(p));
             const randomPixel = availablePixels[Math.floor(Math.random() * availablePixels.length)];
             if (randomPixel) {
                 activatePixel(randomPixel);
             }
         }
-    }, 200);
+        
+        // Schedule next frame based on current spawn interval
+        setTimeout(animate, getCurrentSpawnInterval());
+    };
+    
+    // Start the animation
+    animate();
 });
 
 function hexToRgb(hex) {

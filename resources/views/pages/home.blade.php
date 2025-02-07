@@ -7,7 +7,7 @@
             <div class="absolute inset-0">
                 <div class="absolute inset-0 bg-gradient-radial from-transparent to-gray-900"></div>
                 <div class="absolute inset-0 opacity-5">
-                    <div id="background-grid" class="w-full h-full grid" style="grid-template-columns: repeat(auto-fill, 20px); grid-template-rows: repeat(auto-fill, 20px);">
+                    <div id="background-grid" class="w-full h-full grid" style="grid-template-columns: repeat(auto-fill, 10px); grid-template-rows: repeat(auto-fill, 10px);">
                     </div>
                 </div>
             </div>
@@ -21,7 +21,6 @@
                 <div class="lg:col-span-7">
                     <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
                         <span class="block xl:inline">Digital Solutions</span>
-                        <br>
                         <span class="block text-blue-400 xl:inline"> For Every Stage</span>
                     </h1>
                     <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
