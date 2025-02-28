@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,12 +17,28 @@
         <!-- Add Alpine.js -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="font-sans antialiased bg-gray-900 text-gray-100 pt-20" x-data="{ mobileMenuOpen: false }">
-        <x-navigation />
-        
-        <main>
-            {{ $slot }}
-        </main>
+    <body class="font-sans antialiased">
+        <!-- SVG Mask Definition -->
+        <svg class="hidden">
+            <defs>
+                <mask id="organic-mask">
+                    <path fill="white" d="M0,0 C150,100 300,-50 450,150 C600,350 750,200 900,300 C1050,400 1200,250 1350,150 L1500,0 L0,1500 L0,0" />
+                </mask>
+            </defs>
+        </svg>
+
+        <div class="min-h-screen relative overflow-hidden">
+            <!-- Ultra-light gradient with fine control -->
+            <div class="absolute inset-0 bg-gradient-to-r from-green-50 to-green-200 opacity-50"></div>
+
+            
+            @include('layouts.navigation')
+            
+            <!-- Page Content -->
+            <main class="pt-16 relative">
+                {{ $slot }}
+            </main>
+        </div>
 
         <footer class="bg-gray-900 border-t border-gray-800">
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
