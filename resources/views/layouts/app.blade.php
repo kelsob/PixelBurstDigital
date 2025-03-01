@@ -5,7 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'PixelCraft Studio') }}</title>
+        <title>PixelBurst Studio - Digital Solutions</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.webp') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.webp') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.webp') }}">
+        <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -27,11 +33,12 @@
             </defs>
         </svg>
 
-        <div class="min-h-screen relative overflow-hidden">
-            <!-- Ultra-light gradient with fine control -->
-            <div class="absolute inset-0 bg-gradient-to-r from-green-50 to-green-200 opacity-50"></div>
+        <!-- Background image that scrolls with content -->
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center -z-20" style="background-image: url('{{ asset('images/gradient-bg.webp') }}');"></div>
+        <!-- Fixed gradient overlay -->
+        <div class="fixed inset-0 bg-gradient-to-r from-red-25 to-red-100 opacity-50 -z-10"></div>
 
-            
+        <div class="min-h-screen relative overflow-hidden">
             @include('layouts.navigation')
             
             <!-- Page Content -->

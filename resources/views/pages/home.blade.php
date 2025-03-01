@@ -1,35 +1,35 @@
 <x-app-layout>
     <!-- Content Sections -->
-    <div class="relative z-10">
+    <div class="relative">
         <!-- Hero Section -->
-        <div class="min-h-[75vh] flex items-center">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="min-h-[75vh] flex items-center relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-8">
                     <div class="lg:col-span-7 max-w-lg">
                         <h1 class="text-3xl tracking-tight font-extrabold sm:text-4xl">
-                            <span class="block text-red-800 text-3xl">Digital Solutions</span>
+                            <span class="block text-red-600 text-3xl">Digital Solutions</span>
                             <span class="block text-blue-800 text-5xl mt-1">
-                                <span class="bg-gradient-to-br from-blue-900 to-green-800 font-bold text-transparent bg-clip-text">For Every Stage.</span>
+                                <span class="bg-gradient-to-br from-blue-700 to-green-700 font-bold text-transparent bg-clip-text">For Every Stage</span><span class="text-red-600">.</span>
                             </span>
                         </h1>
-                        <p class="mt-2 text-sm font-bold text-gray-800 sm:text-base max-w-lg">
+                        <p class="mt-2 text-xl font-bold text-blue-900  max-w-lg">
                             Comprehensive digital solutions - from websites to branding, marketing to design.
                             Your one-stop digital partner for growth and success.
                         </p> 
 
                         <!-- Floating SVGs -->
                         <div class="absolute top-20 right-[55%] animate-float-slow">
-                            <svg class="w-6 h-6 text-green-75" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-blue-75" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
                             </svg>
                         </div>
                         <div class="absolute top-28 right-[40%] animate-float-medium">
-                            <svg class="w-4 h-4 text-green-50" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 text-blue-50" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
                             </svg>
                         </div>
                         <div class="absolute top-36 right-[65%] animate-float-fast">
-                            <svg class="w-3 h-3 text-green-25" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-3 h-3 text-blue-25" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                             </svg>
                         </div>
@@ -60,23 +60,23 @@
                         <div class="mt-6 sm:flex sm:justify-center lg:justify-start">
                             <div class="rounded-md">
                                 <a href="{{ route('services') }}" 
-                                   class="w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 bg-gradient-to-br from-blue-800 to-green-900 hover:from-deep-blue/90 hover:to-deep-blue/70 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.4)] transform hover:-translate-y-0.5 transition-all duration-300 md:py-3 md:text-base md:px-8">
+                                   class="w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 bg-gradient-to-br from-blue-600 to-green-600 hover:from-deep-blue/90 hover:to-deep-blue/70 shadow-[-4px_4px_0px_0px_rgba(0,125,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(0,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 md:py-3 md:text-base md:px-8">
                                     Explore Services
                                 </a>
                             </div>
                             <div class="mt-3 sm:mt-0 sm:ml-3">
                                 <a href="{{ route('contact') }}" 
-                                   class="w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-br-lg rounded-tl-lg text-blue-25 bg-gradient-to-br from-green-800 to-blue-900 hover:from-pastel-blue/90 hover:to-pastel-blue/70 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.4)] transform hover:-translate-y-0.5 transition-all duration-300 md:py-3 md:text-base md:px-8">
+                                   class="w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-br-lg rounded-tl-lg text-blue-25 bg-gradient-to-br from-green-600 to-red-600 hover:from-pastel-blue/90 hover:to-pastel-blue/70 shadow-[4px_4px_0px_0px_rgba(0,0,125,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,255,0.4)] transform hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 md:py-3 md:text-base md:px-8">
                                     Start a Project
                                 </a>
                             </div>
                         </div>
                         
                     </div>
-                    <div class="hidden lg:block lg:col-span-5">
+                    <div class="hidden h-full lg:block lg:col-span-5">
                         <div class="relative">
                             <!-- Placeholder image -->
-                            <img src="images/imac.png" alt="Placeholder" class="w-full rounded-lg shadow-lg transform">
+                            <img src="images/imac.png" alt="Placeholder" class="w-full h-full transform">
                         </div>
                     </div>
                 </div>
