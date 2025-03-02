@@ -36,16 +36,16 @@
 
                         <style>
                             @keyframes float-slow {
-                                0%, 100% { transform: translateY(0px) rotate(0deg); }
-                                50% { transform: translateY(-10px) rotate(5deg); }
+                                0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+                                50% { transform: translateY(-10px) rotate(5deg) scale(1.1); }
                             }
                             @keyframes float-medium {
-                                0%, 100% { transform: translateY(0px) rotate(0deg); }
-                                50% { transform: translateY(-8px) rotate(-5deg); }
+                                0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+                                50% { transform: translateY(-8px) rotate(-5deg) scale(1.15); }
                             }
                             @keyframes float-fast {
-                                0%, 100% { transform: translateY(0px) rotate(0deg); }
-                                50% { transform: translateY(-6px) rotate(3deg); }
+                                0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+                                50% { transform: translateY(-6px) rotate(3deg) scale(1.2); }
                             }
                             .animate-float-slow {
                                 animation: float-slow 12s ease-in-out infinite;
@@ -57,7 +57,7 @@
                                 animation: float-fast 8s ease-in-out infinite;
                             }
                         </style>
-                        <div class="mt-6 sm:flex sm:justify-center lg:justify-start">
+                        <div class="mt-6 sm:flex sm:justify-center gap-x-4 lg:justify-start">
                             <div class="rounded-md">
                                 <a href="{{ route('services') }}" 
                                    class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(125,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
@@ -66,11 +66,11 @@
                                     <span class="relative">Explore Services</span>
                                 </a>
                             </div>
-                            <div class="rounded-md pl-4">
+                            <div class="rounded-md">
                                 <a href="{{ route('services') }}" 
-                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[4px_4px_0px_0px_rgba(0,125,0,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(0,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
-                                    <span class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-600"></span>
-                                    <span class="absolute inset-0 bg-gradient-to-br from-blue-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(125,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                    <span class="absolute inset-0 bg-gradient-to-br from-blue-600 to-green-600"></span>
+                                    <span class="absolute inset-0 bg-gradient-to-br from-red-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                     <span class="relative">Explore Services</span>
                                 </a>
                             </div>
@@ -78,10 +78,128 @@
                         
                     </div>
                     <div class="hidden h-full lg:block lg:col-span-5">
-                        <div class="relative">
-                            <!-- Placeholder image -->
-                            <img src="images/imac.png" alt="Placeholder" class="w-full h-full transform">
+                        <div class="computer-screen">
+                            <div class="screen-container">
+                                <div class="screen-layer bg-gradient-to-r from-red-25 to-red-100 opacity-50 bg-gradient"></div>
+                                <div class="screen-layer bg-image" style="background-image: url('{{ asset('images/gradient-bg.webp') }}'); background-size: cover; background-position: center;"></div>
+                                <div class="screen-layer header scale-[0.80] origin-top-left">
+                                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                        <div class="flex justify-between h-8">
+                                            <div class="flex">
+                                                <div class="screen-layer screen-logo flex-shrink-0 flex items-center">
+                                                    <a href="{{ route('home') }}">
+                                                        <x-application-logo class="block h-5 w-auto fill-current text-gray-600" />
+                                                    </a>
+                                                </div>
+                                                <div class="screen-layer screen-nav-links hidden sm:ml-4 sm:flex sm:space-x-4">
+                                                    <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-xs font-medium leading-4 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                                        Home
+                                                    </a>
+                                                    <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-xs font-medium leading-4 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                                        About  
+                                                    </a>
+                                                    <a href="#" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-xs font-medium leading-4 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                                        Contact
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="items-start flex gap-8 body-container flex items-center w-full h-full mx-auto scale-[0.6] origin-center">
+                                    <div class="w-2/3">
+                                        <h1 class="text-3xl tracking-tight font-extrabold sm:text-4xl">
+                                            <span class="screen-layer screen-header-1 block text-red-800 text-xs">Web Design & Branding</span>
+                                            <span class="screen-layer screen-header-2 block text-blue-800 text-3xl mt-1">
+                                                <span class="bg-gradient-to-br from-blue-700 to-green-700 font-bold text-transparent bg-clip-text">Refined</span><span class="text-red-800">.</span>
+                                            </span>
+                                        </h1>
+                                        <p class="screen-layer screen-blurb mt-2 text-xs font-bold text-blue-900 w-full">
+                                            Comprehensive digital solutions - from websites to branding, marketing to design.
+                                            Your one-stop digital partner for growth and success.
+                                        </p>
+                                        <div class="mt-6 sm:flex sm:justify-start gap-x-4 w-2/3 gap-0">
+                                            <div class="screen-layer screen-button-1 rounded-md w-1/2">
+                                                <a href="{{ route('services') }}" 
+                                                class="group relative w-full flex items-center justify-center px-1 py-1 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-1.5 md:text-xs shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(125,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                                    <span class="absolute inset-0 bg-gradient-to-br from-blue-600 to-green-600"></span>
+                                                    <span class="absolute inset-0 bg-gradient-to-br from-red-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                                    <span class="relative whitespace-nowrap text-xs scale-75">Explore Services</span>
+                                                </a>
+                                            </div>
+                                            <div class="screen-layer screen-button-2 rounded-md w-1/2">
+                                                <a href="{{ route('services') }}" 
+                                                class="group relative w-full flex items-center justify-center px-1 py-1 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-1.5 md:text-xs shadow-[4px_4px_0px_0px_rgba(0,125,0,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(0,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                                    <span class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-600"></span>
+                                                    <span class="absolute inset-0 bg-gradient-to-br from-blue-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                                    <span class="relative whitespace-nowrap text-xs scale-75">Explore Services</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="screen-layer screen-image w-1/2 h-auto flex items-center justify-center">
+                                        <img src="{{ asset('images/imac.png') }}" alt="iMac" class="w-full h-auto object-contain">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
+
+                        <style>
+                            .computer-screen {
+                                perspective: 1000px;
+                            }
+                        
+                            .screen-container {
+                                position: relative;
+                                transform-style: preserve-3d;
+                                transition: transform 0.5s;
+                                width: 500px;
+                                height: 300px;
+                            }
+                            .screen-container:hover {
+                                transform: rotateX(10deg) rotateY(-10deg);
+                            }
+                            .screen-layer {
+                                transition: transform 0.5s;
+                            }
+                            .screen-container:hover .screen-layer {
+                                transform: translatex(20px) translatey(20px) translateZ(10px) scale(1.05) skew(-1deg, -1deg);
+                            }
+                            .screen-container:hover .screen-layer.bg-gradient {
+                                transform: translatex(20px) translatey(20px) translateZ(20px) scale(1.1) skew(-1deg, -1deg);
+                            }
+                            .screen-container:hover .screen-layer.bg-image {
+                                transform: translatex(-20px) translatey(20px) translateZ(30px) scale(1.2) skew(-1deg, -1deg);
+                            }
+                            .screen-container:hover .screen-layer.screen-blurb {
+                                transform: translatex(-60px) translatey(60px) translateZ(40px) scale(1.5) skew(-1deg, -1deg);
+                            }
+                            .screen-container:hover .screen-layer.screen-header-1 {
+                                transform: translatex(-60px) translatey(-30px) translateZ(50px) scale(2.25) skew(-1deg, -1deg);
+                            }                            
+                            .screen-container:hover .screen-layer.screen-button-1 {
+                                transform: translatex(-120px) translatey(80px) translateZ(60px) scale(1.75) skew(-1deg, -1deg);
+                            }
+                            .screen-container:hover .screen-layer.screen-button-2 {
+                                transform: translatex(-60px) translatey(80px) translateZ(60px) scale(1.75) skew(-1deg, -1deg);
+                            }               
+                            .screen-container:hover .screen-layer.screen-nav-links {
+                                transform: translatex(0px) translatey(0px) translateZ(0px) scale(2.0) skew(-1deg, -1deg);
+                            }                           
+                            .screen-container:hover .screen-layer.screen-image {
+                                transform: translatex(60px) translatey(20px) translateZ(20px) scale(1.75) skew(-1deg, -1deg);
+                            }
+                            .screen-container:hover .screen-layer.screen-logo {
+                                transform: translatex(-120px) translatey(0px) translateZ(0px) scale(2.8);
+                            }                  
+                            .screen-container:hover .screen-layer.screen-header-2 {
+                                transform: translatex(-40px) translatey(10px) translateZ(100px) scale(3.0) skew(-1deg, -1deg);
+                            }
+                        </style>
                     </div>
                 </div>
             </div>
