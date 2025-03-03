@@ -23,7 +23,7 @@
         <!-- Add Alpine.js -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200">
         <!-- SVG Mask Definition -->
         <svg class="hidden">
             <defs>
@@ -34,9 +34,11 @@
         </svg>
 
         <!-- Background image that scrolls with content -->
-        <div class="absolute inset-0 w-full h-full bg-cover bg-center -z-20" style="background-image: url('{{ asset('images/gradient-bg.webp') }}');"></div>
-        <!-- Fixed gradient overlay -->
-        <div class="fixed inset-0 bg-gradient-to-r from-red-25 to-red-100 opacity-50 -z-10"></div>
+        <div class="absolute -z-20 top-0 left-0 w-full">
+            <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-green.webp') }}'); background-size: 100vw 100vh;"></div>
+            <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-blue.webp') }}'); background-size: 100vw 100vh;"></div>
+            <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
+        </div>
 
         <div class="min-h-screen relative overflow-hidden">
             @include('layouts.navigation')
