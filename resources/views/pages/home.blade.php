@@ -76,98 +76,133 @@
                             </div>
                         </div>
                     </div>
-                    <div class="h-full hidden lg:col-span-5 relative w-64">
+                    <div class="perspective-container group h-full block lg:col-span-5 relative w-128 h-128">
                         <!-- Base iMac Image -->
-                        <img src="{{ asset('images/imac.webp') }}" alt="iMac" class="w-full h-auto relative z-0">
+                        <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="w-full w-auto relative z-0">
                         
                         <!-- Screen Content positioned absolutely over the iMac screen -->
-                        <div class="computer-screen absolute top-[27%] left-[20%] w-[45%] h-[44%] z-10 p-2">
-                            <h2 class="text-xs font-extrabold mb-0.5">
-                                <span class="bg-gradient-to-br from-blue-600 to-green-500 text-transparent bg-clip-text">Your Brand, Bursting to Life</span>
-                            </h2>
-                            <p class="text-[9px] font-bold text-blue-800 mb-1">Ignite Your Digital Presence</p>
-                            <p class="text-[6px] text-gray-600">
-                                Captivate your audience with a stunning website that showcases your brand's personality.
-                            </p>
+                        <div class="computer-screen bg-gradient-to-tr from-blue-800 to-green-600 absolute top-[7.6%] left-[10.5%] w-[84%] h-[58%] z-10 flex flex-col">
+                            <div class="screen-container">
+                                <!-- Mac toolbar -->
+                                <img src="{{ asset('images/toolbar.webp') }}" alt="Mac toolbar" class="screen-layer toolbar-img w-full h-8 object-contain -mt-3.5">
+
+                                <!-- Main content -->
+                                <div class="screen-layer flex-1 flex items-center justify-between px-6 pr-8">
+                                    <!-- Text content with background card -->
+                                    <div class="relative w-5/6 p-4">
+                                        <div class="relative">
+                                            <div class="screen-layer header-text-wrapper-1 absolute top-1 left-2">
+                                                <span class="bg-gradient-to-br from-red-200 to-green-100 text-blue-200 bg-clip-text">Your Brand,</span>
+                                            </div>
+                                            <div class="screen-layer header-text-wrapper-2 absolute top-7 left-2">
+                                                <span class="font-bold bg-gradient-to-br from-green-200 to-blue-200 text-green-400 bg-clip-text whitespace-nowrap">Bursting to Life</span>
+                                            </div>
+                                            <h2 class="screen-layer header-box text-sm h-16 w-full font-extrabold mb-1 text-left bg-red-800 backdrop-blur-sm rounded-lg p-2 pr-4"></h2>
+                                            <p class="screen-layer text-blurb text-[10px] font-bold text-red-200 mb-1 pl-6 pt-2 pr-2">Ignite Your Digital Presence</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Image section with decorative cards -->
+                                    <div class="screen-layer relative w-1/2 h-full flex items-center justify-center">
+                                        <!-- Decorative background cards -->
+                                        <div class="screen-layer decorative-box-1 absolute right-1 top-1 w-24 h-24 bg-blue-500/20 rounded-lg rotate-6 animate-float-slow"></div>
+                                        <div class="screen-layer decorative-box-2 absolute -right-1 top-1 w-24 h-24 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
+                                        
+                                        <!-- Main image container -->
+                                        <div class="screen-layer relative z-10 w-24 h-24 bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                                            <img src="{{ asset(path: 'images/pixelburst-logo.webp') }}" alt="Brand visualization" class="brand-img w-full h-full object-contain rounded">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mac dock -->
+                                <img src="{{ asset('images/dock.png') }}" alt="Mac dock" class="screen-layer dock-img w-4/5 h-12 object-contain mx-auto mt-auto -mb-2">
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
 
         <style>
-            .computer-screen {
-                perspective: 1000px;
-                transform-style: preserve-3d;
-                transform: rotateX(18deg) rotateY(0deg) rotateZ(7deg) skewY(-2deg) scaleY(1.0);
-                will-change: transform;
+            .perspective-container {
+                perspective: 800px;
             }
         
+            .computer-screen {
+                transform-style: preserve-3d;
+                transform: rotateY(-16deg) translateZ(0px);
+                will-change: transform;
+                transition: transform 3.0s ease-out;
+            }
+            .perspective-container:hover .computer-screen {}
+
             .screen-container {
                 position: relative;
                 transform-style: preserve-3d;
-                perspective: 1000px;
-                transition: transform 0.5s;
-                width: 500px;
-                height: 300px;
-                backface-visibility: hidden;
-                will-change: transform;
+                transition: transform 3.0s;
+                width: 100%;
+                height: 100%;
             }
-            
-            /* Add a new class for gradient containers */
-            .gradient-container {
-                will-change: transform, opacity;
-                transform: translateZ(0);
-            }
-            
-            /* Add a new class for optimized hover elements */
-            .hover-optimized {
-                will-change: transform, box-shadow;
-                transform: translateZ(0);
-            }
-            
-            .screen-container:hover {
-                transform: rotateX(10deg) rotateY(-10deg);
-            }
+
             .screen-layer {
-                position: absolute;
-                transform-style: preserve-3d;
-                backface-visibility: hidden;
-                transition: transform 0.5s;
+                transition: transform 3.0s;
             }
-            .screen-container:hover .screen-layer {
-                transform: translateZ(20px) scale(1.05);
+
+            .screen-container:hover .brand-img {
+                transform: translateX(-20px) translateY(6px) translateZ(50px) scale(1.75) skew(-0deg, -0deg);
+                transition: transform 3.0s ease-out;
             }
-            .screen-container:hover .screen-layer.bg-gradient {
-                transform: translateZ(30px) scale(1.1);
+            .screen-container:hover .dock-img {
+                transform: translateX(-4px) translateY(2px) translateZ(30px) scale(1.1) skew(0deg, 0deg);
             }
-            .screen-container:hover .screen-layer.bg-image {
-                transform: translateZ(40px) scale(1.2);
+            .screen-container:hover .toolbar-img {
+                transform: translateX(-4px) translateY(-6px) translateZ(30px) scale(1.1) skew(-0deg, -0deg);
             }
-            .screen-container:hover .screen-layer.screen-blurb {
-                transform: translateZ(50px) scale(1.5);
+
+            .screen-container:hover .decorative-box-1 {
+                transform: translateX(-20px) translateY(5px) translateZ(30px) scale(1.1) skew(-0deg, -0deg);
             }
-            .screen-container:hover .screen-layer.screen-header-1 {
-                transform: translateZ(60px) scale(2.25);
-            }                            
-            .screen-container:hover .screen-layer.screen-button-1 {
-                transform: translateZ(70px) scale(1.75);
+
+            .screen-container:hover .decorative-box-2 {
+                transform: translateX(-20px) translateY(7px) translateZ(15px) scale(1.05) skew(-0deg, -0deg);
             }
-            .screen-container:hover .screen-layer.screen-button-2 {
-                transform: translateZ(70px) scale(1.75);
-            }               
-            .screen-container:hover .screen-layer.screen-nav-links {
-                transform: translateZ(80px) scale(1.75);
-            }                           
-            .screen-container:hover .screen-layer.screen-image {
-                transform: translateZ(90px) scale(1.75);
+
+            .screen-container:hover .header-box {
+                transform: translateX(-60px) translateY(-10px) translateZ(40px) scale(1.5) skew(-0deg, -0deg);
             }
-            .screen-container:hover .screen-layer.screen-logo {
-                transform: translateZ(100px) scale(4);
-            }                  
-            .screen-container:hover .screen-layer.screen-header-2 {
-                transform: translateZ(110px) scale(3.0);
+
+            .screen-container:hover .header-text-wrapper-1 {
+                transform: translateX(-120px) translateY(-40px) translateZ(70px) scale(2.5) skew(-0deg, -0deg);
             }
+
+            .screen-container:hover .header-text-wrapper-2 {
+                transform: translateX(-140px) translateY(-15px) translateZ(60px) scale(3.0) skew(-0deg, -0deg);
+            }
+
+            .screen-container:hover .text-blurb {
+                transform: translateX(-45px) translateY(10px) translateZ(40px) scale(1.75) skew(-0deg, -0deg);
+            }
+
+            .header-text-wrapper-1 {
+                transform: translateX(0) translateY(0) translateZ(0);
+                transition: transform 3s ease-out;
+                z-index: 2;
+            }
+
+            .header-text-wrapper-2 {
+                transform: translateX(0) translateY(0) translateZ(0);
+                transition: transform 3s ease-out; 
+                z-index: 2;
+            }
+
+            .header-box {
+                transform: translateX(0) translateY(0) translateZ(0);
+                transition: transform 3s ease-out;
+                z-index: 1;
+            }
+
         </style>
     </div>
 
