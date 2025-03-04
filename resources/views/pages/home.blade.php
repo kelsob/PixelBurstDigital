@@ -76,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="h-full lg:block lg:col-span-5 relative w-64">
+                    <div class="h-full hidden lg:col-span-5 relative w-64">
                         <!-- Base iMac Image -->
                         <img src="{{ asset('images/imac.webp') }}" alt="iMac" class="w-full h-auto relative z-0">
                         
@@ -100,6 +100,7 @@
                 perspective: 1000px;
                 transform-style: preserve-3d;
                 transform: rotateX(18deg) rotateY(0deg) rotateZ(7deg) skewY(-2deg) scaleY(1.0);
+                will-change: transform;
             }
         
             .screen-container {
@@ -110,7 +111,21 @@
                 width: 500px;
                 height: 300px;
                 backface-visibility: hidden;
+                will-change: transform;
             }
+            
+            /* Add a new class for gradient containers */
+            .gradient-container {
+                will-change: transform, opacity;
+                transform: translateZ(0);
+            }
+            
+            /* Add a new class for optimized hover elements */
+            .hover-optimized {
+                will-change: transform, box-shadow;
+                transform: translateZ(0);
+            }
+            
             .screen-container:hover {
                 transform: rotateX(10deg) rotateY(-10deg);
             }
@@ -277,9 +292,9 @@
     </div>
 
     <!-- Why Choose Us -->
-    <div class="py-12">
+    <div class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-2xl p-12 bg-gradient-to-br from-green-600 to-blue-900">
+            <div class="section-border rounded-2xl p-12 gradient-container">
                 <div class="lg:text-center">
                     <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl">
                         Why Choose PixelCraft
@@ -330,8 +345,8 @@
 
     <!-- CTA Section -->
     <div class="relative">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-tl-lg rounded-br-lg shadow-xl overflow-hidden">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-tl-lg rounded-br-lg shadow-xl overflow-hidden gradient-container">
                 <div class="relative px-8 py-10 lg:p-12">
                     <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
                         <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -340,13 +355,13 @@
                         </h2>
                         <div class="mt-8 lg:mt-0 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                             <a href="{{ route('contact') }}" 
-                               class="group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-bl-lg rounded-tr-lg text-blue-900 overflow-hidden transition-all duration-300 bg-blue-400 hover:bg-blue-500 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(125,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                               class="hover-optimized group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-bl-lg rounded-tr-lg text-blue-900">
                                 <span class="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-500"></span>
                                 <span class="absolute inset-0 bg-gradient-to-br from-blue-500 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                 <span class="relative">Contact Us</span>
                             </a>
                             <a href="{{ route('portfolio') }}" 
-                               class="group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-tr-lg rounded-bl-lg text-blue-200 overflow-hidden transition-all duration-300 bg-blue-800 hover:bg-blue-900 shadow-[4px_4px_0px_0px_rgba(0,125,0,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(0,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                               class="hover-optimized group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-tr-lg rounded-bl-lg text-blue-200">
                                 <span class="absolute inset-0 bg-gradient-to-br from-blue-800 to-indigo-900"></span>
                                 <span class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                 <span class="relative">View Portfolio</span>
