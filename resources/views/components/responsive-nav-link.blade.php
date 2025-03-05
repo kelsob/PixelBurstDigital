@@ -2,10 +2,12 @@
 
 @php
 $classes = ($active ?? false)
-            ? 'block w-full ps-3 pe-4 py-3 border-l-4 text-start text-lg font-bold transition duration-150 ease-in-out'
-            : 'block w-full ps-3 pe-4 py-3 border-l-4 border-transparent text-start text-lg font-bold transition duration-150 ease-in-out';
+            ? 'block text-deep-red hover:text-pastel-red text-[10px] font-bold transition-all duration-200'
+            : 'block text-deep-red hover:text-pastel-red text-[10px] font-bold transition-all duration-200';
 @endphp
 
 <a {{ $attributes->merge(['class' => $classes]) }}>
-    {{ $slot }}
+    <span class="inline-block px-1.5 py-0.5 rounded-md {{ $active ? 'bg-deep-red text-red-100' : '' }}">
+        {{ $slot }}
+    </span>
 </a>

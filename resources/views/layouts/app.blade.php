@@ -49,14 +49,81 @@
             </main>
         </div>
 
-        <footer class="bg-gray-900 border-t border-gray-800">
-            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('images/pixelcraftlogo.png') }}" 
-                         alt="PixelCraft Studio" 
-                         class="h-6 w-auto grayscale opacity-40 transition-all duration-300 hover:grayscale-0 hover:opacity-100">
-                    <p class="mt-4 text-gray-400">&copy; {{ date('Y') }} PixelCraft Studio. All rights reserved.</p>
+        <footer class="relative overflow-hidden">
+            <!-- Enhanced layered background with multiple gradients -->
+            <div class="absolute inset-0">
+                <!-- Primary gradient layer -->
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-800 to-green-900 rounded-tl-[3rem] rounded-br-[2rem] transform rotate-1 opacity-90"></div>
+                <!-- Secondary gradient layer -->
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-800 via-blue-900 to-green-800 rounded-tr-[2rem] rounded-bl-[3rem] transform -rotate-1 opacity-80"></div>
+                <!-- Accent gradient layer -->
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-lg blur-xl opacity-30 animate-pulse"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Logo and Copyright -->
+                    <div class="flex flex-col items-center md:items-start space-y-6">
+                        <div class="group relative transform transition-all duration-300 hover:scale-105">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                            <img src="{{ asset('images/pixelburst-logo.webp') }}" 
+                                 alt="Pixel Burst Studio" 
+                                 class="relative h-12 w-auto">
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="text-center md:text-right">
+                        <div class="inline-flex flex-row items-center md:items-end space-x-4">
+                            <a href="{{ route('home') }}" 
+                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
+                                <span class="relative">Home</span>
+                            </a>
+                            <a href="{{ route('about') }}" 
+                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
+                                <span class="relative">About</span>
+                            </a>
+                            <a href="{{ route('portfolio') }}" 
+                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
+                                <span class="relative">Our Work</span>
+                            </a>
+                            <a href="{{ route('contact') }}" 
+                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
+                                <span class="relative">Contact</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Bottom Bar with enhanced gradients -->
+                <div class="mt-12 pt-8 border-t border-white/20 relative">
+                    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-30"></div>
+                    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                        <div>
+                            <p class="text-blue-200 text-sm">&copy; {{ date('Y') }} Pixel Burst Studio. All rights reserved.</p>
+                        </div>
+                        <div class="flex space-x-6">
+                            <a href="#" class="group relative px-4 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-lg rounded-br-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
+                                <span class="relative">Privacy Policy</span>
+                            </a>
+                            <a href="#" class="group relative px-4 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-lg rounded-br-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
+                                <span class="relative">Terms of Service</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced decorative elements -->
+            <div class="absolute bottom-0 left-0 w-full">
+                <div class="h-0.5 bg-gradient-to-r from-blue-400 via-green-400 to-blue-600 opacity-50"></div>
+                <div class="h-0.5 bg-gradient-to-r from-green-400 via-blue-400 to-green-600 opacity-30 transform translate-y-0.5"></div>
             </div>
         </footer>
 

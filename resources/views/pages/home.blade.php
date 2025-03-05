@@ -18,22 +18,26 @@
                         </p> 
 
                         <!-- Floating SVGs -->
-                        <div class="absolute top-20 right-[55%] animate-float-slow">
-                            <svg class="w-6 h-6 text-blue-100" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                        <div class="absolute top-20 right-[65%] animate-float-fast">
+                            <svg class="w-5 h-5 text-blue-700 opacity-100" fill="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12"/>
                             </svg>
                         </div>
-                        <div class="absolute top-28 right-[40%] animate-float-medium">
-                            <svg class="w-4 h-4 text-blue-75" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                        <div class="absolute top-6 right-[53%] animate-float-fast">
+                            <svg class="w-14 h-14 text-green-500 opacity-75" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="5"/>
                             </svg>
                         </div>
-                        <div class="absolute top-36 right-[65%] animate-float-fast">
-                            <svg class="w-3 h-3 text-blue-50" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                        <div class="absolute top-4 right-[34%] animate-float-fast">
+                            <svg class="w-24 h-24 text-red-600 opacity-50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 40 40">
+                                <circle cx="12" cy="12" r="10"/>
                             </svg>
                         </div>
-
+                        <div class="absolute -top-24 right-[0%] animate-float-fast">
+                            <svg class="w-48 h-48 text-blue-800 opacity-15" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45"/>
+                            </svg>
+                        </div>
                         <style>
                             @keyframes float-slow {
                                 0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
@@ -57,21 +61,21 @@
                                 animation: float-fast 8s ease-in-out infinite;
                             }
                         </style>
-                        <div class="mt-6 sm:flex sm:justify-center gap-x-4 lg:justify-start">
+                        <div class="mt-6 sm:flex sm:justify-center gap-x-6 lg:justify-start">
                             <div class="rounded-md">
                                 <a href="{{ route('services') }}" 
-                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(125,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:-translate-x-0.5 hover:-translate-y-0.5">
                                     <span class="absolute inset-0 bg-gradient-to-br from-blue-600 to-green-600"></span>
-                                    <span class="absolute inset-0 bg-gradient-to-br from-red-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                    <span class="absolute inset-0 bg-gradient-to-br from-blue-500 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                     <span class="relative">Explore Services</span>
                                 </a>
                             </div>
                             <div class="rounded-md">
                                 <a href="{{ route('services') }}" 
-                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(125,255,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
-                                    <span class="absolute inset-0 bg-gradient-to-br from-blue-600 to-green-600"></span>
-                                    <span class="absolute inset-0 bg-gradient-to-br from-red-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                                    <span class="relative">Explore Services</span>
+                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-br-lg rounded-tl-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                    <span class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-600"></span>
+                                    <span class="absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                                    <span class="relative">Our Work</span>
                                 </a>
                             </div>
                         </div>

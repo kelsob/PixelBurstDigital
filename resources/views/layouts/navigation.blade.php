@@ -1,8 +1,8 @@
 <nav x-data="{ open: false }" class="relative z-50">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
-            <div class="flex">
+            <div class="flex justify-between flex-1">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="/">
@@ -11,14 +11,20 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-12 sm:-my-px sm:ms-16 sm:flex">
-                    <x-nav-link href="/" :active="request()->is('/')" class="text-blue-900 hover:text-pastel-red border-deep-red text-base">
+                <div class="hidden space-x-4 sm:flex items-center">
+                    <x-nav-link href="/" :active="request()->is('/')">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link href="/about" :active="request()->is('about')" class="text-blue-900 hover:text-pastel-red border-deep-red text-base">
+                    <x-nav-link href="/about" :active="request()->is('about')">
                         {{ __('About') }}
                     </x-nav-link>
-                    <x-nav-link href="/contact" :active="request()->is('contact')" class="text-blue-900 hover:text-pastel-red border-deep-red text-base">
+                    <x-nav-link href="/services" :active="request()->is('services')">
+                        {{ __('Services') }}
+                    </x-nav-link>
+                    <x-nav-link href="/our-work" :active="request()->is('our-work')">
+                        {{ __('Our Work') }}
+                    </x-nav-link>
+                    <x-nav-link href="/contact" :active="request()->is('contact')">
                         {{ __('Contact') }}
                     </x-nav-link>
                 </div>
@@ -39,13 +45,19 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1 rounded-lg mx-2 mt-2">
-            <x-responsive-nav-link href="/" :active="request()->is('/')" class="text-deep-red hover:text-pastel-red text-base">
+            <x-responsive-nav-link href="/" :active="request()->is('/')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="/about" :active="request()->is('about')" class="text-deep-red hover:text-pastel-red text-base">
+            <x-responsive-nav-link href="/about" :active="request()->is('about')">
                 {{ __('About') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="/contact" :active="request()->is('contact')" class="text-deep-red hover:text-pastel-red text-base">
+            <x-responsive-nav-link href="/services" :active="request()->is('services')">
+                {{ __('Services') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="/our-work" :active="request()->is('our-work')">
+                {{ __('Our Work') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="/contact" :active="request()->is('contact')">
                 {{ __('Contact') }}
             </x-responsive-nav-link>
         </div>
