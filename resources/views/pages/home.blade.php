@@ -37,15 +37,15 @@
                         <style>
                             @keyframes float-slow {
                                 0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-                                50% { transform: translateY(-10px) rotate(5deg) scale(1.1); }
+                                50% { transform: translateY(-2px) rotate(5deg) scale(1.025); }
                             }
                             @keyframes float-medium {
                                 0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-                                50% { transform: translateY(-8px) rotate(-5deg) scale(1.15); }
+                                50% { transform: translateY(-2px) rotate(-5deg) scale(1.05); }
                             }
                             @keyframes float-fast {
                                 0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-                                50% { transform: translateY(-6px) rotate(3deg) scale(1.2); }
+                                50% { transform: translateY(-2px) rotate(3deg) scale(1.075); }
                             }
                             .animate-float-slow {
                                 animation: float-slow 12s ease-in-out infinite;
@@ -76,37 +76,46 @@
                             </div>
                         </div>
                     </div>
-                    <div class="perspective-container group h-full block lg:col-span-5 relative w-128 h-128">
+                    <div class="perspective-container group block relative lg:mt-0 mt-8">
                         <!-- Base iMac Image -->
                         <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="w-full w-auto relative z-0">
                         
                         <!-- Screen Content positioned absolutely over the iMac screen -->
-                        <div class="computer-screen bg-gradient-to-tr from-blue-800 to-green-600 absolute top-[7.6%] left-[10.5%] w-[84%] h-[58%] z-10 flex flex-col">
+                        <div class="computer-screen absolute top-[6.4%] left-[10.2%] w-[83.9%] h-[49%] z-10 flex flex-col">
+                            <img src="{{ asset('images/mac_bg.jpg') }}" alt="Mac background" class="absolute inset-0 w-full h-full object-cover">
                             <div class="screen-container">
                                 <!-- Mac toolbar -->
                                 <img src="{{ asset('images/toolbar.webp') }}" alt="Mac toolbar" class="screen-layer toolbar-img w-full h-8 object-contain -mt-3.5">
+                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="absolute inset-0 top-[8%] left-[8%] w-5/6 h-[80%] object-fill">
 
                                 <!-- Main content -->
-                                <div class="screen-layer flex-1 flex items-center justify-between px-6 pr-8">
+                                <div class="screen-layer flex-1 flex items-center justify-between px-6 pr-10 py-4">
                                     <!-- Text content with background card -->
-                                    <div class="relative w-5/6 p-4">
+                                    <div class="relative w-5/6 p-4 flex flex-col">
                                         <div class="relative">
-                                            <div class="screen-layer header-text-wrapper-1 absolute top-1 left-2">
-                                                <span class="bg-gradient-to-br from-red-200 to-green-100 text-blue-200 bg-clip-text">Your Brand,</span>
+                                            <div class="screen-layer header-text-wrapper-1 absolute top-1">
+                                                <span class="font-extrabold bg-gradient-to-br from-red-200 to-green-100 text-blue-200 bg-clip-text text-[10px]">YOUR BRAND,</span>
                                             </div>
-                                            <div class="screen-layer header-text-wrapper-2 absolute top-7 left-2">
-                                                <span class="font-bold bg-gradient-to-br from-green-200 to-blue-200 text-green-400 bg-clip-text whitespace-nowrap">Bursting to Life</span>
+                                            <div class="screen-layer header-text-wrapper-2 absolute top-6 left-2">
+                                                <span class="relative inline-block animate-pulse">
+                                                    <span class="absolute -inset-1 rounded-lg bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500 blur-md"></span>
+                                                    <span class="relative font-bold bg-gradient-to-br from-green-200 to-blue-200 text-green-400 bg-clip-text whitespace-nowrap">Bursting to Life.</span>
+                                                </span>
                                             </div>
-                                            <h2 class="screen-layer header-box text-sm h-16 w-full font-extrabold mb-1 text-left bg-red-800 backdrop-blur-sm rounded-lg p-2 pr-4"></h2>
-                                            <p class="screen-layer text-blurb text-[10px] font-bold text-red-200 mb-1 pl-6 pt-2 pr-2">Ignite Your Digital Presence</p>
+                                            <h2 class="screen-layer header-box text-sm h-12 w-full font-extrabold mb-1 mt-2 text-left bg-gradient-to-br from-red-800 to-blue-600 backdrop-blur-sm rounded-lg p-2 pr-4"></h2>
+                                            <p class="screen-layer text-blurb text-[8px] font-bold text-red-200 pl-2 pt-1 pb-2 pr-2 whitespace-nowrap">Ignite Your Digital Presence</p>
+                                            <button class="float-right screen-layer relative text-[8px] font-bold text-white px-3 py-1 rounded-bl-lg rounded-tr-lg overflow-hidden transition-all duration-500 ease-in-out shadow-[2px_2px_0px_0px_rgba(34,197,94,0.2)] hover:shadow-[2px_2px_0px_0px_rgba(22,163,74,0.5)] hover:scale-105">
+                                                <span class="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-500 to-green-400"></span>
+                                                <span class="relative">Get Started</span>
+                                            </button>
                                         </div>
                                     </div>
 
                                     <!-- Image section with decorative cards -->
                                     <div class="screen-layer relative w-1/2 h-full flex items-center justify-center">
                                         <!-- Decorative background cards -->
-                                        <div class="screen-layer decorative-box-1 absolute right-1 top-1 w-24 h-24 bg-blue-500/20 rounded-lg rotate-6 animate-float-slow"></div>
-                                        <div class="screen-layer decorative-box-2 absolute -right-1 top-1 w-24 h-24 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
+                                        <div class="screen-layer decorative-box-1 absolute right-3 top-1 w-16 h-16 bg-blue-500/20 rounded-lg rotate-6 animate-float-slow"></div>
+                                        <div class="screen-layer decorative-box-2 absolute right-5 top-1 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
                                         
                                         <!-- Main image container -->
                                         <div class="screen-layer relative z-10 w-24 h-24 bg-white/10 backdrop-blur-sm rounded-lg p-2">
@@ -116,10 +125,9 @@
                                 </div>
 
                                 <!-- Mac dock -->
-                                <img src="{{ asset('images/dock.png') }}" alt="Mac dock" class="screen-layer dock-img w-4/5 h-12 object-contain mx-auto mt-auto -mb-2">
+                                <img src="{{ asset('images/dock.png') }}" alt="Mac dock" class="screen-layer dock-img object-contain mx-auto absolute bottom-1 transform">
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -128,81 +136,101 @@
         <style>
             .perspective-container {
                 perspective: 800px;
+                perspective-origin: 218px 142px;
+                width: 400px;
+                height: 400px;
             }
-        
+
             .computer-screen {
                 transform-style: preserve-3d;
-                transform: rotateY(-16deg) translateZ(0px);
+                transform: rotateY(-16deg) translateZ(0px) translateY(0px);
                 will-change: transform;
-                transition: transform 3.0s ease-out;
+                transition: transform 1.5s ease-out;
             }
-            .perspective-container:hover .computer-screen {}
 
             .screen-container {
                 position: relative;
                 transform-style: preserve-3d;
-                transition: transform 3.0s;
+                transition: transform 1.5s;
                 width: 100%;
                 height: 100%;
             }
 
             .screen-layer {
-                transition: transform 3.0s;
+                transition: transform 1.5s;
             }
 
             .screen-container:hover .brand-img {
-                transform: translateX(-20px) translateY(6px) translateZ(50px) scale(1.75) skew(-0deg, -0deg);
-                transition: transform 3.0s ease-out;
+                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
+                transition: transform 1.5s ease-out;
             }
             .screen-container:hover .dock-img {
-                transform: translateX(-4px) translateY(2px) translateZ(30px) scale(1.1) skew(0deg, 0deg);
+                transform: translateX(0px);
             }
             .screen-container:hover .toolbar-img {
-                transform: translateX(-4px) translateY(-6px) translateZ(30px) scale(1.1) skew(-0deg, -0deg);
+                transform: translateX(-0px) translateY(-0px) translateZ(0px) scale(1.0);
             }
 
             .screen-container:hover .decorative-box-1 {
-                transform: translateX(-20px) translateY(5px) translateZ(30px) scale(1.1) skew(-0deg, -0deg);
+                transform: translateX(-0px) translateY(5px) translateZ(0px) scale(1.0);
             }
 
             .screen-container:hover .decorative-box-2 {
-                transform: translateX(-20px) translateY(7px) translateZ(15px) scale(1.05) skew(-0deg, -0deg);
+                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
             }
 
             .screen-container:hover .header-box {
-                transform: translateX(-60px) translateY(-10px) translateZ(40px) scale(1.5) skew(-0deg, -0deg);
+                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
             }
 
             .screen-container:hover .header-text-wrapper-1 {
-                transform: translateX(-120px) translateY(-40px) translateZ(70px) scale(2.5) skew(-0deg, -0deg);
+                transform: translateX(-0px) translateY(-0px) translateZ(0px) scale(1.0);
             }
 
             .screen-container:hover .header-text-wrapper-2 {
-                transform: translateX(-140px) translateY(-15px) translateZ(60px) scale(3.0) skew(-0deg, -0deg);
+                transform: translateX(-0px) translateY(-0px) translateZ(0px) scale(1.0));
             }
 
             .screen-container:hover .text-blurb {
-                transform: translateX(-45px) translateY(10px) translateZ(40px) scale(1.75) skew(-0deg, -0deg);
+                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
             }
 
             .header-text-wrapper-1 {
                 transform: translateX(0) translateY(0) translateZ(0);
-                transition: transform 3s ease-out;
+                transition: transform 1.5s ease-out;
                 z-index: 2;
+                display: inline-block;
+                text-align: right;
+                right: 8px;
             }
 
             .header-text-wrapper-2 {
                 transform: translateX(0) translateY(0) translateZ(0);
-                transition: transform 3s ease-out; 
+                transition: transform 1.5s ease-out; 
                 z-index: 2;
             }
 
             .header-box {
                 transform: translateX(0) translateY(0) translateZ(0);
-                transition: transform 3s ease-out;
+                transition: transform 1.5s ease-out;
                 z-index: 1;
             }
 
+            button {
+                transition: transform 0.5s ease-in-out;
+            }
+
+            button:hover {
+                transform: scale(1.05);
+            }
+
+            .shadow-\[2px_2px_0px_0px_rgba\(34\,197\,94\,0\.2\)\] {
+                transition: box-shadow 0.5s ease-in-out;
+            }
+
+            .hover\:shadow-\[2px_2px_0px_0px_rgba\(22\,163\,74\,0\.5\)\]:hover {
+                transition: box-shadow 0.5s ease-in-out;
+            }
         </style>
     </div>
 
@@ -261,7 +289,7 @@
     </div>
 
     <!-- Branding & Digital Identity Section -->
-    <div class="py-12">
+    <div class="py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
                 <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-800 to-blue-400 text-transparent bg-clip-text sm:text-4xl">
@@ -327,7 +355,7 @@
     </div>
 
     <!-- Why Choose Us -->
-    <div class="py-24">
+    <div class="py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="rounded-2xl p-12 bg-gradient-to-br from-blue-800 to-green-400">
                 <div class="lg:text-center">
