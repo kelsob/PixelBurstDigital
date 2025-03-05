@@ -78,7 +78,7 @@
                     </div>
                     <div class="perspective-container group block relative lg:mt-0 mt-8">
                         <!-- Base iMac Image -->
-                        <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="w-full w-auto relative z-0">
+                        <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         
                         <!-- Screen Content positioned absolutely over the iMac screen -->
                         <div class="computer-screen absolute top-[6.4%] left-[10.2%] w-[83.9%] h-[49%] z-10 flex flex-col">
@@ -86,10 +86,10 @@
                             <div class="screen-container">
                                 <!-- Mac toolbar -->
                                 <img src="{{ asset('images/toolbar.webp') }}" alt="Mac toolbar" class="screen-layer toolbar-img w-full h-8 object-contain -mt-3.5">
-                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="absolute inset-0 top-[8%] left-[8%] w-5/6 h-[80.2%] object-fill">
+                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="screen-layer chrome-img absolute inset-0 top-[8%] left-[8%] w-5/6 h-[80.2%] object-fill">
 
                                 <!-- Main content -->
-                                <div class="screen-layer flex-1 flex items-center justify-between px-6 pr-10 py-4">
+                                <div class="screen-layer preserve-3d flex-1 flex items-center justify-between px-6 pr-10 py-4">
                                     <!-- Text content with background card -->
                                     <div class="relative w-5/6 p-4 flex flex-col">
                                         <div class="relative">
@@ -103,8 +103,8 @@
                                                 </span>
                                             </div>
                                             <h2 class="screen-layer header-box text-sm h-12 w-full font-extrabold mb-1 mt-2 text-left bg-gradient-to-br from-red-800 to-blue-600 backdrop-blur-sm rounded-lg p-2 pr-4"></h2>
-                                            <p class="screen-layer text-blurb text-[8px] font-bold text-red-200 pl-2 pt-1 pb-2 pr-2 whitespace-nowrap">Ignite Your Digital Presence</p>
-                                            <button class="float-right screen-layer relative text-[8px] font-bold text-white px-3 py-1 rounded-bl-lg rounded-tr-lg overflow-hidden transition-all duration-500 ease-in-out shadow-[2px_2px_0px_0px_rgba(34,197,94,0.2)] hover:shadow-[2px_2px_0px_0px_rgba(22,163,74,0.5)] hover:scale-105">
+                                            <p class="screen-layer text-blurb text-[8px] font-bold text-blue-400 pl-2 pt-1 pb-2 pr-2 whitespace-nowrap">Ignite Your Digital Presence.</p>
+                                            <button class="float-right screen-layer screen-button relative text-[8px] font-bold text-white px-3 py-1 rounded-bl-lg rounded-tr-lg overflow-hidden transition-all duration-500 ease-in-out shadow-[2px_2px_0px_0px_rgba(34,197,94,0.2)] hover:shadow-[2px_2px_0px_0px_rgba(22,163,74,0.5)] hover:scale-105">
                                                 <span class="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-500 to-green-400"></span>
                                                 <span class="relative">Get Started</span>
                                             </button>
@@ -112,15 +112,13 @@
                                     </div>
 
                                     <!-- Image section with decorative cards -->
-                                    <div class="screen-layer relative w-1/2 h-full flex items-center justify-center">
+                                    <div class="screen-layer preserve-3d relative w-1/2 h-full flex items-center justify-center">
                                         <!-- Decorative background cards -->
-                                        <div class="screen-layer decorative-box-1 absolute right-3 top-1 w-16 h-16 bg-blue-500/20 rounded-lg rotate-6 animate-float-slow"></div>
-                                        <div class="screen-layer decorative-box-2 absolute right-5 top-1 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
-                                        
+                                        <div class="screen-layer decorative-box-2 absolute -bottom-5 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
+                                        <div class="screen-layer decorative-box-1 absolute -bottom-5 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
+
                                         <!-- Main image container -->
-                                        <div class="screen-layer relative z-10 w-24 h-24 bg-white/10 backdrop-blur-sm rounded-lg p-2">
-                                            <img src="{{ asset(path: 'images/pixelburst-logo.webp') }}" alt="Brand visualization" class="brand-img w-full h-full object-contain rounded">
-                                        </div>
+                                        <img src="{{ asset('images/pixelburst-logo.Webp') }}" alt="Chrome browser" class="brand-img transition-all absolute  object-fill">
                                     </div>
                                 </div>
 
@@ -139,6 +137,7 @@
                 perspective-origin: 218px 142px;
                 width: 400px;
                 height: 400px;
+                transform-style: preserve-3d;
             }
 
             .computer-screen {
@@ -149,6 +148,7 @@
             }
 
             .screen-container {
+                perspective: 800px;
                 position: relative;
                 transform-style: preserve-3d;
                 transition: transform 1.5s;
@@ -158,46 +158,73 @@
 
             .screen-layer {
                 transition: transform 1.5s;
+                transform-style: preserve-3d;
+                transform: translateZ(10);
+                will-change: transform;
+            }
+
+            .imac-bg {
+                transform: translateZ(-48px) scale(1.05) translateX(-2px);
             }
 
             .screen-container:hover .brand-img {
-                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
-                transition: transform 1.5s ease-out;
+                transform: translateX(-0px) translateY(0px) translateZ(120px) scale(1.0);
+                transition: transform 3.5s ease-out;
+
             }
             .screen-container:hover .dock-img {
-                transform: translateX(0px);
+                transform: translateX(0px) translateZ(10px);
             }
             .screen-container:hover .toolbar-img {
-                transform: translateX(-0px) translateY(-0px) translateZ(0px) scale(1.0);
+                transform: translateX(0px) translateY(-0px) translateZ(10px) scale(1.0);
             }
 
+            .screen-container:hover .chrome-img {
+                transform: translateX(0px) translateY(0px) translateZ(30px) scale(1.0);
+                transition: transform 2.5s ease-out;
+            }
+
+            .screen-container:hover .screen-button {
+                transform: translateX(-20px) translateY(0px) translateZ(80px) scale(1.0);
+                transition: transform 3.0s ease-out;
+            }
+
+
             .screen-container:hover .decorative-box-1 {
-                transform: translateX(-0px) translateY(5px) translateZ(0px) scale(1.0);
+                transform: translateX(-6px) translateY(0px) translateZ(80px) scale(1.0);
+                transition: transform 3.5s ease-out;
+
             }
 
             .screen-container:hover .decorative-box-2 {
-                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
+                transform: translateX(-8px) translateY(0px) translateZ(100px) scale(1.0);
+                transition: transform 3.5s ease-out;
+
             }
 
             .screen-container:hover .header-box {
-                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
+                transform: translateX(0px) translateY(0px) translateZ(120px) scale(1.0);
             }
 
             .screen-container:hover .header-text-wrapper-1 {
-                transform: translateX(-0px) translateY(-0px) translateZ(0px) scale(1.0);
+                transform: translateX(0px) translateY(6px) translateZ(170px) scale(1.0);
+                transition: transform 3.5s ease-out;
             }
 
             .screen-container:hover .header-text-wrapper-2 {
-                transform: translateX(-0px) translateY(-0px) translateZ(0px) scale(1.0));
+                transform: translateX(0px) translateY(3px) translateZ(170px) scale(1.0);
+                transition: transform 3.5s ease-out;
             }
 
             .screen-container:hover .text-blurb {
-                transform: translateX(-0px) translateY(0px) translateZ(0px) scale(1.0);
+                transform: translateX(0px) translateY(0px) translateZ(120px) scale(1.0);
+                transition: transform 3.0s ease-out;
+
             }
 
             .header-text-wrapper-1 {
-                transform: translateX(0) translateY(0) translateZ(0);
-                transition: transform 1.5s ease-out;
+                transform: translateX(0) translateY(0) translateZ(0px);
+                transition: transform 4.5s ease-out;
                 z-index: 2;
                 display: inline-block;
                 text-align: right;
@@ -205,32 +232,23 @@
             }
 
             .header-text-wrapper-2 {
-                transform: translateX(0) translateY(0) translateZ(0);
-                transition: transform 1.5s ease-out; 
+                transform: translateX(0) translateY(0px) translateZ(0px);
+                transition: transform 3.0s ease-out; 
                 z-index: 2;
             }
 
             .header-box {
                 transform: translateX(0) translateY(0) translateZ(0);
-                transition: transform 1.5s ease-out;
+                transition: transform 3.0s ease-out;
                 z-index: 1;
             }
 
-            button {
-                transition: transform 0.5s ease-in-out;
+
+            /* Add transform-style: preserve-3d to the inner relative div */
+            .relative {
+                transform-style: preserve-3d;
             }
 
-            button:hover {
-                transform: scale(1.05);
-            }
-
-            .shadow-\[2px_2px_0px_0px_rgba\(34\,197\,94\,0\.2\)\] {
-                transition: box-shadow 0.5s ease-in-out;
-            }
-
-            .hover\:shadow-\[2px_2px_0px_0px_rgba\(22\,163\,74\,0\.5\)\]:hover {
-                transition: box-shadow 0.5s ease-in-out;
-            }
         </style>
     </div>
 
