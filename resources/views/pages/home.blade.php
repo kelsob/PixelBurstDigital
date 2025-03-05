@@ -86,7 +86,7 @@
                             <div class="screen-container">
                                 <!-- Mac toolbar -->
                                 <img src="{{ asset('images/toolbar.webp') }}" alt="Mac toolbar" class="screen-layer toolbar-img w-full h-8 object-contain -mt-3.5">
-                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="absolute inset-0 top-[8%] left-[8%] w-5/6 h-[80%] object-fill">
+                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="absolute inset-0 top-[8%] left-[8%] w-5/6 h-[80.2%] object-fill">
 
                                 <!-- Main content -->
                                 <div class="screen-layer flex-1 flex items-center justify-between px-6 pr-10 py-4">
