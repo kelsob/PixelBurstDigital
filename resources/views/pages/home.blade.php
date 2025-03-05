@@ -264,7 +264,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-3xl font-extrabold text-red-800 sm:text-4xl">
+                <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-800 to-blue-400 text-transparent bg-clip-text sm:text-4xl">
                     Branding & Digital Identity
                 </h2>
                 <p class="mt-4 max-w-2xl text-xl text-red-600 lg:mx-auto">
@@ -329,7 +329,7 @@
     <!-- Why Choose Us -->
     <div class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="section-border rounded-2xl p-12 gradient-container">
+            <div class="rounded-2xl p-12 bg-gradient-to-br from-blue-800 to-green-400">
                 <div class="lg:text-center">
                     <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl">
                         Why Choose PixelCraft
