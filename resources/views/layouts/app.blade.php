@@ -23,7 +23,6 @@
         <!-- Add Alpine.js -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200">
         <!-- SVG Mask Definition -->
         <svg class="hidden">
             <defs>
@@ -34,10 +33,9 @@
         </svg>
 
         <div class="min-h-screen relative overflow-hidden">
-            @include('layouts.navigation')
             
             <!-- Page Content -->
-            <main class="pt-16 relative">
+            <main class="pt-8 relative">
                 {{ $slot }}
             </main>
         </div>
@@ -67,24 +65,29 @@
                     
                     <!-- Quick Links -->
                     <div class="text-center md:text-right">
-                        <div class="inline-flex flex-row items-center md:items-end space-x-4">
+                        <div class="flex flex-col sm:flex-row justify-center md:justify-end items-center space-y-2 sm:space-y-0 sm:space-x-2">
                             <a href="{{ route('home') }}" 
-                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                               class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
                                 <span class="relative">Home</span>
                             </a>
                             <a href="{{ route('about') }}" 
-                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                               class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
                                 <span class="relative">About</span>
                             </a>
-                            <a href="{{ route('portfolio') }}" 
-                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                            <a href="{{ route('services') }}" 
+                               class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
-                                <span class="relative">Our Work</span>
+                                <span class="relative">Services</span>
+                            </a>
+                            <a href="{{ route('portfolio') }}" 
+                               class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
+                                <span class="relative whitespace-nowrap">Our Work</span>
                             </a>
                             <a href="{{ route('contact') }}" 
-                               class="group relative px-6 py-2 text-blue-200 hover:text-white transition-all duration-300">
+                               class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
                                 <span class="relative">Contact</span>
                             </a>
@@ -95,16 +98,16 @@
                 <!-- Bottom Bar with enhanced gradients -->
                 <div class="mt-12 pt-8 border-t border-white/20 relative">
                     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-30"></div>
-                    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
                         <div>
-                            <p class="text-blue-200 text-sm">&copy; {{ date('Y') }} Pixel Burst Studio. All rights reserved.</p>
+                            <p class="text-blue-200 text-sm text-center sm:text-left">&copy; {{ date('Y') }} Pixel Burst Studio. All rights reserved.</p>
                         </div>
-                        <div class="flex space-x-6">
-                            <a href="#" class="group relative px-4 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
+                            <a href="#" class="group relative px-4 py-1 text-blue-200 hover:text-white transition-all duration-300 text-center sm:text-left">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-lg rounded-br-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
                                 <span class="relative">Privacy Policy</span>
                             </a>
-                            <a href="#" class="group relative px-4 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                            <a href="#" class="group relative px-4 py-1 text-blue-200 hover:text-white transition-all duration-300 text-center sm:text-left">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-lg rounded-br-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
                                 <span class="relative">Terms of Service</span>
                             </a>

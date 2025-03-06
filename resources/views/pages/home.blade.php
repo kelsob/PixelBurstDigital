@@ -1,4 +1,7 @@
 <x-app-layout>
+    @include('layouts.navigation')
+    <body class="font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200">
+
     <!-- Background image that scrolls with content -->
     <div class="absolute -z-20 top-0 left-0 w-full">
         <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-green.webp') }}'); background-size: 100vw 100vh;"></div>
@@ -7,12 +10,12 @@
     </div>
 
     <!-- Content Sections -->
-    <div class="relative">
+    <div class="relative pt-16">
         <!-- Hero Section -->
         <div class="min-h-[50vh] flex items-center relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                    <div class="lg:col-span-7 max-w-lg">
+                    <div class="lg:col-span-7 max-w-lg pt-8">
                         <h1 class="text-3xl tracking-tight font-extrabold sm:text-4xl">
                             <span class="block text-red-800 text-3xl">Web Design & Branding</span>
                             <span class="block text-blue-800 text-7xl mt-1">
@@ -104,7 +107,7 @@
                                     <!-- Text content with background card -->
                                     <div class="relative w-5/6 p-4 flex flex-col">
                                         <div class="relative">
-                                            <div class="screen-layer header-text-wrapper-1 absolute top-1">
+                                            <div class="screen-layer header-text-wrapper-1 absolute top-2">
                                                 <span class="font-extrabold bg-gradient-to-br from-red-200 to-green-100 text-blue-200 bg-clip-text text-[10px]">YOUR BRAND,</span>
                                             </div>
                                             <div class="screen-layer header-text-wrapper-2 absolute top-6 left-2">
@@ -113,12 +116,23 @@
                                                     <span class="relative font-bold bg-gradient-to-br from-green-200 to-blue-200 text-green-400 bg-clip-text whitespace-nowrap">Bursting to Life.</span>
                                                 </span>
                                             </div>
-                                            <h2 class="screen-layer header-box text-sm h-12 w-full font-extrabold mb-1 mt-2 text-left bg-gradient-to-br from-red-800 to-blue-600 backdrop-blur-sm rounded-lg p-2 pr-4"></h2>
-                                            <p class="screen-layer text-blurb text-[8px] font-bold text-blue-400 pl-2 pt-1 pb-2 pr-2 whitespace-nowrap">Ignite Your Digital Presence.</p>
-                                            <button class="float-right screen-layer screen-button relative text-[8px] font-bold text-white px-3 py-1 rounded-bl-lg rounded-tr-lg overflow-hidden transition-all duration-500 ease-in-out shadow-[2px_2px_0px_0px_rgba(34,197,94,0.2)] hover:shadow-[2px_2px_0px_0px_rgba(22,163,74,0.5)] hover:scale-105">
-                                                <span class="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-500 to-green-400"></span>
-                                                <span class="relative">Get Started</span>
-                                            </button>
+                                            <div class="relative mt-2">
+                                                <h2 class="screen-layer header-box text-sm h-12 w-full font-extrabold text-left bg-gradient-to-br from-red-800 to-blue-600 backdrop-blur-sm rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
+                                                <h2 class="screen-layer header-box-2 text-sm h-12 w-full font-extrabold text-left bg-gray-600 backdrop-blur-sm rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
+                                                <h2 class="screen-layer header-box-3 text-sm h-12 w-full font-extrabold text-left bg-gray-800 backdrop-blur-sm rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
+                                            </div>
+
+
+                                            <p class="screen-layer text-blurb text-[8px] font-bold text-blue-400 pl-2 pt-1 pb-2 pr-2 pt-14 whitespace-nowrap">Ignite Your Digital Presence.</p>
+                                            <div class="float-right relative">
+                                                <!-- Shadow element -->
+                                                <div class="screen-layer button-shadow absolute top-[2px] left-[2px] w-full h-full bg-[rgba(34,197,94,0.2)] rounded-bl-lg rounded-tr-lg transition-all duration-500 ease-in-out"></div>
+                                                <!-- Button element -->
+                                                <button class="screen-layer screen-button relative text-[8px] font-bold text-white px-3 py-1 rounded-bl-lg rounded-tr-lg overflow-hidden transition-all duration-500 ease-in-out hover:scale-105">
+                                                    <span class="absolute inset-0 bg-gradient-to-br from-purple-600 via-blue-500 to-green-400"></span>
+                                                    <span class="relative">Get Started</span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -155,20 +169,20 @@
                 transform-style: preserve-3d;
                 transform: rotateY(-16deg) translateZ(0px) translateY(0px);
                 will-change: transform;
-                transition: transform 1.5s ease-out;
+                transition: transform 3.0s ease-out;
             }
 
             .screen-container {
                 perspective: 800px;
                 position: relative;
                 transform-style: preserve-3d;
-                transition: transform 1.5s;
+                transition: transform 3.0s;
                 width: 100%;
                 height: 100%;
             }
 
             .screen-layer {
-                transition: transform 1.5s;
+                transition: transform 3.0s;
                 transform-style: preserve-3d;
                 transform: translateZ(10);
                 will-change: transform;
@@ -178,8 +192,13 @@
                 transform: translateZ(-48px) scale(1.05) translateX(-2px);
             }
 
+            .brand-img {
+                transition: transform 3.5s ease-out;
+
+            }
+
             .screen-container:hover .brand-img {
-                transform: translateX(-0px) translateY(0px) translateZ(120px) scale(1.0);
+                transform: translateX(-0px) translateY(0px) translateZ(160px) scale(1.0);
                 transition: transform 3.5s ease-out;
 
             }
@@ -200,15 +219,19 @@
                 transition: transform 3.0s ease-out;
             }
 
+            .screen-container:hover .button-shadow {
+                transform: translateX(0px) translateY(0px) translateZ(60px) scale(1.0);
+                transition: transform 3.0s ease-out;
+            }
 
             .screen-container:hover .decorative-box-1 {
-                transform: translateX(-6px) translateY(0px) translateZ(80px) scale(1.0);
-                transition: transform 3.5s ease-out;
+                transform: translateX(-6px) translateY(0px) translateZ(40px) scale(1.0);
+                transition: transform 2.5s ease-out;
 
             }
 
             .screen-container:hover .decorative-box-2 {
-                transform: translateX(-8px) translateY(0px) translateZ(100px) scale(1.0);
+                transform: translateX(-8px) translateY(0px) translateZ(90px) scale(1.0);
                 transition: transform 3.5s ease-out;
 
             }
@@ -217,13 +240,25 @@
                 transform: translateX(0px) translateY(0px) translateZ(120px) scale(1.0);
             }
 
+            .screen-container:hover .header-box-2 {
+                transform: translateX(0px) translateY(0px) translateZ(85px) scale(1.0);
+                transition: transform 3.5s ease-out;
+
+            }
+
+            .screen-container:hover .header-box-3 {
+                transform: translateX(0px) translateY(0px) translateZ(50px) scale(1.0);
+                transition: transform 3.5s ease-out;
+
+            }
+
             .screen-container:hover .header-text-wrapper-1 {
-                transform: translateX(0px) translateY(6px) translateZ(170px) scale(1.0);
+                transform: translateX(0px) translateY(0px) translateZ(166px) scale(1.0);
                 transition: transform 3.5s ease-out;
             }
 
             .screen-container:hover .header-text-wrapper-2 {
-                transform: translateX(0px) translateY(3px) translateZ(170px) scale(1.0);
+                transform: translateX(0px) translateY(0px) translateZ(165px) scale(1.0);
                 transition: transform 3.5s ease-out;
             }
 
@@ -234,7 +269,7 @@
             }
 
             .header-text-wrapper-1 {
-                transform: translateX(0) translateY(0) translateZ(0px);
+                transform: translateX(0) translateY(0) translateZ(1px);
                 transition: transform 4.5s ease-out;
                 z-index: 2;
                 display: inline-block;
@@ -384,7 +419,7 @@
     </div>
 
     <!-- Why Choose Us -->
-    <div class="py-12">
+    <div class="py-4 pb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="rounded-2xl p-12 bg-gradient-to-br from-blue-800 to-green-400">
                 <div class="lg:text-center">
@@ -396,9 +431,9 @@
                     </p>
                 </div>
 
-                <div class="mt-8">
+                <div class="mt-4">
                     <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                        <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[-4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[-6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                        <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 text-white">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -414,7 +449,7 @@
                             </div>
                         </div>
 
-                        <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                        <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[-4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[-6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 text-white">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

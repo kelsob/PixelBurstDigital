@@ -21,7 +21,7 @@
                     <x-nav-link href="/services" :active="request()->is('services')">
                         {{ __('Services') }}
                     </x-nav-link>
-                    <x-nav-link href="/our-work" :active="request()->is('our-work')">
+                    <x-nav-link href="/portfolio" :active="request()->is('portfolio')">
                         {{ __('Our Work') }}
                     </x-nav-link>
                     <x-nav-link href="/contact" :active="request()->is('contact')">
