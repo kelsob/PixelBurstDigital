@@ -33,13 +33,6 @@
             </defs>
         </svg>
 
-        <!-- Background image that scrolls with content -->
-        <div class="absolute -z-20 top-0 left-0 w-full">
-            <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-green.webp') }}'); background-size: 100vw 100vh;"></div>
-            <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-blue.webp') }}'); background-size: 100vw 100vh;"></div>
-            <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
-        </div>
-
         <div class="min-h-screen relative overflow-hidden">
             @include('layouts.navigation')
             
