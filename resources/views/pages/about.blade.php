@@ -31,11 +31,11 @@
                             <div class="text-base font-bold text-blue-400">Lead Developer</div>
                             <p class="text-sm text-blue-100">Full-stack developer focused on building modern, high-performance websites from scratch using the latest frameworks, tailored to each client's unique needs.</p>
                             <div class="flex space-x-4 pt-2">
-                                <a href="https://github.com/bkdev98" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                                <a href="https://github.com/kelsob" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                                     <span class="relative">GitHub</span>
                                 </a>
-                                <a href="https://linkedin.com/in/benkelso" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                                <a href="https://www.linkedin.com/in/ben-kelso-1040ab330/" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                                     <span class="relative">LinkedIn</span>
                                 </a>
@@ -57,11 +57,11 @@
                             <div class="text-base font-bold text-green-400">Creative Director</div>
                             <p class="text-sm text-blue-100">Branding strategist with experience in 3D product visualization, photography, videography, animation, and logo design helps bring brands to life through clear, engaging visuals.</p>
                             <div class="flex space-x-4 pt-2">
-                                <a href="https://bsky.app/profile/chrisfast.bsky.social" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                                <a href="https://www.youtube.com/@chrisfastmedia" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                                    <span class="relative">Bluesky</span>
+                                    <span class="relative">Youtube</span>
                                 </a>
-                                <a href="https://linkedin.com/in/chrisfast" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
+                                <a href="https://www.linkedin.com/in/chrisfastmedia/" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                                     <span class="relative">LinkedIn</span>
                                 </a>

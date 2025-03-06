@@ -424,7 +424,7 @@
             <div class="rounded-2xl p-12 bg-gradient-to-br from-blue-800 to-green-400">
                 <div class="lg:text-center">
                     <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl">
-                        Why Choose PixelCraft
+                        Why Choose Pixel Burst
                     </h2>
                     <p class="mt-4 max-w-2xl text-lg font-bold text-red-200 lg:mx-auto">
                         Small team, big impact. We bring enterprise-level expertise with startup agility.
