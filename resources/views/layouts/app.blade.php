@@ -23,6 +23,7 @@
         <!-- Add Alpine.js -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
+    <body class="min-h-screen">
         <!-- SVG Mask Definition -->
         <svg class="hidden">
             <defs>
@@ -32,15 +33,9 @@
             </defs>
         </svg>
 
-        <div class="min-h-screen relative overflow-hidden">
-            
-            <!-- Page Content -->
-            <main class="pt-8 relative">
-                {{ $slot }}
-            </main>
-        </div>
+        {{ $slot }}
 
-        <footer class="relative overflow-hidden">
+        <footer class="relative">
             <!-- Enhanced layered background with multiple gradients -->
             <div class="absolute inset-0">
                 <!-- Primary gradient layer -->
@@ -82,7 +77,7 @@
                                 <span class="relative">Services</span>
                             </a>
                             <a href="{{ route('portfolio') }}" 
-                               class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
+                               class="hidden group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
                                 <span class="relative whitespace-nowrap">Our Work</span>
                             </a>

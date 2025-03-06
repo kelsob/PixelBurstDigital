@@ -1,6 +1,6 @@
 <x-app-layout>
     @include('layouts.navigation')
-    <body class="font-sans antialiased bg-gradient-to-br from-blue-200 via-gray-100 via-green-200 via-gray-100 to-red-200">
+    <div class="fixed inset-0 -z-10 h-screen font-sans antialiased bg-gradient-to-br from-blue-200 via-gray-100 via-green-200"></div>
 
     <!-- Page-specific background images -->
     <div class="absolute -z-20 top-0 left-0 w-full">

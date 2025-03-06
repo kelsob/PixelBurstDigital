@@ -1,6 +1,6 @@
 <x-app-layout>
     @include('layouts.navigation')
-    <body class="font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200">
+    <div class="fixed inset-0 -z-10 h-screen font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200"></div>
 
     <!-- Background image that scrolls with content -->
     <div class="absolute -z-20 top-0 left-0 w-full">
@@ -71,7 +71,7 @@
                                 animation: float-fast 8s ease-in-out infinite;
                             }
                         </style>
-                        <div class="mt-6 sm:flex sm:justify-center gap-x-6 lg:justify-start">
+                        <div class="mt-6 flex justify-end pr-12">
                             <div class="rounded-md">
                                 <a href="{{ route('services') }}" 
                                    class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:-translate-x-0.5 hover:-translate-y-0.5">
@@ -80,8 +80,8 @@
                                     <span class="relative">Explore Services</span>
                                 </a>
                             </div>
-                            <div class="rounded-md">
-                                <a href="{{ route('services') }}" 
+                            <div class="hidden rounded-md">
+                                <a href="{{ route('portfolio') }}" 
                                    class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-br-lg rounded-tl-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
                                     <span class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-600"></span>
                                     <span class="absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
