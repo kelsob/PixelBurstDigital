@@ -5,7 +5,6 @@
     <!-- Page-specific background images -->
     <div class="absolute -z-20 top-0 left-0 w-full">
         <div class="w-full h-screen bg-cover bg-center opacity-80" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
-        <div class="w-full h-screen bg-cover bg-center opacity-60" style="background-image: url('{{ asset('images/gradient-bg-green.webp') }}'); background-size: 100vw 100vh;"></div>
     </div>
 
     <div class="relative overflow-hidden pl-4 pt-12">
