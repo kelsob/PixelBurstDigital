@@ -197,98 +197,120 @@
 
             }
 
-            .screen-container:hover .brand-img {
+            .screen-container .brand-img {
                 transform: translateX(-0px) translateY(0px) translateZ(160px) scale(1.0);
-                transition: transform 3.5s ease-out;
-
+                animation: brandImgAnimation 18s ease-in-out infinite;
             }
-            .screen-container:hover .dock-img {
-                transform: translateX(0px) translateZ(10px);
+            .screen-container .dock-img {
+                animation: dockImgAnimation 18s ease-in-out infinite;
             }
-            .screen-container:hover .toolbar-img {
-                transform: translateX(0px) translateY(-0px) translateZ(10px) scale(1.0);
+            .screen-container .toolbar-img {
+                animation: toolbarImgAnimation 18s ease-in-out infinite;
             }
-
-            .screen-container:hover .chrome-img {
-                transform: translateX(0px) translateY(0px) translateZ(30px) scale(1.0);
-                transition: transform 2.5s ease-out;
+            .screen-container .chrome-img {
+                animation: chromeImgAnimation 18s ease-in-out infinite;
             }
-
-            .screen-container:hover .screen-button {
-                transform: translateX(-20px) translateY(0px) translateZ(80px) scale(1.0);
-                transition: transform 3.0s ease-out;
+            .screen-container .screen-button {
+                animation: screenButtonAnimation 18s ease-in-out infinite;
             }
-
-            .screen-container:hover .button-shadow {
-                transform: translateX(0px) translateY(0px) translateZ(60px) scale(1.0);
-                transition: transform 3.0s ease-out;
+            .screen-container .button-shadow {
+                animation: buttonShadowAnimation 18s ease-in-out infinite;
             }
-
-            .screen-container:hover .decorative-box-1 {
-                transform: translateX(-6px) translateY(0px) translateZ(40px) scale(1.0);
-                transition: transform 2.5s ease-out;
-
+            .screen-container .decorative-box-1 {
+                animation: decorativeBox1Animation 18s ease-in-out infinite;
             }
-
-            .screen-container:hover .decorative-box-2 {
-                transform: translateX(-8px) translateY(0px) translateZ(90px) scale(1.0);
-                transition: transform 3.5s ease-out;
-
+            .screen-container .decorative-box-2 {
+                animation: decorativeBox2Animation 18s ease-in-out infinite;
             }
-
-            .screen-container:hover .header-box {
-                transform: translateX(0px) translateY(0px) translateZ(120px) scale(1.0);
+            .screen-container .header-box {
+                animation: headerBoxAnimation 18s ease-in-out infinite;
             }
-
-            .screen-container:hover .header-box-2 {
-                transform: translateX(0px) translateY(0px) translateZ(85px) scale(1.0);
-                transition: transform 3.5s ease-out;
-
+            .screen-container .header-box-2 {
+                animation: headerBox2Animation 18s ease-in-out infinite;
+            }
+            .screen-container .header-box-3 {
+                animation: headerBox3Animation 18s ease-in-out infinite;
+            }
+            .screen-container .header-text-wrapper-1 {
+                animation: headerTextWrapper1Animation 18s ease-in-out infinite;
+            }
+            .screen-container .header-text-wrapper-2 {
+                animation: headerTextWrapper2Animation 18s ease-in-out infinite;
+            }
+            .screen-container .text-blurb {
+                animation: textBlurbAnimation 18s ease-in-out infinite;
             }
 
-            .screen-container:hover .header-box-3 {
-                transform: translateX(0px) translateY(0px) translateZ(50px) scale(1.0);
-                transition: transform 3.5s ease-out;
-
+            /* Define the keyframe animations */
+            @keyframes brandImgAnimation {
+                0%, 100% { transform: translateX(-0px) translateY(0px) translateZ(3px) scale(1.0); }
+                50% { transform: translateX(-0px) translateY(0px) translateZ(160px) scale(1.0); }
             }
 
-            .screen-container:hover .header-text-wrapper-1 {
-                transform: translateX(0px) translateY(0px) translateZ(166px) scale(1.0);
-                transition: transform 3.5s ease-out;
+            @keyframes dockImgAnimation {
+                0%, 100% { transform: translateX(0px) translateZ(0px); }  
+                50% { transform: translateX(0px) translateZ(10px); }
             }
 
-            .screen-container:hover .header-text-wrapper-2 {
-                transform: translateX(0px) translateY(0px) translateZ(165px) scale(1.0);
-                transition: transform 3.5s ease-out;
+            @keyframes toolbarImgAnimation {
+                0%, 100% { transform: translateX(0px) translateY(-0px) translateZ(0px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(-0px) translateZ(10px) scale(1.0); } 
             }
 
-            .screen-container:hover .text-blurb {
-                transform: translateX(0px) translateY(0px) translateZ(120px) scale(1.0);
-                transition: transform 3.0s ease-out;
-
+            @keyframes chromeImgAnimation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(0px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(30px) scale(1.0); }
             }
 
-            .header-text-wrapper-1 {
-                transform: translateX(0) translateY(0) translateZ(1px);
-                transition: transform 4.5s ease-out;
-                z-index: 2;
-                display: inline-block;
-                text-align: right;
-                right: 8px;
+            @keyframes screenButtonAnimation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(0px) scale(1.0); }
+                50% { transform: translateX(-20px) translateY(0px) translateZ(80px) scale(1.0); }
             }
 
-            .header-text-wrapper-2 {
-                transform: translateX(0) translateY(0px) translateZ(0px);
-                transition: transform 3.0s ease-out; 
-                z-index: 2;
+            @keyframes buttonShadowAnimation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(0px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(60px) scale(1.0); }
             }
 
-            .header-box {
-                transform: translateX(0) translateY(0) translateZ(0);
-                transition: transform 3.0s ease-out;
-                z-index: 1;
+            @keyframes decorativeBox1Animation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(1px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(40px) scale(1.0); }
             }
 
+            @keyframes decorativeBox2Animation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(2px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(90px) scale(1.0); }
+            }
+
+            @keyframes headerBoxAnimation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(1px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(120px) scale(1.0); }
+            }
+
+            @keyframes headerBox2Animation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(0px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(85px) scale(1.0); }
+            }
+
+            @keyframes headerBox3Animation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(0px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(50px) scale(1.0); }
+            }
+
+            @keyframes headerTextWrapper1Animation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(3px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(166px) scale(1.0); }
+            }
+
+            @keyframes headerTextWrapper2Animation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(2px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(165px) scale(1.0); }
+            }
+
+            @keyframes textBlurbAnimation {
+                0%, 100% { transform: translateX(0px) translateY(0px) translateZ(0px) scale(1.0); }
+                50% { transform: translateX(0px) translateY(0px) translateZ(120px) scale(1.0); }
+            }
 
             /* Add transform-style: preserve-3d to the inner relative div */
             .relative {
