@@ -1,6 +1,6 @@
 <x-app-layout>
     @include('layouts.navigation')
-    <div class="fixed inset-0 -z-10 h-screen font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200"></div>
+    <div class="fixed inset-0 -z-40 h-screen font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200"></div>
 
     <!-- Background image that scrolls with content -->
     <div class="absolute -z-20 top-0 left-0 w-full">
@@ -10,7 +10,7 @@
     </div>
 
     <!-- Content Sections -->
-    <div class="relative pt-16">
+    <div class="relative pt-12">
         <!-- Hero Section -->
         <div class="min-h-[50vh] flex items-center relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">

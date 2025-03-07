@@ -4,8 +4,11 @@
             <div class="flex justify-between flex-1">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="/">
+                    <a href="/" class="pl-0 pt-2">
                         <x-application-logo class="block h-16 w-auto fill-current text-deep-red" />
+
+                        <div class="absolute -z-30 -bottom-8 left-16 transform -translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl"></div>
+
                     </a>
                 </div>
 
@@ -26,16 +29,21 @@
                     <x-nav-link href="/contact" :active="request()->is('contact')">
                         {{ __('Contact') }}
                     </x-nav-link>
+                    <div class="absolute -z-30 bottom-0 right-[312px] transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl"></div>
+                    <div class="absolute -z-30 -bottom-8 -right-0 transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-red-500/100 rounded-full blur-xl"></div>
                 </div>
             </div>
 
             <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
+            <div class="-me-2 flex items-center sm:hidden pr-2 pt-2">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-blue-900 hover:text-pastel-red hover:bg-deep-red/5 focus:outline-none transition duration-150 ease-in-out">
                     <svg class="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
+
+                <div class="absolute -z-30 bottom-0 right-[312px] transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl"></div>
+                <div class="absolute -z-30 -bottom-8 -right-0 transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-red-500/100 rounded-full blur-xl"></div>
             </div>
         </div>
     </div>

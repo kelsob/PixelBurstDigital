@@ -8,7 +8,7 @@
         <div class="w-full h-screen bg-cover bg-center opacity-60" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
     </div>
 
-    <div class="relative overflow-hidden pl-4">
+    <div class="relative overflow-hidden pl-4 pt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center pt-4">
                 <h1 class="text-4xl font-extrabold bg-gradient-to-br from-blue-400 to-green-600 bg-clip-text text-transparent sm:text-5xl md:text-6xl">
@@ -20,14 +20,14 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8 max-w-5xl mx-auto">
                 <!-- Ben Kelso -->
                 <div class="relative bg-gradient-to-br from-blue-600 to-red-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
-                    <div class="bg-gradient-to-br from-green-900 to-blue-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
+                    <div class="h-full bg-gradient-to-br from-green-900 to-blue-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="aspect-w-16 aspect-h-9 mb-4">
                             <img class="object-cover w-full h-[200px] rounded-tr-lg rounded-bl-lg" 
                                  src="{{ asset('images/benkelso.jpg') }}"
                                  alt="Ben Kelso">
                         </div>
                         <div class="space-y-2">
-                            <h2 class="text-xl font-extrabold bg-gradient-to-br from-blue-200 to-green-200 bg-clip-text text-transparent">Ben Kelso</h2>
+                            <h2 class="h-full text-xl font-extrabold bg-gradient-to-br from-blue-200 to-green-200 bg-clip-text text-transparent">Ben Kelso</h2>
                             <div class="text-base font-bold text-blue-400">Lead Developer</div>
                             <p class="text-sm text-blue-100">Full-stack developer focused on building modern, high-performance websites from scratch using the latest frameworks, tailored to each client's unique needs.</p>
                             <div class="flex space-x-4 pt-2">
