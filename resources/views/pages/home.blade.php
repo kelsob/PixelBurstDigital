@@ -24,7 +24,7 @@
                         </h1>
                         <p class="mt-2 text-xl font-bold text-blue-900 max-w-lg">
                             Comprehensive digital solutions - from websites to branding, marketing to design.
-                            Your one-stop digital partner for growth and success.
+                            Pixel Burst is your one-stop digital partner for growth and success.
                         </p> 
 
                         <!-- Floating SVGs -->
@@ -477,12 +477,13 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="mt-4 text-right">
+
+                    </div>
+                    <div class="mt-4 text-right">
                         <a href="{{ route('about') }}" 
                            class="inline-block px-6 py-2 bg-gradient-to-br from-red-200 to-green-200 text-blue-900 text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(239,68,68,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.3)] hover:from-red-100 hover:to-green-100 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5">
                             Learn More About Us →
                         </a>
-                    </div>
                     </div>
                 </div>
             </div>

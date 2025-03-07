@@ -5,7 +5,6 @@
     <!-- Page-specific background images -->
     <div class="absolute -z-20 top-0 left-0 w-full">
         <div class="w-full h-screen bg-cover bg-center opacity-80" style="background-image: url('{{ asset('images/gradient-bg-blue.webp') }}'); background-size: 100vw 100vh;"></div>
-        <div class="w-full h-screen bg-cover bg-center opacity-60" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
     </div>
 
     <div class="relative overflow-hidden pl-4 pt-12">
@@ -22,7 +21,7 @@
                 <div class="relative bg-gradient-to-br from-blue-600 to-red-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
                     <div class="h-full bg-gradient-to-br from-green-900 to-blue-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img class="object-cover w-full h-[200px] rounded-tr-lg rounded-bl-lg" 
+                            <img class="object-contain w-full h-[200px] rounded-tr-lg rounded-bl-lg=" 
                                  src="{{ asset('images/benkelso.jpg') }}"
                                  alt="Ben Kelso">
                         </div>
@@ -48,7 +47,7 @@
                 <div class="relative bg-gradient-to-br from-green-600 to-blue-600 p-1 rounded-tl-[2rem] rounded-br-[2rem] shadow-[6px_6px_0px_0px_rgba(5,150,105,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(59,130,246,0.4)] transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1">
                     <div class="bg-gradient-to-br from-red-900 to-blue-900 p-4 rounded-tl-[1.9rem] rounded-br-[1.9rem]">
                         <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img class="object-cover w-full h-[200px] rounded-tl-lg rounded-br-lg" 
+                            <img class="object-contain w-full h-[200px] rounded-tl-lg rounded-br-lg" 
                                  src="{{ asset('images/chrisfast.jpg') }}"
                                  alt="Chris Fast">
                         </div>
@@ -59,7 +58,7 @@
                             <div class="flex space-x-4 pt-2">
                                 <a href="https://www.youtube.com/@chrisfastmedia" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                                    <span class="relative">Youtube</span>
+                                    <span class="relative">YouTube</span>
                                 </a>
                                 <a href="https://www.linkedin.com/in/chrisfastmedia/" target="_blank" class="group relative px-3 py-1 text-blue-200 hover:text-white transition-all duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
@@ -77,12 +76,8 @@
                     <div class="bg-gradient-to-br from-green-800 via-blue-800 to-green-800 p-8 rounded-tl-[1.9rem] rounded-br-[1.9rem]">
                         <h2 class="text-3xl font-extrabold bg-gradient-to-br from-green-200 to-blue-200 bg-clip-text text-transparent mb-6">The Small Team Advantage</h2>
                         <div class="space-y-6">
-                            <p class="text-lg text-blue-100">
-                                Our lean team structure isn't just about efficiency—it's about delivering better results for our clients. 
-                                With direct access to decision-makers and no bureaucratic layers, we can move quickly from concept to execution 
-                                while maintaining the highest standards of quality.
-                            </p>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
                                 <div class="bg-gradient-to-br from-green-400/90 to-emerald-500/90 rounded-2xl rounded-br-3xl p-6 shadow-lg shadow-emerald-500/20 transform hover:scale-105 transition-all duration-300">
                                     <h3 class="text-xl font-bold text-white mb-3">Rapid Development</h3>
                                     <p class="text-white/90">Small teams mean faster decisions and quicker iterations. We move fast without sacrificing quality.</p>
