@@ -28,22 +28,22 @@
                         </p> 
 
                         <!-- Floating SVGs -->
-                        <div class="absolute top-20 right-[65%] animate-float-fast">
+                        <div class="hidden lg:block absolute top-28 lg:top-20 right-[35%] lg:right-[65%] animate-float-fast">
                             <svg class="w-5 h-5 text-blue-700 opacity-100" fill="currentColor" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="12"/>
                             </svg>
                         </div>
-                        <div class="absolute top-6 right-[53%] animate-float-fast">
+                        <div class="hidden lg:block absolute top-20 lg:top-6 right-[25%] lg:right-[53%] animate-float-fast">
                             <svg class="w-14 h-14 text-green-500 opacity-75" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="5"/>
                             </svg>
                         </div>
-                        <div class="absolute top-4 right-[34%] animate-float-fast">
+                        <div class="hidden lg:block absolute top-14 right-[14%] lg:right-[34%] animate-float-fast">
                             <svg class="w-24 h-24 text-red-600 opacity-50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 40 40">
                                 <circle cx="12" cy="12" r="10"/>
                             </svg>
                         </div>
-                        <div class="absolute -top-24 right-[0%] animate-float-fast">
+                        <div class="hidden lg:block absolute -top-24 right-[0%] lg:right-[0%] animate-float-fast">
                             <svg class="w-48 h-48 text-blue-800 opacity-15" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="45"/>
                             </svg>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="perspective-container group block relative lg:mt-0 mt-8">
+                    <div class="scale-75 lg:scale-100 ml-12 lg:ml-0 perspective-container group block relative lg:mt-0 mt-8">
                         <!-- Base iMac Image -->
                         <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         
@@ -108,7 +108,7 @@
                                     <div class="relative w-5/6 p-4 flex flex-col">
                                         <div class="relative">
                                             <div class="screen-layer header-text-wrapper-1 absolute top-2">
-                                                <span class="font-extrabold bg-gradient-to-br from-red-200 to-green-100 text-blue-200 bg-clip-text text-[10px]">YOUR BRAND,</span>
+                                                <span class="font-extrabold bg-gradient-to-br from-red-200 to-green-100 text-blue-400 bg-clip-text text-[10px]">YOUR BRAND,</span>
                                             </div>
                                             <div class="screen-layer header-text-wrapper-2 absolute top-6 left-2">
                                                 <span class="relative inline-block animate-pulse">
