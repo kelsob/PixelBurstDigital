@@ -2,8 +2,8 @@
 
 @php
 $classes = ($active ?? false)
-            ? 'whitespace-nowrap inline-flex text-blue-900 hover:text-pastel-red text-[10px] font-bold transition-all duration-200'
-            : 'whitespace-nowrap inline-flex text-blue-900 hover:text-pastel-red text-[10px] font-bold transition-all duration-200';
+            ? 'whitespace-nowrap inline-flex text-white hover:text-pastel-red text-[10px] font-bold transition-all duration-200'
+            : 'whitespace-nowrap inline-flex text-white hover:text-pastel-red text-[10px] font-bold transition-all duration-200';
 @endphp
 
 <a {{ $attributes->merge(['class' => $classes]) }}>

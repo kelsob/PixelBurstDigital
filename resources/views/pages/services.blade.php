@@ -72,7 +72,7 @@
                         </div>
                         <div class="lg:w-1/3 flex items-center justify-center">
                             <div class="relative group">
-                                <div class="absolute -inset-1 blur-lg bg-gradient-to-tl from-blue-400 to-green-400 rounded-xl blur-2xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                                <div class="absolute -inset-1 blur-lg rounded-xl blur-4xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                                 <img src="{{ asset('images/toolbox.webp') }}" 
                                      alt="Web Design Illustration" 
                                      class="relative w-full max-w-md transform transition duration-500 group-hover:scale-[1.03] drop-shadow-xl">
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="lg:w-1/3 flex items-center justify-center relative group">
-                            <div class="absolute -inset-1 blur-lg bg-gradient-to-tl from-blue-400 to-red-400 rounded-xl blur-2xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <div class="absolute -inset-1 blur-lg rounded-xl blur-2xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                             <img src="{{ asset('images/polaroid.webp') }}" 
                                 alt="Branding Illustration" 
                                 class="relative w-full max-w-md transform transition duration-500 group-hover:scale-[1.03] drop-shadow-xl">
@@ -163,7 +163,7 @@
                             </div>
                         </div>
                         <div class="relative group">
-                            <div class="absolute -inset-1 blur-lg bg-gradient-to-tl from-purple-400 to-indigo-400 rounded-xl blur-2xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <div class="absolute -inset-1 blur-lg rounded-xl blur-2xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                             <img src="{{ asset('images/joystick.webp') }}" 
                                  alt="Custom Solutions" 
                                  class="relative transform transition duration-500 group-hover:scale-[1.03] drop-shadow-xl">

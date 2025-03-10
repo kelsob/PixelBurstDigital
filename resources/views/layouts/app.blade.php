@@ -52,9 +52,12 @@
                     <div class="flex flex-col items-center md:items-start space-y-6">
                         <div class="group relative transform transition-all duration-300 hover:scale-105">
                             <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                            <img src="{{ asset('images/pixelburst-logo.webp') }}" 
+                            <img src="{{ asset('images/pixelburst-logo-white-vertical.webp') }}" 
                                  alt="Pixel Burst Studio" 
-                                 class="relative h-12 w-auto">
+                                 class="relative h-12 w-auto md:hidden">
+                            <img src="{{ asset('images/pixelburst-logo-white.webp') }}"
+                                 alt="Pixel Burst Studio"
+                                 class="relative h-12 w-auto hidden md:block">
                         </div>
                     </div>
                     

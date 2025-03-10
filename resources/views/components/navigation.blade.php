@@ -26,7 +26,7 @@
 
                 @foreach($links as $key => $link)
                     <a href="{{ $link[0] }}" 
-                       class="nav-link relative mx-2 px-3 py-1.5 rounded-md text-sm font-semibold tracking-wide transition-colors duration-200 {{ $currentRoute === $key ? 'text-white' : 'text-gray-300 hover:text-white' }}"
+                       class="nav-link relative mx-2 px-3 py-1.5 rounded-md text-sm font-semibold tracking-wide transition-colors duration-200 {{ $currentRoute === $key ? 'text-white' : 'text-white hover:text-white' }}"
                        data-active="{{ $currentRoute === $key ? 'true' : 'false' }}">
                         {{ $link[1] }}
                     </a>
