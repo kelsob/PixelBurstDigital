@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>PixelBurst Studio - Digital Solutions</title>
+        <title>PixelBurst Digital - Digital Solutions</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.webp') }}">
@@ -53,10 +53,10 @@
                         <div class="group relative transform transition-all duration-300 hover:scale-105">
                             <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                             <img src="{{ asset('images/pixelburst-logo-white-vertical.webp') }}" 
-                                 alt="Pixel Burst Studio" 
+                                 alt="Pixel Burst Digital" 
                                  class="relative h-12 w-auto md:hidden">
                             <img src="{{ asset('images/pixelburst-logo-white.webp') }}"
-                                 alt="Pixel Burst Studio"
+                                 alt="Pixel Burst Digital"
                                  class="relative h-12 w-auto hidden md:block">
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                     <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-30"></div>
                     <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
                         <div>
-                            <p class="text-blue-200 text-sm text-center sm:text-left">&copy; {{ date('Y') }} Pixel Burst Studio. All rights reserved.</p>
+                            <p class="text-blue-200 text-sm text-center sm:text-left">&copy; {{ date('Y') }} Pixel Burst Digital. All rights reserved.</p>
                         </div>
                         <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
                             <a href="#" class="group relative px-4 py-1 text-blue-200 hover:text-white transition-all duration-300 text-center sm:text-left">

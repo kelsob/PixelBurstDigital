@@ -41,8 +41,7 @@
 
                 <!-- Hamburger -->
                 <div class="-me-2 flex items-center sm:hidden">
-                    <button @click="mobileMenuOpen = ! mobileMenuOpen" 
-                            @@click="$mobileMenuOpen = ! $mobileMenuOpen"
+                    <button onclick="toggleMobileMenu()" 
                             class="relative p-2 rounded-lg group transition-all duration-300">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                         <svg class="h-8 w-8 text-white transition-colors duration-300" 
@@ -68,80 +67,70 @@
         </div>
 
         <!-- Mobile menu -->
-        @if ($mobileMenuOpen)
-            <div x-show="mobileMenuOpen" 
-                 x-transition:enter="transition ease-out duration-200"
-                 x-transition:enter-start="opacity-0"
-                 x-transition:enter-end="opacity-100"
-                 x-transition:leave="transition ease-in duration-150"
-                 x-transition:leave-start="opacity-100"
-                 x-transition:leave-end="opacity-0"
-                 class="fixed inset-0 z-40">
-                <!-- Gradient background with blur -->
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-green-800">
+        <div id="mobileMenu" class="fixed inset-0 z-40 hidden">
+            <!-- Gradient background with blur -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-green-800">
+            </div>
+            
+            <!-- Content -->
+            <div class="relative h-full flex flex-col justify-center px-6">
+                <!-- Close button -->
+                <div class="absolute top-6 right-6 z-[60]">
+                    <button onclick="toggleMobileMenu()" 
+                            class="p-2 rounded-lg group relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                        <svg class="relative h-8 w-8 text-white group-hover:text-white/90 transition-colors duration-200" 
+                             stroke="currentColor" 
+                             fill="none" 
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" 
+                                  stroke-linejoin="round" 
+                                  stroke-width="2" 
+                                  d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
                 
-                <!-- Content -->
-                <div class="relative h-full flex flex-col justify-center px-6">
-                    <!-- Close button -->
-                    <div class="absolute top-6 right-6 z-[60]">
-                        <button @click="mobileMenuOpen = false" 
-                                @@click="$mobileMenuOpen = false"
-                                class="p-2 rounded-lg group relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                            <svg class="relative h-8 w-8 text-white group-hover:text-white/90 transition-colors duration-200" 
-                                 stroke="currentColor" 
-                                 fill="none" 
-                                 viewBox="0 0 24 24">
-                                <path stroke-linecap="round" 
-                                      stroke-linejoin="round" 
-                                      stroke-width="2" 
-                                      d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <!-- Navigation links -->
-                    <nav class="space-y-8 relative z-50">
-                        <a href="/" 
-                           @click="mobileMenuOpen = false"
-                           class="block group relative">
-                            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                            <div class="relative px-6 py-3 text-center">
-                                <span class="block text-2xl font-semibold text-white">Home</span>
-                            </div>
-                        </a>
-                        <a href="/about" 
-                           @click="mobileMenuOpen = false"
-                           class="block group relative">
-                            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                            <div class="relative px-6 py-3 text-center">
-                                <span class="block text-2xl font-semibold text-white">About</span>
-                            </div>
-                        </a>
-                        <a href="/services" 
-                           @click="mobileMenuOpen = false"
-                           class="block group relative">
-                            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                            <div class="relative px-6 py-3 text-center">
-                                <span class="block text-2xl font-semibold text-white">Services</span>
-                            </div>
-                        </a>
-                        <a href="/contact" 
-                           @click="mobileMenuOpen = false"
-                           class="block group relative">
-                            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                            <div class="relative px-6 py-3 text-center">
-                                <span class="block text-2xl font-semibold text-white">Contact</span>
-                            </div>
-                        </a>
-                    </nav>
-                    
-                    <!-- Decorative elements -->
-                    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-500/5 to-transparent"></div>
-                </div>
+                <!-- Navigation links -->
+                <nav class="space-y-8 relative z-50">
+                    <a href="/" 
+                       @click="mobileMenuOpen = false"
+                       class="block group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                        <div class="relative px-6 py-3 text-center">
+                            <span class="block text-2xl font-semibold text-white">Home</span>
+                        </div>
+                    </a>
+                    <a href="/about" 
+                       @click="mobileMenuOpen = false"
+                       class="block group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                        <div class="relative px-6 py-3 text-center">
+                            <span class="block text-2xl font-semibold text-white">About</span>
+                        </div>
+                    </a>
+                    <a href="/services" 
+                       @click="mobileMenuOpen = false"
+                       class="block group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                        <div class="relative px-6 py-3 text-center">
+                            <span class="block text-2xl font-semibold text-white">Services</span>
+                        </div>
+                    </a>
+                    <a href="/contact" 
+                       @click="mobileMenuOpen = false"
+                       class="block group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                        <div class="relative px-6 py-3 text-center">
+                            <span class="block text-2xl font-semibold text-white">Contact</span>
+                        </div>
+                    </a>
+                </nav>
+                
+                <!-- Decorative elements -->
+                <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-500/5 to-transparent"></div>
             </div>
-        @endif
+        </div>
     </div>
 
     <!-- Spacer -->
@@ -157,3 +146,10 @@
         transform: translateY(-20px);
     }
 </style>
+
+<script>
+    function toggleMobileMenu() {
+        var mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.toggle('hidden');
+    }
+</script>

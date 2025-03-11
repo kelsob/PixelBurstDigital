@@ -12,38 +12,38 @@
     <!-- Content Sections -->
     <div class="relative pt-24">
         <!-- Hero Section -->
-        <div class="min-h-[50vh] flex items-center relative">
+        <div class="min-h-[50vh] sm:max-w-[80vw] md:max-w-[100vw] flex items-center relative">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                    <div class="lg:col-span-7 max-w-lg pt-8">
-                        <h1 class="text-3xl tracking-tight font-extrabold sm:text-4xl">
-                            <span class="block text-red-800 text-3xl">Web Design & Branding</span>
-                            <span class="block text-blue-800 text-7xl mt-1">
+                <div class="grid grid-cols-1 sm:grid-cols-12 gap-0">
+                    <div class="sm:col-span-7 max-w-lg sm:max-w-none pt-8">
+                        <h1 class="text-3xl tracking-tight font-extrabold sm:text-3xl md:text-4xl">
+                            <span class="block text-red-800 text-2xl sm:text-xl">Web Design & Branding</span>
+                            <span class="block text-blue-800 text-4xl sm:text-5xl mt-1">
                                 <span class="bg-gradient-to-br from-blue-700 to-green-700 font-bold text-transparent bg-clip-text">Refined</span><span class="text-red-800">.</span>
                             </span>
                         </h1>
-                        <p class="mt-2 text-xl font-bold text-blue-900 max-w-lg">
+                        <p class="mt-2 sm:text-xs md:text-sm lg:text-md font-bold text-blue-900 max-w-lg">
                             Comprehensive digital solutions - from websites to branding, marketing to design.
                             Pixel Burst is your one-stop digital partner for growth and success.
                         </p> 
 
                         <!-- Floating SVGs -->
-                        <div class="hidden lg:block absolute top-28 lg:top-20 right-[35%] lg:right-[65%] animate-float-fast">
+                        <div class="hidden sm:block absolute top-28 sm:top-20 right-[35%] sm:right-[65%] animate-float-fast">
                             <svg class="w-5 h-5 text-blue-700 opacity-100" fill="currentColor" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="12"/>
                             </svg>
                         </div>
-                        <div class="hidden lg:block absolute top-20 lg:top-6 right-[25%] lg:right-[53%] animate-float-fast">
+                        <div class="hidden sm:block absolute top-20 sm:top-6 right-[25%] sm:right-[53%] animate-float-fast">
                             <svg class="w-14 h-14 text-green-500 opacity-75" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="5"/>
                             </svg>
                         </div>
-                        <div class="hidden lg:block absolute top-14 right-[14%] lg:right-[34%] animate-float-fast">
+                        <div class="hidden sm:block absolute top-14 right-[14%] sm:right-[34%] animate-float-fast">
                             <svg class="w-24 h-24 text-red-600 opacity-50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 40 40">
                                 <circle cx="12" cy="12" r="10"/>
                             </svg>
                         </div>
-                        <div class="hidden lg:block absolute -top-24 right-[0%] lg:right-[0%] animate-float-fast">
+                        <div class="hidden sm:block absolute -top-24 right-[0%] sm:right-[0%] animate-float-fast">
                             <svg class="w-48 h-48 text-blue-800 opacity-15" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="45"/>
                             </svg>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="scale-75 lg:scale-100 ml-12 lg:ml-0 perspective-container group block relative lg:mt-0 mt-8">
+                    <div class="sm:col-span-5 scale-75 sm:scale-90 md:scale-100 mx-auto sm:mx-0 perspective-container group block relative mt-8 sm:mt-0">
                         <!-- Base iMac Image -->
                         <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         
@@ -122,7 +122,6 @@
                                                 <h2 class="screen-layer header-box-3 text-sm h-12 w-full font-extrabold text-left bg-gray-800 backdrop-blur-sm rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
                                             </div>
 
-
                                             <p class="screen-layer text-blurb text-[8px] font-bold text-blue-400 pl-2 pt-1 pb-2 pr-2 pt-14 whitespace-nowrap">Ignite Your Digital Presence.</p>
                                             <div class="float-right relative">
                                                 <!-- Shadow element -->
@@ -147,8 +146,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Mac dock -->
-                                <img src="{{ asset('images/dock.png') }}" alt="Mac dock" class="screen-layer dock-img object-contain mx-auto absolute bottom-1 transform">
                             </div>
                         </div>
                     </div>
