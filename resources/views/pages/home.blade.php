@@ -95,12 +95,12 @@
                         <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         
                         <!-- Screen Content positioned absolutely over the iMac screen -->
-                        <div class="computer-screen absolute top-[6.4%] left-[10.2%] w-[83.9%] h-[49%] z-10 flex flex-col">
+                        <div class="computer-screen absolute top-[6.5%] left-[10.1%] w-[84.3%] h-[48.5%] z-10 flex flex-col">
                             <img src="{{ asset('images/mac_bg.jpg') }}" alt="Mac background" class="absolute inset-0 w-full h-full object-cover">
                             <div class="screen-container">
                                 <!-- Mac toolbar -->
                                 <img src="{{ asset('images/toolbar.webp') }}" alt="Mac toolbar" class="screen-layer toolbar-img w-full h-8 object-contain -mt-3.5">
-                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="screen-layer chrome-img absolute inset-0 top-[8%] left-[8%] w-5/6 h-[80.2%] object-fill">
+                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="screen-layer chrome-img absolute inset-0 top-[10%] left-[8%] w-5/6 h-[80.2%] object-fill">
 
                                 <!-- Main content -->
                                 <div class="screen-layer preserve-3d flex-1 flex items-center justify-between px-6 pr-10 py-4">

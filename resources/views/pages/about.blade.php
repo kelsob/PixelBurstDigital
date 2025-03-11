@@ -20,8 +20,8 @@
                 <!-- Ben Kelso -->
                 <div class="relative bg-gradient-to-br from-blue-600 to-red-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
                     <div class="h-full bg-gradient-to-br from-green-900 to-blue-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
-                        <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img class="object-contain w-full h-[200px] rounded-tr-lg rounded-bl-lg=" 
+                        <div class="flex justify-center mb-4">
+                            <img class="object-contain h-[200px] rounded-tr-[2rem] rounded-bl-[2rem]" 
                                  src="{{ asset('images/benkelso.jpg') }}"
                                  alt="Ben Kelso">
                         </div>
@@ -46,8 +46,8 @@
                 <!-- Chris Fast -->
                 <div class="relative bg-gradient-to-br from-green-600 to-blue-600 p-1 rounded-tl-[2rem] rounded-br-[2rem] shadow-[6px_6px_0px_0px_rgba(5,150,105,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(59,130,246,0.4)] transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1">
                     <div class="bg-gradient-to-br from-red-900 to-blue-900 p-4 rounded-tl-[1.9rem] rounded-br-[1.9rem]">
-                        <div class="aspect-w-16 aspect-h-9 mb-4">
-                            <img class="object-contain w-full h-[200px] rounded-tl-lg rounded-br-lg" 
+                        <div class="flex justify-center mb-4">
+                            <img class="object-contain h-[200px] rounded-tl-[2rem] rounded-br-[2rem]" 
                                  src="{{ asset('images/chrisfast.jpg') }}"
                                  alt="Chris Fast">
                         </div>
