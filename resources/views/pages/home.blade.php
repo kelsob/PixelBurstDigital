@@ -138,8 +138,8 @@
                                     <!-- Image section with decorative cards -->
                                     <div class="screen-layer preserve-3d relative w-1/2 h-full flex items-center justify-center">
                                         <!-- Decorative background cards -->
-                                        <div class="screen-layer decorative-box-2 absolute -bottom-5 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
-                                        <div class="screen-layer decorative-box-1 absolute -bottom-5 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 animate float-slow"></div>
+                                        <div class="screen-layer decorative-box-2 absolute -bottom-5 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 float-slow"></div>
+                                        <div class="screen-layer decorative-box-1 absolute -bottom-5 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 float-slow"></div>
 
                                         <!-- Main image container -->
                                         <img src="{{ asset('images/pixelburst-logo.Webp') }}" alt="Chrome browser" class="brand-img transition-all absolute  object-fill">
@@ -166,14 +166,14 @@
                 transform-style: preserve-3d;
                 transform: rotateY(-16deg) translateZ(0px) translateY(0px);
                 will-change: transform;
-                transition: transform 3.0s ease-out;
+                transition: transform 18s ease-out;
             }
 
             .screen-container {
                 perspective: 800px;
                 position: relative;
                 transform-style: preserve-3d;
-                transition: transform 3.0s;
+                transition: transform 18s;
                 width: 100%;
                 height: 100%;
             }
@@ -190,7 +190,7 @@
             }
 
             .brand-img {
-                transition: transform 3.5s ease-out;
+                transition: transform 18s ease-out;
 
             }
 
