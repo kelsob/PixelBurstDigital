@@ -74,7 +74,7 @@
                         <div class="mt-6 flex justify-end pr-12">
                             <div class="rounded-md">
                                 <a href="{{ route('services') }}" 
-                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:-translate-x-0.5 hover:-translate-y-0.5">
+                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-bl-lg rounded-tr-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:-translate-x-0.5 hover:-translate-y-0.5 animate fadeIn">
                                     <span class="absolute inset-0 bg-gradient-to-br from-blue-600 to-green-600"></span>
                                     <span class="absolute inset-0 bg-gradient-to-br from-blue-500 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                     <span class="relative">Explore Services</span>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="hidden rounded-md">
                                 <a href="{{ route('portfolio') }}" 
-                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-br-lg rounded-tl-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                   class="group relative w-full flex items-center justify-center px-6 py-2 text-sm font-medium rounded-br-lg rounded-tl-lg text-blue-25 overflow-hidden transition-all duration-300 md:py-3 md:text-base md:px-8 shadow-[-4px_4px_0px_0px_rgba(56,0,0,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(255,125,0,0.4)] transform hover:translate-x-0.5 hover:-translate-y-0.5 animate fadeIn">
                                     <span class="absolute inset-0 bg-gradient-to-br from-green-600 to-blue-600"></span>
                                     <span class="absolute inset-0 bg-gradient-to-br from-green-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                     <span class="relative">Our Work</span>
@@ -314,6 +314,99 @@
                 transform-style: preserve-3d;
             }
 
+            /* Base animate class - hide elements by default */
+            .animate {
+                opacity: 0;
+                will-change: transform, opacity;
+                pointer-events: none;  /* Prevent interaction while invisible */
+            }
+
+            .animate.animate--active {
+                animation-duration: 0.6s;
+                animation-fill-mode: both;
+                opacity: 1;
+                pointer-events: auto;  /* Re-enable interaction after animation */
+            }
+
+            /* Entrance Animations */
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, 30px, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, -30px, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes slideInLeft {
+                from {
+                    opacity: 0;
+                    transform: translate3d(-40px, 0, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            @keyframes slideInRight {
+                from {
+                    opacity: 0;
+                    transform: translate3d(40px, 0, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            /* Animation Classes */
+            .animate.animate--active.fadeInUp {
+                animation-name: fadeInUp;
+                animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .animate.animate--active.fadeInDown {
+                animation-name: fadeInDown;
+                animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .animate.animate--active.fadeIn {
+                animation-name: fadeIn;
+                animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .animate.animate--active.slideInLeft {
+                animation-name: slideInLeft;
+                animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .animate.animate--active.slideInRight {
+                animation-name: slideInRight;
+                animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
         </style>
     </div>
 
@@ -321,7 +414,7 @@
     <div class="py-12 relative z-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-3xl font-extrabold bg-gradient-to-br from-blue-800 to-green-400 text-transparent bg-clip-text sm:text-4xl">
+                <h2 class="text-3xl font-extrabold bg-gradient-to-br from-blue-800 to-green-400 text-transparent bg-clip-text sm:text-4xl animate fadeInDown">
                     Web Design & Development
                 </h2>
                 <p class="mt-4 max-w-2xl text-xl text-blue-900 lg:mx-auto">
@@ -332,7 +425,7 @@
 
             <div class="mt-4">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
-                    <div class="relative bg-gradient-to-br from-blue-500 to-green-500 p-8 rounded-lg shadow-[-6px_6px_0_0_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0_0_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                    <div class="relative bg-gradient-to-br from-blue-600 to-green-600 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInUp">
                         <div class="flex justify-center mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
@@ -344,7 +437,7 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-tl from-red-500 to-blue-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                    <div class="relative bg-gradient-to-tl from-red-500 to-blue-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInLeft">
                         <div class="flex justify-center mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
@@ -356,7 +449,7 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-green-500 to-red-500 p-8 rounded-lg shadow-[-6px_6px_0_0_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0_0_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                    <div class="relative bg-gradient-to-br from-green-500 to-red-500 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInRight">
                         <div class="flex justify-center mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -370,7 +463,7 @@
                 </div>
                 <div class="mt-4 text-right">
                     <a href="{{ route('services') }}" 
-                       class="inline-block px-6 py-2 bg-gradient-to-br from-blue-600 to-green-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(37,99,235,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(22,163,74,0.5)] hover:from-blue-500 hover:to-green-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                       class="inline-block px-6 py-2 bg-gradient-to-br from-blue-600 to-green-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(37,99,235,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(22,163,74,0.5)] hover:from-blue-500 hover:to-green-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn">
                         Explore Our Web Services →
                     </a>
                 </div>
@@ -382,7 +475,7 @@
     <div class="py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-800 to-blue-400 text-transparent bg-clip-text sm:text-4xl">
+                <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-800 to-blue-400 text-transparent bg-clip-text sm:text-4xl animate fadeInDown">
                     Branding & Digital Identity
                 </h2>
                 <p class="mt-4 max-w-2xl text-xl text-red-600 lg:mx-auto">
@@ -392,7 +485,7 @@
 
             <div class="mt-4">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-                    <div class="relative bg-gradient-to-br from-blue-600 via-purple-500 to-red-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(59,130,246,0.3)] hover:shadow-[8px_8px_0_0_rgba(147,51,234,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                    <div class="relative bg-gradient-to-br from-blue-600 via-purple-500 to-red-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(59,130,246,0.3)] hover:shadow-[8px_8px_0_0_rgba(147,51,234,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInUp">
                         <div class="flex justify-center mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
@@ -404,7 +497,7 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-tl from-green-500 via-blue-500 to-purple-500 p-8 rounded-lg shadow-[-6px_6px_0_0_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                    <div class="relative bg-gradient-to-tl from-green-500 via-blue-500 to-purple-500 p-8 rounded-lg shadow-[-6px_6px_0_0_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInLeft">
                         <div class="flex justify-center mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
@@ -416,7 +509,7 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 p-8 rounded-lg shadow-[6px_-6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_-8px_0_0_rgba(234,179,8,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                    <div class="relative bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 p-8 rounded-lg shadow-[6px_-6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_-8px_0_0_rgba(234,179,8,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInUp">
                         <div class="flex justify-center mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
@@ -428,7 +521,7 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-tr from-purple-500 via-red-500 to-yellow-500 p-8 rounded-lg shadow-[-6px_-6px_0_0_rgba(147,51,234,0.3)] hover:shadow-[-8px_-8px_0_0_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                    <div class="relative bg-gradient-to-tr from-purple-500 via-red-500 to-yellow-500 p-8 rounded-lg shadow-[-6px_-6px_0_0_rgba(147,51,234,0.3)] hover:shadow-[-8px_-8px_0_0_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInRight">
                         <div class="flex justify-center mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-100" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
@@ -442,7 +535,7 @@
                 </div>
                 <div class="mt-4 text-right">
                     <a href="{{ route('services') }}" 
-                       class="inline-block px-6 py-2 bg-gradient-to-br from-red-600 to-blue-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(220,38,38,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(37,99,235,0.5)] hover:from-red-500 hover:to-blue-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                       class="inline-block px-6 py-2 bg-gradient-to-br from-red-600 to-blue-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(220,38,38,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(37,99,235,0.5)] hover:from-red-500 hover:to-blue-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn">
                         Explore Our Branding Services →
                     </a>
                 </div>
@@ -453,7 +546,7 @@
     <!-- Why Choose Us -->
     <div class="py-4 pb-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="rounded-2xl p-12 bg-gradient-to-br from-blue-800 to-green-400">
+            <div class="relative bg-gradient-to-br from-blue-800 to-green-400 rounded-2xl p-12">
                 <div class="lg:text-center">
                     <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl">
                         Why Choose Pixel Burst
@@ -500,7 +593,7 @@
                     </div>
                     <div class="mt-4 text-right">
                         <a href="{{ route('about') }}" 
-                           class="inline-block px-6 py-2 bg-gradient-to-br from-red-200 to-green-200 text-blue-900 text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(239,68,68,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.3)] hover:from-red-100 hover:to-green-100 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                           class="inline-block px-6 py-2 bg-gradient-to-br from-red-200 to-green-200 text-blue-900 text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(239,68,68,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.3)] hover:from-red-100 hover:to-green-100 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn">
                             Learn More About Us →
                         </a>
                     </div>
@@ -512,22 +605,22 @@
     <!-- CTA Section -->
     <div class="relative">
         <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-tl-lg rounded-br-lg shadow-xl overflow-hidden gradient-container">
+            <div class="relative bg-gradient-to-br from-blue-600 to-indigo-600 rounded-tl-lg rounded-br-lg shadow-xl overflow-hidden gradient-container">
                 <div class="relative px-8 py-10 lg:p-12">
                     <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
-                        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl animate fadeInDown">
                             <span class="block">Ready to get started?</span>
                             <span class="block text-blue-200">Let's build something great.</span>
                         </h2>
                         <div class="mt-8 lg:mt-0 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                             <a href="{{ route('contact') }}" 
-                               class="hover-optimized group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-bl-lg rounded-tr-lg text-blue-900">
+                               class="hover-optimized group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-bl-lg rounded-tr-lg text-blue-900 animate fadeIn">
                                 <span class="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-500"></span>
                                 <span class="absolute inset-0 bg-gradient-to-br from-blue-500 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                 <span class="relative">Contact Us</span>
                             </a>
                             <a href="{{ route('services') }}" 
-                               class="hover-optimized group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-tr-lg rounded-bl-lg text-blue-200">
+                               class="hover-optimized group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-tr-lg rounded-bl-lg text-blue-200 animate fadeIn">
                                 <span class="absolute inset-0 bg-gradient-to-br from-blue-800 to-indigo-900"></span>
                                 <span class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                 <span class="relative">Explore Services</span>
@@ -539,3 +632,29 @@
         </div>
     </div>
 </x-app-layout> 
+
+<!-- Include Animate.css library in <head> section -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
+
+<!-- Update the Intersection Observer script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.animate');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate--active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script> 

@@ -97,4 +97,24 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.animate');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animationClass = entry.target.dataset.animationClass;
+                        entry.target.classList.add('animate__animated', animationClass);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </x-app-layout> 
