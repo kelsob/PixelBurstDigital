@@ -106,7 +106,7 @@
                                 <div class="screen-layer preserve-3d flex-1 flex items-center justify-between px-6 pr-10 py-4">
                                     <!-- Text content with background card -->
                                     <div class="relative w-5/6 p-4 flex flex-col">
-                                        <div class="relative">
+                        <div class="relative">
                                             <div class="screen-layer header-text-wrapper-1 absolute top-2">
                                                 <span class="font-extrabold bg-gradient-to-br from-red-200 to-green-100 text-blue-400 bg-clip-text text-[10px]">YOUR BRAND,</span>
                                             </div>
@@ -407,127 +407,182 @@
                 animation-name: slideInRight;
                 animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
+
+            @keyframes slideInDown {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, -30px, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            .animate.animate--active.slideInDown {
+                animation: slideInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .animate-delay-200 {
+                animation-delay: 0.2s;
+            }
+
+            @keyframes zoomFadeIn {
+                from {
+                    opacity: 0;
+                    transform: scale(1.5);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            .animate.animate--active.zoomFadeIn {
+                animation: zoomFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            /* Add a wrapper class to isolate the SVG animation */
+            .icon-wrapper {
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                will-change: transform, opacity;
+            }
         </style>
     </div>
 
     <!-- Web Design & Development Section -->
     <div class="py-12 relative z-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
                 <h2 class="text-3xl font-extrabold bg-gradient-to-br from-blue-800 to-green-400 text-transparent bg-clip-text sm:text-4xl animate fadeInDown">
                     Web Design & Development
-                </h2>
-                <p class="mt-4 max-w-2xl text-xl text-blue-900 lg:mx-auto">
+                        </h2>
+                <p class="mt-4 max-w-2xl text-xl text-blue-900 lg:mx-auto animate slideInDown animate-delay-200">
                     💡 Custom websites for businesses of all sizes—whether you're starting fresh or need an upgrade.
-                </p>
+                        </p>
 
-            </div>
+                    </div>
 
             <div class="mt-4">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
-                    <div class="relative bg-gradient-to-br from-blue-600 to-green-600 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInUp">
+                    <div class="relative bg-gradient-to-br from-blue-600 to-green-600 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-100" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
-                            </svg>
+                            <div class="icon-wrapper animate-delay-200 animate zoomFadeIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-100" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                                    </svg>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative animate-delay-200 animate slideInLeft">
                             <h3 class="text-xl font-bold text-blue-50">Website Builder Customization</h3>
                             <p class="mt-2 text-blue-100">For those who started with Wix, WordPress, etc. and need expert tweaks.</p>
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-tl from-red-500 to-blue-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInLeft">
+                    <div class="relative bg-gradient-to-tl from-red-500 to-blue-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-100" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
-                            </svg>
+                            <div class="icon-wrapper animate-delay-200 animate zoomFadeIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-100" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                                    </svg>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative animate-delay-200 animate slideInLeft">
                             <h3 class="text-xl font-bold text-red-50">Modern, Built-from-Scratch Websites</h3>
                             <p class="mt-2 text-red-100">For those who need a fully custom web experience.</p>
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-green-500 to-red-500 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInRight">
+                    <div class="relative bg-gradient-to-br from-green-500 to-red-500 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-100" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
+                            <div class="icon-wrapper animate-delay-200 animate zoomFadeIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-100" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative animate-delay-200 animate slideInLeft">
                             <h3 class="text-xl font-bold text-green-50">Website Migration & Modernization</h3>
                             <p class="mt-2 text-green-100">Moving old sites to better platforms, upgrading UI/UX, and improving performance.</p>
                         </div>
-                    </div>
-                </div>
+                                </div>
+                            </div>
                 <div class="mt-4 text-right">
                     <a href="{{ route('services') }}" 
                        class="inline-block px-6 py-2 bg-gradient-to-br from-blue-600 to-green-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(37,99,235,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(22,163,74,0.5)] hover:from-blue-500 hover:to-green-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn">
                         Explore Our Web Services →
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     <!-- Branding & Digital Identity Section -->
     <div class="py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
                 <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-800 to-blue-400 text-transparent bg-clip-text sm:text-4xl animate fadeInDown">
                     Branding & Digital Identity
-                </h2>
-                <p class="mt-4 max-w-2xl text-xl text-red-600 lg:mx-auto">
+                        </h2>
+                <p class="mt-4 max-w-2xl text-xl text-red-600 lg:mx-auto animate slideInDown animate-delay-200">
                     🎨 Professional branding and visuals to make your business stand out.
                 </p>
             </div>
 
             <div class="mt-4">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-                    <div class="relative bg-gradient-to-br from-blue-600 via-purple-500 to-red-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(59,130,246,0.3)] hover:shadow-[8px_8px_0_0_rgba(147,51,234,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInUp">
+                    <div class="relative bg-gradient-to-br from-blue-600 via-purple-500 to-red-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(59,130,246,0.3)] hover:shadow-[8px_8px_0_0_rgba(147,51,234,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-100" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
-                            </svg>
+                            <div class="icon-wrapper animate-delay-200 animate zoomFadeIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-100" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative animate-delay-200 animate slideInRight">
                             <h3 class="text-xl font-bold text-blue-50">3D Product Visualization</h3>
                             <p class="mt-2 text-blue-100">Blender-powered product renders, mockups, and animations.</p>
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-tl from-green-500 via-blue-500 to-purple-500 p-8 rounded-lg shadow-[-6px_6px_0_0_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInLeft">
+                    <div class="relative bg-gradient-to-tl from-green-500 via-blue-500 to-purple-500 p-8 rounded-lg shadow-[-6px_6px_0_0_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-100" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                            </svg>
+                            <div class="icon-wrapper animate-delay-200 animate zoomFadeIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-100" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative animate-delay-200 animate slideInRight">
                             <h3 class="text-xl font-bold text-green-50">Photography & Videography</h3>
                             <p class="mt-2 text-green-100">High-quality product photography and promotional videos.</p>
                         </div>
-                    </div>
+                                </div>
 
-                    <div class="relative bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 p-8 rounded-lg shadow-[6px_-6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_-8px_0_0_rgba(234,179,8,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate fadeInUp">
+                    <div class="relative bg-gradient-to-br from-red-500 via-yellow-500 to-green-500 p-8 rounded-lg shadow-[6px_-6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_-8px_0_0_rgba(234,179,8,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-100" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                            </svg>
+                            <div class="icon-wrapper animate-delay-200 animate zoomFadeIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-100" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative animate-delay-200 animate slideInRight">
                             <h3 class="text-xl font-bold text-red-50">Logo & Visual Identity Design</h3>
                             <p class="mt-2 text-red-100">Custom logo creation, typography, and color palettes.</p>
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-tr from-purple-500 via-red-500 to-yellow-500 p-8 rounded-lg shadow-[-6px_-6px_0_0_rgba(147,51,234,0.3)] hover:shadow-[-8px_-8px_0_0_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInRight">
+                    <div class="relative bg-gradient-to-tr from-purple-500 via-red-500 to-yellow-500 p-8 rounded-lg shadow-[-6px_-6px_0_0_rgba(147,51,234,0.3)] hover:shadow-[-8px_-8px_0_0_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-100" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                            </svg>
+                            <div class="icon-wrapper animate-delay-200 animate zoomFadeIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-100" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                                </svg>
+                            </div>
                         </div>
-                        <div class="relative">
+                        <div class="relative animate-delay-200 animate slideInRight">
                             <h3 class="text-xl font-bold text-purple-50">Brand Identity Clarification</h3>
                             <p class="mt-2 text-purple-100">Helping businesses refine their message, audience, and aesthetic.</p>
                         </div>
@@ -537,74 +592,76 @@
                     <a href="{{ route('services') }}" 
                        class="inline-block px-6 py-2 bg-gradient-to-br from-red-600 to-blue-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(220,38,38,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(37,99,235,0.5)] hover:from-red-500 hover:to-blue-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn">
                         Explore Our Branding Services →
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Why Choose Us -->
+        <!-- Why Choose Us -->
     <div class="py-4 pb-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="relative bg-gradient-to-br from-blue-800 to-green-400 rounded-2xl p-12">
-                <div class="lg:text-center">
-                    <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl">
+                    <div class="lg:text-center">
+                    <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl opacity-0 animate fadeIn animate-delay-200">
                         Why Choose Pixel Burst
-                    </h2>
-                    <p class="mt-4 max-w-2xl text-lg font-bold text-red-200 lg:mx-auto">
-                        Small team, big impact. We bring enterprise-level expertise with startup agility.
-                    </p>
-                </div>
+                        </h2>
+                    <p class="mt-4 max-w-2xl text-lg font-bold text-red-200 lg:mx-auto opacity-0 animate fadeIn animate-delay-400">
+                            Small team, big impact. We bring enterprise-level expertise with startup agility.
+                        </p>
+                    </div>
 
                 <div class="mt-4">
-                    <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                        <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 text-white">
+                        <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                        <div class="relative opacity-0 animate fadeIn animate-delay-600">
+                            <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500 text-white">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                                     </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Direct Communication</h3>
+                                    <p class="mt-2 text-gray-600">
+                                        Work directly with our core team. No account managers, no bureaucracy.
+                                    </p>
+                                </div>
                                 </div>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-medium text-gray-900">Direct Communication</h3>
-                                <p class="mt-2 text-gray-600">
-                                    Work directly with our core team. No account managers, no bureaucracy.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[-4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[-6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 text-white">
+                        <div class="relative opacity-0 animate fadeIn animate-delay-800">
+                            <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[-4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[-6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
+                                <div class="flex-shrink-0">
+                                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 text-white">
                                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                     </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Fast Execution</h3>
+                                    <p class="mt-2 text-gray-600">
+                                        Small team means quick decisions and faster implementation of your ideas.
+                                    </p>
                                 </div>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-medium text-gray-900">Fast Execution</h3>
-                                <p class="mt-2 text-gray-600">
-                                    Small team means quick decisions and faster implementation of your ideas.
-                                </p>
-                            </div>
                         </div>
-
                     </div>
                     <div class="mt-4 text-right">
                         <a href="{{ route('about') }}" 
-                           class="inline-block px-6 py-2 bg-gradient-to-br from-red-200 to-green-200 text-blue-900 text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(239,68,68,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.3)] hover:from-red-100 hover:to-green-100 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn">
+                           class="inline-block px-6 py-2 bg-gradient-to-br from-red-200 to-green-200 text-blue-900 text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(239,68,68,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.3)] hover:from-red-100 hover:to-green-100 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 opacity-0 animate fadeIn animate-delay-1000">
                             Learn More About Us →
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- CTA Section -->
-    <div class="relative">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <!-- CTA Section -->
+        <div class="relative">
+            <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div class="relative bg-gradient-to-br from-blue-600 to-indigo-600 rounded-tl-lg rounded-br-lg shadow-xl overflow-hidden gradient-container">
                 <div class="relative px-8 py-10 lg:p-12">
                     <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
@@ -658,3 +715,40 @@
         });
     });
 </script> 
+
+<style>
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translate3d(20px, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .animate.animate--active.fadeInRight {
+        animation: fadeInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .animate-delay-400 {
+        animation-delay: 0.4s;
+    }
+
+    .animate-delay-600 {
+        animation-delay: 0.6s;
+    }
+
+    .animate-delay-800 {
+        animation-delay: 0.8s;
+    }
+
+    .animate-delay-1000 {
+        animation-delay: 1s;
+    }
+
+    .animate-delay-1200 {
+        animation-delay: 1.2s;
+    }
+</style> 
