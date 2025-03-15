@@ -25,13 +25,7 @@
     </head>
     <body class="min-h-screen">
         <!-- SVG Mask Definition -->
-        <svg class="hidden">
-            <defs>
-                <mask id="organic-mask">
-                    <path fill="white" d="M0,0 C150,100 300,-50 450,150 C600,350 750,200 900,300 C1050,400 1200,250 1350,150 L1500,0 L0,1500 L0,0" />
-                </mask>
-            </defs>
-        </svg>
+
 
         {{ $slot }}
 

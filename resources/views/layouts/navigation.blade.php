@@ -128,7 +128,6 @@
                 </nav>
                 
                 <!-- Decorative elements -->
-                <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-500/5 to-transparent"></div>
             </div>
         </div>
     </div>
