@@ -5,7 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>PixelBurst Digital - Digital Solutions</title>
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Pixel Burst Digital - Your one-stop digital partner for web design, branding, and digital solutions. We create custom websites, brand identities, and digital experiences that help businesses grow.">
+        <meta name="keywords" content="web design, branding, digital solutions, website development, brand identity, digital marketing, UI/UX design">
+        <meta name="author" content="Pixel Burst Digital">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:title" content="Pixel Burst Digital - Digital Solutions">
+        <meta property="og:description" content="Your one-stop digital partner for web design, branding, and digital solutions. We create custom websites, brand identities, and digital experiences that help businesses grow.">
+        <meta property="og:image" content="{{ asset('images/og-image.webp') }}">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="{{ url()->current() }}">
+        <meta property="twitter:title" content="Pixel Burst Digital - Digital Solutions">
+        <meta property="twitter:description" content="Your one-stop digital partner for web design, branding, and digital solutions. We create custom websites, brand identities, and digital experiences that help businesses grow.">
+        <meta property="twitter:image" content="{{ asset('images/og-image.webp') }}">
+
+        <title>@yield('title', 'Pixel Burst Digital - Digital Solutions')</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.webp') }}">
@@ -24,11 +44,7 @@
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
     <body class="min-h-screen">
-        <!-- SVG Mask Definition -->
-
-
         {{ $slot }}
-
         <footer class="relative">
             <!-- Enhanced layered background with multiple gradients -->
             <div class="absolute inset-0">

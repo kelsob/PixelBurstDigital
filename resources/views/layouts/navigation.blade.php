@@ -2,14 +2,14 @@
     $mobileMenuOpen = false;
 @endphp
 
-<div x-data="{ mobileMenuOpen: false }" x-cloak>
-    <div class="fixed top-0 left-0 w-full z-[9999]">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex justify-between flex-1">
+<div x-data="{ mobileMenuOpen: false }" x-cloak class="overflow-visible">
+    <div class="fixed top-0 left-0 w-full z-[9999] overflow-visible">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+            <div class="flex justify-between h-20 overflow-visible">
+                <div class="flex justify-between flex-1 overflow-visible">
                     <!-- Logo -->
-                    <div class="shrink-0 flex items-center">
-                        <a href="/" class="pl-0 pt-2">
+                    <div class="shrink-0 flex items-center overflow-visible">
+                        <a href="/" class="pl-0 pt-2 overflow-visible">
                             <x-application-logo class="block h-16 w-auto fill-current text-deep-red" />
 
                             <div class="absolute -z-30 -bottom-8 left-16 transform -translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl transition-all md:scale-x-[115%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[300%] 3xl:scale-x-[400%]"></div>
@@ -18,7 +18,7 @@
                     </div>
 
                     <!-- Navigation Links -->
-                    <div class="hidden space-x-4 sm:flex items-center">
+                    <div class="hidden space-x-4 sm:flex items-center overflow-visible">
                         <x-nav-link href="/" :active="request()->is('/')">
                             {{ __('Home') }}
                         </x-nav-link>
@@ -34,13 +34,13 @@
                         <x-nav-link href="/contact" :active="request()->is('contact')">
                             {{ __('Contact') }}
                         </x-nav-link>
-                        <div class="absolute -z-50 bottom-0 right-[312px] transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl transition-all md:scale-x-[115%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[300%] 3xl:scale-x-[400%]"></div>
-                        <div class="absolute -z-50 -bottom-8 -right-0 transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-red-500/100 rounded-full blur-xl transition-all md:scale-x-[115%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[300%] 3xl:scale-x-[400%]"></div>
+                        <div class="absolute -z-50 bottom-0 right-[312px] transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl transition-all md:scale-x-[110%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[200%] 3xl:scale-x-[225%]"></div>
+                        <div class="absolute -z-50 -bottom-8 -right-0 transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-red-500/100 rounded-full blur-xl transition-all md:scale-x-[110%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[250%] 3xl:scale-x-[275%]"></div>
                     </div>
                 </div>
 
                 <!-- Hamburger -->
-                <div class="-me-2 flex items-center sm:hidden">
+                <div class="-me-2 flex items-center sm:hidden overflow-visible">
                     <button onclick="toggleMobileMenu()" 
                             class="relative p-2 rounded-lg group transition-all duration-300">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
@@ -67,15 +67,15 @@
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobileMenu" class="fixed inset-0 z-40 hidden">
+        <div id="mobileMenu" class="fixed inset-0 z-40 hidden overflow-visible">
             <!-- Gradient background with blur -->
             <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-green-800">
             </div>
             
             <!-- Content -->
-            <div class="relative h-full flex flex-col justify-center px-6">
+            <div class="relative h-full flex flex-col justify-center px-6 overflow-visible">
                 <!-- Close button -->
-                <div class="absolute top-6 right-6 z-[60]">
+                <div class="absolute top-6 right-6 z-[60] overflow-visible">
                     <button onclick="toggleMobileMenu()" 
                             class="p-2 rounded-lg group relative">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
@@ -92,7 +92,7 @@
                 </div>
                 
                 <!-- Navigation links -->
-                <nav class="space-y-8 relative z-50">
+                <nav class="space-y-8 relative z-50 overflow-visible">
                     <a href="/" 
                        @click="mobileMenuOpen = false"
                        class="block group relative">
