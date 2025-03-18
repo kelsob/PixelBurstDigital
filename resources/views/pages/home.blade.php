@@ -12,7 +12,7 @@
     <!-- Content Sections -->
     <div class="relative pt-24">
         <!-- Hero Section -->
-        <div class="min-h-[50vh] sm:max-w-[80vw] md:max-w-[100vw] flex items-center relative">
+        <div class="min-h-[50vh] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[100vw] flex items-center relative md:ml-8">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="grid grid-cols-1 sm:grid-cols-12 gap-0 sm:gap-4">
                     <div class="sm:col-span-7 max-w-lg sm:max-w-none pt-8">
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm:col-span-5 scale-75 sm:scale-90 md:scale-100 mx-auto sm:mx-0 perspective-container group block relative mt-8 sm:mt-0">
+                    <div class="sm:col-span-5 scale-[0.75] xs:scale-[0.90] sm:scale-75 md:scale-[0.90] lg:scale-100 relative mt-8 perspective-container sm:mt-0 mx-auto transform -translate-x-4">
                         <!-- Base iMac Image -->
                         <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         
@@ -489,28 +489,27 @@
 
     <!-- Web Design & Development Section -->
     <div class="py-12 relative z-0">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
-                <h2 class="text-3xl font-extrabold bg-gradient-to-br from-blue-800 to-green-400 text-transparent bg-clip-text sm:text-4xl animate fadeInDown">
+                <h2 class="text-3xl font-extrabold bg-gradient-to-br from-blue-800 to-green-400 text-transparent bg-clip-text sm:text-4xl opacity-0 animate fadeInDown">
                     Web Design & Development
-                        </h2>
-                <p class="mt-4 max-w-2xl text-xl text-blue-900 lg:mx-auto animate slideInDown animate-delay-400">
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-blue-900 lg:mx-auto opacity-0 animate slideInDown animate-delay-400">
                     💡 Custom websites for businesses of all sizes—whether you're starting fresh or need an upgrade.
-                        </p>
-
-                    </div>
+                </p>
+            </div>
 
             <div class="mt-4">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
                     <div class="relative bg-gradient-to-br from-blue-600 to-green-600 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(5,150,105,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <div class="icon-wrapper animate-delay-400 animate zoomFadeIn">
+                            <div class="icon-wrapper animate zoomFadeIn">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-100" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
-                                    </svg>
+                                </svg>
                             </div>
                         </div>
-                        <div class="relative animate-delay-400 animate slideInLeft">
+                        <div class="relative  opacity-0 animate slideInRight">
                             <h3 class="text-xl font-bold text-blue-50">Website Builder Customization</h3>
                             <p class="mt-2 text-blue-100">For those who started with Wix, WordPress, etc. and need expert tweaks.</p>
                         </div>
@@ -518,13 +517,13 @@
 
                     <div class="relative bg-gradient-to-tl from-red-500 to-blue-500 p-8 rounded-lg shadow-[6px_6px_0_0_rgba(239,68,68,0.3)] hover:shadow-[8px_8px_0_0_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <div class="icon-wrapper animate-delay-400 animate zoomFadeIn">
+                            <div class="icon-wrapper  animate zoomFadeIn">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-100" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
-                                    </svg>
+                                </svg>
                             </div>
                         </div>
-                        <div class="relative animate-delay-400 animate slideInLeft">
+                        <div class="relative opacity-0 animate slideInRight">
                             <h3 class="text-xl font-bold text-red-50">Modern, Built-from-Scratch Websites</h3>
                             <p class="mt-2 text-red-100">For those who need a fully custom web experience.</p>
                         </div>
@@ -532,27 +531,27 @@
 
                     <div class="relative bg-gradient-to-br from-green-500 to-red-500 p-8 rounded-lg shadow-[-6px_6px_0px_0px_rgba(5,150,105,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(239,68,68,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 animate slideInDown">
                         <div class="flex justify-center mb-4">
-                            <div class="icon-wrapper animate-delay-400 animate zoomFadeIn">
+                            <div class="icon-wrapper animate zoomFadeIn">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-100" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
+                                </svg>
                             </div>
                         </div>
-                        <div class="relative animate-delay-400 animate slideInLeft">
+                        <div class="relative opacity-0 animate slideInRight">
                             <h3 class="text-xl font-bold text-green-50">Website Migration & Modernization</h3>
                             <p class="mt-2 text-green-100">Moving old sites to better platforms, upgrading UI/UX, and improving performance.</p>
                         </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
                 <div class="mt-4 text-right">
                     <a href="{{ route('services') }}" 
-                       class="inline-block px-6 py-2 bg-gradient-to-br from-blue-600 to-green-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(37,99,235,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(22,163,74,0.5)] hover:from-blue-500 hover:to-green-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn">
+                       class="inline-block px-6 py-2 bg-gradient-to-br from-blue-600 to-green-600 text-white text-sm font-semibold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(37,99,235,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(22,163,74,0.5)] hover:from-blue-500 hover:to-green-500 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5 animate fadeIn animate-delay-2000">
                         Explore Our Web Services →
-                        </a>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Branding & Digital Identity Section -->
     <div class="py-6">
