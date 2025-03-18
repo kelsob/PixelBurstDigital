@@ -43,7 +43,7 @@
         <!-- Add Alpine.js -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="min-h-screen">
+    <body class="font-sans antialiased bg-gradient-to-br from-blue-50 to-green-50 overflow-x-hidden">
         {{ $slot }}
         <footer class="relative">
             <!-- Enhanced layered background with multiple gradients -->

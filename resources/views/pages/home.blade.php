@@ -1,6 +1,6 @@
 <x-app-layout>
     @include('layouts.navigation')
-    <div class="fixed inset-0 -z-40 h-screen font-sans antialiased bg-gradient-to-br from-red-200 via-gray-100 via-blue-200 via-gray-100 to-green-200"></div>
+    <div class="fixed inset-0 -z-40 h-screen bg-gradient-to-br from-red-200/50 via-gray-100/50 via-blue-200/50 via-gray-100/50 to-green-200/50"></div>
 
     <!-- Background image that scrolls with content -->
     <div class="absolute -z-20 top-0 left-0 w-full">
@@ -142,7 +142,7 @@
                                 <div class="screen-layer preserve-3d flex-1 flex items-center justify-between px-6 pr-10 py-4">
                                     <!-- Text content with background card -->
                                     <div class="relative w-5/6 p-4 flex flex-col">
-                        <div class="relative">
+                                        <div class="relative">
                                             <div class="screen-layer header-text-wrapper-1 absolute top-2">
                                                 <span class="font-extrabold bg-gradient-to-br from-red-200 to-green-100 text-blue-400 bg-clip-text text-[10px]">YOUR BRAND,</span>
                                             </div>
@@ -153,9 +153,9 @@
                                                 </span>
                                             </div>
                                             <div class="relative mt-2">
-                                                <h2 class="screen-layer header-box text-sm h-12 w-full font-extrabold text-left bg-gradient-to-br from-red-800 to-blue-600 backdrop-blur-sm rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
-                                                <h2 class="screen-layer header-box-2 text-sm h-12 w-full font-extrabold text-left bg-gray-600 backdrop-blur-sm rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
-                                                <h2 class="screen-layer header-box-3 text-sm h-12 w-full font-extrabold text-left bg-gray-800 backdrop-blur-sm rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
+                                                <h2 class="screen-layer header-box text-sm h-12 w-full font-extrabold text-left bg-gradient-to-br from-red-800 to-blue-600 rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
+                                                <h2 class="screen-layer header-box-2 text-sm h-12 w-full font-extrabold text-left bg-gray-600 rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
+                                                <h2 class="screen-layer header-box-3 text-sm h-12 w-full font-extrabold text-left bg-gray-800 rounded-lg p-2 pr-4 absolute top-0 left-0"></h2>
                                             </div>
 
                                             <p class="screen-layer text-blurb text-[8px] font-bold text-blue-400 pl-2 pt-1 pb-2 pr-2 pt-14 whitespace-nowrap">Ignite Your Digital Presence.</p>
@@ -178,7 +178,7 @@
                                         <div class="screen-layer decorative-box-1 absolute -bottom-5 w-16 h-16 bg-green-500/20 rounded-lg -rotate-3 float-slow"></div>
 
                                         <!-- Main image container -->
-                                        <img src="{{ asset('images/pixelburst-logo.Webp') }}" alt="Chrome browser" class="brand-img transition-all absolute  object-fill">
+                                        <img src="{{ asset('images/pixelburst-logo.webp') }}" alt="Brand Logo" class="brand-img transition-all absolute object-fill">
                                     </div>
                                 </div>
 

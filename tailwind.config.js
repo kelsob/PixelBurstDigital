@@ -8,6 +8,9 @@ module.exports = {
       "./resources/**/*.blade.php",
       "./resources/**/*.js",
     ],
+    safelist: [
+      'overflow-x-hidden'
+    ],
     theme: {
       extend: {
         colors: {
