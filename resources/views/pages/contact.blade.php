@@ -60,7 +60,18 @@
                     <div class="relative bg-gradient-to-br from-red-600 to-blue-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(239,68,68,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(59,130,246,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
                         <div class="bg-gradient-to-br from-red-900 to-blue-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                             <h2 class="text-lg font-extrabold bg-gradient-to-br from-red-200 to-blue-200 bg-clip-text text-transparent mb-4">Get in Touch</h2>
-                            <form action="#" method="POST" class="space-y-4">
+                            @if(session('success'))
+                                <div class="mb-4 p-4 bg-green-100 text-green-700 rounded-md">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                            @if(session('error'))
+                                <div class="mb-4 p-4 bg-red-100 text-red-700 rounded-md">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
+                            <form action="{{ route('contact.submit') }}" method="POST" class="space-y-4">
+                                @csrf
                                 <div>
                                     <label for="name" class="block text-xs font-medium text-red-100">Name</label>
                                     <div class="mt-1">

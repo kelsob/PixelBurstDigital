@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormSubmission;
 
 class ContactController extends Controller
 {
@@ -14,19 +15,20 @@ class ContactController extends Controller
 
     public function submit(Request $request)
     {
-        $validated = $request->validate([
+        $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'project_type' => 'required|string',
-            'budget' => 'required|string',
             'message' => 'required|string',
+            'referral' => 'nullable|string',
+            'services' => 'nullable|array',
+            'services.*' => 'string'
         ]);
 
-        // Here you would typically:
-        // 1. Send an email notification
-        // 2. Store the inquiry in the database
-        // 3. Send an auto-response to the client
-
-        return back()->with('success', 'Thank you for your message. We\'ll be in touch soon!');
+        try {
+            Mail::to(['kelsob@gmail.com', 'chrisjdfast@gmail.com'])->send(new ContactFormSubmission($validatedData));
+            return redirect()->route('contact')->with('success', 'Thank you for your message! We will get back to you soon.');
+        } catch (\Exception $e) {
+            return redirect()->route('contact')->with('error', 'Sorry, there was an error sending your message. Please try again later.');
+        }
     }
 } 
