@@ -8,11 +8,10 @@
         <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-blue.webp') }}'); background-size: 100vw 100vh;"></div>
         <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
     </div>
-
     <!-- Content Sections -->
     <div class="relative pt-24">
         <!-- Hero Section -->
-        <div class="min-h-[50vh] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[100vw] flex items-center relative md:ml-8">
+        <div class="min-h-[50vh] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[100vw] flex items-center relative left-1/2 -translate-x-1/2">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div class="grid grid-cols-1 sm:grid-cols-12 gap-0 sm:gap-4">
                     <div class="sm:col-span-7 max-w-lg sm:max-w-none pt-8">
