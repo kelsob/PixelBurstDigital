@@ -127,15 +127,15 @@
                     </div>
                     <div class="sm:col-span-5 scale-[0.75] xs:scale-[0.90] sm:scale-75 md:scale-[0.90] lg:scale-100 relative mt-8 perspective-container sm:mt-0 mx-auto transform -translate-x-4">
                         <!-- Base iMac Image -->
-                        <img src="{{ asset('images/imac-2.png') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
+                        <img src="{{ asset('images/imac-2.webp') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         
                         <!-- Screen Content positioned absolutely over the iMac screen -->
                         <div class="computer-screen absolute top-[6.5%] left-[10.1%] w-[84.3%] h-[48.5%] z-10 flex flex-col">
-                            <img src="{{ asset('images/mac_bg.jpg') }}" alt="Mac background" class="absolute inset-0 w-full h-full object-cover">
+                            <img src="{{ asset('images/mac_bg.webp') }}" alt="Mac background" class="absolute inset-0 w-full h-full object-cover">
                             <div class="screen-container">
                                 <!-- Mac toolbar -->
                                 <img src="{{ asset('images/toolbar.webp') }}" alt="Mac toolbar" class="screen-layer toolbar-img w-full h-8 object-contain -mt-3.5">
-                                <img src="{{ asset('images/browser-img.png') }}" alt="Chrome browser" class="screen-layer chrome-img absolute inset-0 top-[10%] left-[8%] w-5/6 h-[80.2%] object-fill">
+                                <img src="{{ asset('images/browser-img.webp') }}" alt="Chrome browser" class="screen-layer chrome-img absolute inset-0 top-[10%] left-[8%] w-5/6 h-[80.2%] object-fill">
 
                                 <!-- Main content -->
                                 <div class="screen-layer preserve-3d flex-1 flex items-center justify-between px-6 pr-10 py-4">

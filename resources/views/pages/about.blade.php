@@ -22,7 +22,7 @@
                     <div class="h-full bg-gradient-to-br from-green-900 to-blue-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="flex justify-center mb-4">
                             <img class="object-contain h-[200px] rounded-tr-[2rem] rounded-bl-[2rem]" 
-                                 src="{{ asset('images/benkelso.jpg') }}"
+                                 src="{{ asset('images/benkelso.webp') }}"
                                  alt="Ben Kelso">
                         </div>
                         <div class="space-y-2">
@@ -48,7 +48,7 @@
                     <div class="bg-gradient-to-br from-red-900 to-blue-900 p-4 rounded-tl-[1.9rem] rounded-br-[1.9rem]">
                         <div class="flex justify-center mb-4">
                             <img class="object-contain h-[200px] rounded-tl-[2rem] rounded-br-[2rem]" 
-                                 src="{{ asset('images/chrisfast.jpg') }}"
+                                 src="{{ asset('images/chrisfast.webp') }}"
                                  alt="Chris Fast">
                         </div>
                         <div class="space-y-2">
