@@ -188,6 +188,9 @@
             </div>
         </div>
 
+        <!-- Featured Work Section -->
+        <x-featured-work />
+
         <style>
             .perspective-container {
                 perspective: 800px;

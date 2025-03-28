@@ -28,8 +28,8 @@
                         <x-nav-link href="/services" :active="request()->is('services')">
                             {{ __('Services') }}
                         </x-nav-link>
-                        <x-nav-link class="hidden" href="/portfolio" :active="request()->is('portfolio')">
-                            <span class="relative whitespace-nowrap">Our Work</span>
+                        <x-nav-link href="/portfolio" :active="request()->is('portfolio')">
+                            {{ __('Portfolio') }}
                         </x-nav-link>
                         <x-nav-link href="/contact" :active="request()->is('contact')">
                             {{ __('Contact') }}
@@ -115,6 +115,14 @@
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                         <div class="relative px-6 py-3 text-center">
                             <span class="block text-2xl font-semibold text-white">Services</span>
+                        </div>
+                    </a>
+                    <a href="/portfolio" 
+                       @click="mobileMenuOpen = false"
+                       class="block group relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                        <div class="relative px-6 py-3 text-center">
+                            <span class="block text-2xl font-semibold text-white">Portfolio</span>
                         </div>
                     </a>
                     <a href="/contact" 
