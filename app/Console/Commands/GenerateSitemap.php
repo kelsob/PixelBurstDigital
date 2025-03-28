@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Spatie\Sitemap\SitemapGenerator;
+use Spatie\Sitemap\Tags\Url;
 
 class GenerateSitemap extends Command
 {
@@ -15,6 +16,11 @@ class GenerateSitemap extends Command
         $this->info('Generating sitemap...');
         
         SitemapGenerator::create('https://www.pixelburstdigital.com')
+            ->hasCrawled(function (Url $url) {
+                if ($url->segment(1) === 'dashboard' || $url->segment(1) === 'profile') {
+                    return;
+                }
+            })
             ->writeToFile(public_path('sitemap.xml'));
             
         $this->info('Sitemap generated successfully!');
