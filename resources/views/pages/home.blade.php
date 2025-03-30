@@ -9,40 +9,40 @@
         <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
     </div>
     <!-- Content Sections -->
-    <div class="relative pt-24">
+    <div class="relative pt-32 flex flex-col items-center">
         <!-- Hero Section -->
-        <div class="min-h-[50vh] sm:max-w-[80vw] md:max-w-[80vw] lg:max-w-[100vw] flex items-center relative left-1/2 -translate-x-1/2">
+        <div class="h-[50vh] lg:max-w-[100vw] flex items-center mb-8 mx-auto translate-x-4 md:translate-x-8">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                <div class="grid grid-cols-1 sm:grid-cols-12 gap-0 sm:gap-4">
-                    <div class="sm:col-span-7 max-w-lg sm:max-w-none pt-8">
-                        <h1 class="text-3xl tracking-tight font-extrabold sm:text-3xl md:text-4xl">
-                            <span class="block text-red-800 text-2xl sm:text-2xl opacity-0 animate scaleUpFadeIn">Web Design & Branding</span>
-                            <span class="block text-blue-800 text-4xl sm:text-7xl mt-1">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-0 lg:gap-12">
+                    <div class="md:col-span-6 max-w-lg md:max-w-none pt-8">
+                        <h1 class="text-3xl tracking-tight font-extrabold md:text-3xl lg:text-4xl">
+                            <span class="block text-red-800 text-2xl md:text-2xl opacity-0 animate scaleUpFadeIn">Web Design & Branding</span>
+                            <span class="block text-blue-800 text-4xl md:text-7xl mt-1">
                                 <span class="bg-gradient-to-br from-blue-700 to-green-700 font-bold text-transparent bg-clip-text opacity-0 animate shrinkFadeIn">Refined</span><span class="text-red-800 opacity-0 animate shrinkFadeIn">.</span>
                             </span>
                         </h1>
-                        <p class="mt-2 sm:text-xs md:text-sm lg:text-md font-bold text-blue-900 max-w-lg opacity-0 animate fadeIn" style="animation-delay: 1200ms;">
+                        <p class="mt-2 md:text-xs lg:text-sm xl:text-md font-bold text-blue-900 max-w-lg opacity-0 animate fadeIn" style="animation-delay: 1200ms;">
                             Comprehensive digital solutions - from websites to branding, marketing to design.
                             Pixel Burst is your one-stop digital partner for growth and success.
                         </p> 
 
                         <!-- Floating SVGs -->
-                        <div class="hidden sm:block absolute top-28 sm:top-20 right-[35%] sm:right-[65%] animate-float-fast">
+                        <div class="hidden md:block absolute top-28 md:top-20 right-[35%] md:right-[65%] animate-float-fast">
                             <svg class="w-5 h-5 text-blue-700 opacity-100" fill="currentColor" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="12"/>
                             </svg>
                         </div>
-                        <div class="hidden sm:block absolute top-20 sm:top-6 right-[25%] sm:right-[53%] animate-float-fast">
+                        <div class="hidden md:block absolute top-20 md:top-6 right-[25%] md:right-[53%] animate-float-fast">
                             <svg class="w-14 h-14 text-green-500 opacity-75" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="5"/>
                             </svg>
                         </div>
-                        <div class="hidden sm:block absolute top-14 right-[14%] sm:right-[34%] animate-float-fast">
+                        <div class="hidden md:block absolute top-14 right-[14%] md:right-[34%] animate-float-fast">
                             <svg class="w-24 h-24 text-red-600 opacity-50" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 40 40">
                                 <circle cx="12" cy="12" r="10"/>
                             </svg>
                         </div>
-                        <div class="hidden sm:block absolute -top-24 right-[0%] sm:right-[0%] animate-float-fast">
+                        <div class="hidden md:block absolute -top-24 right-[0%] md:right-[0%] animate-float-fast">
                             <svg class="w-48 h-48 text-blue-800 opacity-15" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="45"/>
                             </svg>
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sm:col-span-5 scale-[0.75] xs:scale-[0.90] sm:scale-75 md:scale-[0.90] lg:scale-100 relative mt-8 perspective-container sm:mt-0 mx-auto transform -translate-x-4">
+                    <div class="md:col-span-5 scale-[0.75] xs:scale-[0.90] md:scale-75 lg:scale-[0.90] xl:scale-100 relative perspective-container md:mt-0 mx-auto transform -mt-12">
                         <!-- Base iMac Image -->
                         <img src="{{ asset('images/imac-2.webp') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         
@@ -556,7 +556,7 @@
     </div>
 
     <!-- Branding & Digital Identity Section -->
-    <div class="py-6">
+    <div class="py-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center">
                 <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-800 to-blue-400 text-transparent bg-clip-text sm:text-4xl animate fadeInDown">
@@ -636,20 +636,19 @@
         </div>
 
         <!-- Why Choose Us -->
-    <div class="py-4 pb-0">
+        <div class="py-12 pb-0">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="relative bg-gradient-to-br from-blue-800 to-green-400 rounded-2xl p-12">
+                <div class="relative bg-gradient-to-br from-blue-800 to-green-400 rounded-2xl p-12">
                     <div class="lg:text-center">
-                    <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl opacity-0 animate fadeIn animate-delay-800">
-                        Why Choose Pixel Burst
+                        <h2 class="text-3xl font-extrabold bg-gradient-to-br from-red-200 to-green-200 bg-clip-text text-transparent sm:text-4xl opacity-0 animate fadeIn animate-delay-800">
+                            Why Choose Pixel Burst
                         </h2>
-                    <p class="mt-4 max-w-2xl text-lg font-bold text-red-200 lg:mx-auto opacity-0 animate fadeIn animate-delay-1000">
+                        <p class="mt-4 max-w-2xl text-lg font-bold text-red-200 lg:mx-auto opacity-0 animate fadeIn animate-delay-1000">
                             Small team, big impact. We bring enterprise-level expertise with startup agility.
                         </p>
                     </div>
-
                 <div class="mt-4">
-                        <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                         <div class="relative opacity-0 animate fadeIn animate-delay-1200">
                             <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
                                 <div class="flex-shrink-0">
@@ -665,9 +664,8 @@
                                         Work directly with our core team. No account managers, no bureaucracy.
                                     </p>
                                 </div>
-                                </div>
                             </div>
-
+                        </div>
                         <div class="relative opacity-0 animate fadeIn animate-delay-1400">
                             <div class="flex bg-gradient-to-br from-red-200 to-green-200 p-6 rounded-lg shadow-[-4px_4px_0px_0px_rgba(239,68,68,0.5)] hover:shadow-[-6px_6px_0px_0px_rgba(34,197,94,0.5)] hover:bg-gradient-to-br hover:from-green-200 hover:to-red-200 transition-all duration-300 transform hover:translate-x-0.5 hover:-translate-y-0.5">
                                 <div class="flex-shrink-0">
@@ -699,13 +697,13 @@
         <!-- CTA Section -->
         <div class="relative">
             <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div class="relative bg-gradient-to-br from-blue-600 to-indigo-600 rounded-tl-lg rounded-br-lg shadow-xl overflow-hidden gradient-container">
-                <div class="relative px-8 py-10 lg:p-12">
-                    <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
-                        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl animate fadeInDown">
-                            <span class="block">Ready to get started?</span>
-                            <span class="block text-blue-200">Let's build something great.</span>
-                        </h2>
+                <div class="relative bg-gradient-to-br from-blue-600 to-indigo-600 rounded-tl-lg rounded-br-lg shadow-xl overflow-hidden gradient-container">
+                    <div class="relative px-8 py-10 lg:p-12">
+                        <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl animate fadeInDown">
+                                <span class="block">Ready to get started?</span>
+                                <span class="block text-blue-200">Let's build something great.</span>
+                            </h2>
                         <div class="mt-8 lg:mt-0 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                             <a href="{{ route('contact') }}" 
                                class="hover-optimized group relative w-full flex items-center justify-center px-6 py-3 text-base font-medium rounded-bl-lg rounded-tr-lg text-blue-900 animate fadeIn">

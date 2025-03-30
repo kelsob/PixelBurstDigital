@@ -12,7 +12,7 @@
                         <a href="/" class="pl-0 pt-2 overflow-visible">
                             <x-application-logo class="block h-16 w-auto fill-current text-deep-red" />
 
-                            <div class="absolute -z-30 -bottom-8 left-16 transform -translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl transition-all md:scale-x-[115%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[300%] 3xl:scale-x-[400%]"></div>
+                            <div class="absolute -z-30 -bottom-8 left-16 transform -translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl transition-all md:scale-x-[115%] lg:scale-x-[125%] xl:scale-x-[175%] 2xl:scale-x-[250%] 3xl:scale-x-[450%]"></div>
 
                         </a>
                     </div>
@@ -34,8 +34,8 @@
                         <x-nav-link href="/contact" :active="request()->is('contact')">
                             {{ __('Contact') }}
                         </x-nav-link>
-                        <div class="absolute -z-50 bottom-0 right-[312px] transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl transition-all md:scale-x-[110%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[200%] 3xl:scale-x-[225%]"></div>
-                        <div class="absolute -z-50 -bottom-8 -right-0 transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-red-500/100 rounded-full blur-xl transition-all md:scale-x-[110%] lg:scale-x-[125%] xl:scale-x-[150%] 2xl:scale-x-[250%] 3xl:scale-x-[275%]"></div>
+                        <div class="absolute -z-50 bottom-0 right-[312px] transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-green-500/100 rounded-full blur-xl transition-all md:scale-x-[115%] lg:scale-x-[125%] xl:scale-x-[175%] 2xl:scale-x-[250%] 3xl:scale-x-[450%]"></div>
+                        <div class="absolute -z-50 -bottom-8 -right-0 transform translate-x-1/2 w-[1024px] h-[1024px] bg-gradient-to-r from-blue-500/100 to-red-500/100 rounded-full blur-xl transition-all md:scale-x-[115%] lg:scale-x-[125%] xl:scale-x-[175%] 2xl:scale-x-[250%] 3xl:scale-x-[450%]"></div>
                     </div>
                 </div>
 

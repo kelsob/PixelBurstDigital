@@ -19,10 +19,7 @@
             <!-- Project Cards -->
             <div class="mt-12 space-y-16 mb-24">
                 <!-- Project Card 1 -->
-            
-
-                <!-- Project Card 2 -->
-                <div class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                <div id="kate-howells" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
                             <!-- Project Images -->
@@ -87,14 +84,15 @@ Built with Laravel and Tailwind CSS, the site features responsive design, optimi
                         </div>
                     </div>
                 </div>
-                <div class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                <div id="planet-bean" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
                             <!-- Project Images -->
                             <div class="space-y-4">
                                 <div class="hidden lg:block">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover rounded-lg shadow-lg">
+                                    <video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover rounded-lg shadow-lg">
                                         <source src="{{ asset('videos/portfolio-planet-bean-1.webm') }}" type="video/webm">
+                                        <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" alt="Planet Bean Animation" class="w-full h-full object-cover rounded-lg shadow-lg">
                                     </video>
                                 </div>
                                 <div class="hidden lg:block">
@@ -118,8 +116,9 @@ Built with Laravel and Tailwind CSS, the site features responsive design, optimi
                                     </div>
                                 </div>
                                 <div class="block lg:hidden mt-4">
-                                    <video autoplay muted loop playsinline class="w-full h-full object-cover rounded-lg shadow-lg">
+                                    <video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover rounded-lg shadow-lg">
                                         <source src="{{ asset('videos/portfolio-planet-bean-1.webm') }}" type="video/webm">
+                                        <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" alt="Planet Bean Animation" class="w-full h-full object-cover rounded-lg shadow-lg">
                                     </video>  
                                 </div>
                                 <div>
@@ -143,7 +142,7 @@ The animation was built using procedural textures, rigging, and physics simulati
                         </div>
                     </div>
                 </div>
-                <div class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1">
+                <div id="ben-reid" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
                             <!-- Project Images -->
