@@ -90,9 +90,9 @@
                                 <span class="relative">Services</span>
                             </a>
                             <a href="{{ route('portfolio') }}" 
-                               class="hidden group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
+                               class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-tl-xl rounded-br-xl opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105"></div>
-                                <span class="relative whitespace-nowrap">Our Work</span>
+                                <span class="relative">Portfolio</span>
                             </a>
                             <a href="{{ route('contact') }}" 
                                class="group relative px-3 py-2 text-blue-200 hover:text-white transition-all duration-300 w-full sm:w-auto text-center">
