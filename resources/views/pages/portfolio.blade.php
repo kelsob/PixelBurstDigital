@@ -188,8 +188,14 @@ The animation was built using procedural textures, rigging, and physics simulati
 
 I developed a cohesive content strategy, ensuring his philosophy, past projects, and offerings were clearly presented. The site now features a streamlined service page, an integrated booking system, and embedded media to showcase his work dynamically. Additionally, I facilitated the migration of his Wix Premium plan and domain, ensuring a seamless transition to his new site.</p>
                                 </div>
-                                <div class="flex items-center space-x-4">
-                                    <span class="px-4 py-2 bg-yellow-500/20 text-yellow-200 rounded-full text-sm font-medium">In Development</span>
+                                <div class="flex items-center justify-between pt-4">
+                                    <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium">Live</span>
+                                    <a href="https://www.benreidhowells.com" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px]">
+                                        <span>Visit Website</span>
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
