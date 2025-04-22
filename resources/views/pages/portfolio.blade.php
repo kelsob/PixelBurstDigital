@@ -19,7 +19,7 @@
             <!-- Project Cards -->
             <div class="mt-12 space-y-16 mb-24">
                 <!-- Project Card 1 -->
-                <div id="kate-howells" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 scroll-mt-32">
+                <div id="kate-howells" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
                             <!-- Project Images -->
@@ -70,10 +70,14 @@
                                     <p class="text-blue-100">This project focused on creating a modern, engaging portfolio website for Kate Howells, a space communicator and public education specialist. The site blends a custom space-themed design with optimized performance, accessibility, and user experience to showcase her work effectively.
 
 Built with Laravel and Tailwind CSS, the site features responsive design, optimized image loading, and interactive elements powered by Alpine.js. A custom email integration ensures smooth communication, while an SEO-optimized structure enhances visibility. The result is a visually striking, high-performing portfolio that reflects Kate's expertise and captivates her audience.</p>
-                                </div>
-                                <div class="flex items-center justify-between pt-4">
-                                    <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium">Live</span>
-                                    <a href="https://www.kateonearth.com" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px]">
+                                </div>                                <div class="flex items-center justify-between pt-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium flex items-center gap-2">
+                                            Live
+                                            <div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_2px_rgba(74,222,128,0.6)]"></div>
+                                        </span>
+                                    </div>
+                                    <a href="https://www.benreidhowells.com" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow-lg">
                                         <span>Visit Website</span>
                                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -105,8 +109,8 @@ Built with Laravel and Tailwind CSS, the site features responsive design, optimi
                                 <div>
                                     <h2 class="text-2xl font-bold text-blue-200">Planet Bean - Fair Trade Coffee Cooperative</h2>
                                     <div class="mt-2 flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-sm">Web Design</span>
-                                        <span class="px-3 py-1 bg-green-500/20 text-green-200 rounded-full text-sm">Branding</span>
+                                        <span class="px-3 py-1 bg-red-500/20 text-blue-200 rounded-full text-sm">Product Visualisation</span>
+                                        <span class="px-3 py-1 bg-orange-500/20 text-green-200 rounded-full text-sm">Branding Animation</span>
                                     </div>
                                 </div>
                                 <div class="flex items-center space-x-4">
@@ -135,14 +139,11 @@ Built with Laravel and Tailwind CSS, the site features responsive design, optimi
 
 The animation was built using procedural textures, rigging, and physics simulations. A custom moon texture was designed, while an astronaut's arm and an alien's tentacle were rigged and animated for movement. Rigid body physics created a realistic coffee bean ring orbiting the central bean planet, and a rocket ship following a curved path added dynamic motion. The result is a fun, engaging animation that captures the unique character of Planet Bean.</p>
                                 </div>
-                                <div class="flex items-center space-x-4">
-                                    <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium">Complete</span>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="ben-reid" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] hover:shadow-[-8px_8px_0px_0px_rgba(34,197,94,0.4)] transition-all duration-300 hover:translate-x-1 hover:-translate-y-1 scroll-mt-32">
+                <div id="ben-reid" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] duration-300 scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
                             <!-- Project Images -->
@@ -189,8 +190,13 @@ The animation was built using procedural textures, rigging, and physics simulati
 I developed a cohesive content strategy, ensuring his philosophy, past projects, and offerings were clearly presented. The site now features a streamlined service page, an integrated booking system, and embedded media to showcase his work dynamically. Additionally, I facilitated the migration of his Wix Premium plan and domain, ensuring a seamless transition to his new site.</p>
                                 </div>
                                 <div class="flex items-center justify-between pt-4">
-                                    <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium">Live</span>
-                                    <a href="https://www.benreidhowells.com" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px]">
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium flex items-center gap-2">
+                                            Live
+                                            <div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_2px_rgba(74,222,128,0.6)]"></div>
+                                        </span>
+                                    </div>
+                                    <a href="https://www.benreidhowells.com" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow-lg">
                                         <span>Visit Website</span>
                                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
