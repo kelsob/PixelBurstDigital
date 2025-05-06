@@ -1,5 +1,5 @@
 <!-- Featured Work Section -->
-<section class="pb-4 relative overflow-hidden">
+<section class="pb-4 relative overflow-hidden pt-12">
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="bg-gradient-to-br from-blue-700/80 to-green-700/80 backdrop-blur-xl rounded-2xl shadow-2xl p-8 border border-white/10">

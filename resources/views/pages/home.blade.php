@@ -9,7 +9,7 @@
         <div class="w-full h-screen bg-cover bg-center" style="background-image: url('{{ asset('images/gradient-bg-red.webp') }}'); background-size: 100vw 100vh;"></div>
     </div>
     <!-- Content Sections -->
-    <div class="relative pt-32 flex flex-col items-center">
+    <div class="relative pt-48 flex flex-col items-center">
         <!-- Hero Section -->
         <div class="h-[50vh] lg:max-w-[100vw] flex items-center mb-8 mx-auto translate-x-4 md:translate-x-8">
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:col-span-5 scale-[0.75] xs:scale-[0.90] md:scale-75 lg:scale-[0.90] xl:scale-100 relative perspective-container md:mt-0 mx-auto transform -mt-12">
+                    <div class="md:col-span-5 scale-[0.65] xs:scale-[0.90] md:scale-75 lg:scale-[0.90] xl:scale-100 relative perspective-container md:mt-0 mx-auto transform -mt-16">
                         <!-- Base iMac Image -->
                         <img src="{{ asset('images/imac-2.webp') }}" alt="iMac" class="imac-bg w-full w-auto relative z-0">
                         

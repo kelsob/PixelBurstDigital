@@ -18,7 +18,7 @@
                     </div>
 
                     <!-- Navigation Links -->
-                    <div class="hidden space-x-4 sm:flex items-center overflow-visible">
+                    <div class="hidden space-x-4 sm:flex items-center overflow-visible pr-4">
                         <x-nav-link href="/" :active="request()->is('/')">
                             {{ __('Home') }}
                         </x-nav-link>
@@ -40,7 +40,7 @@
                 </div>
 
                 <!-- Hamburger -->
-                <div class="-me-2 flex items-center sm:hidden overflow-visible">
+                <div class="-me-2 flex items-center sm:hidden overflow-visible pr-4">
                     <button onclick="toggleMobileMenu()" 
                             class="relative p-2 rounded-lg group transition-all duration-300">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-green-500/10 to-blue-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
