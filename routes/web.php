@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
+Route::get('/services/web-design', [ServicesController::class, 'webDesign'])->name('services.web-design');
+Route::get('/services/branding', [ServicesController::class, 'branding'])->name('services.branding');
+Route::get('/services/seo', [ServicesController::class, 'seo'])->name('services.seo');
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');

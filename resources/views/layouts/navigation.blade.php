@@ -25,9 +25,35 @@
                         <x-nav-link href="/about" :active="request()->is('about')">
                             {{ __('About') }}
                         </x-nav-link>
-                        <x-nav-link href="/services" :active="request()->is('services')">
-                            {{ __('Services') }}
-                        </x-nav-link>
+                        <div x-data="{ open: false }" class="relative inline-flex">
+                            <x-nav-link href="#" :active="false" @click.prevent="open = !open" @click.away="open = false">
+                                {{ __('Services') }}
+                            </x-nav-link>
+                            <div x-show="open" 
+                                 x-transition:enter="transition ease-out duration-200"
+                                 x-transition:enter-start="transform opacity-0 scale-95"
+                                 x-transition:enter-end="transform opacity-100 scale-100"
+                                 x-transition:leave="transition ease-in duration-75"
+                                 x-transition:leave-start="transform opacity-100 scale-100"
+                                 x-transition:leave-end="transform opacity-0 scale-95"
+                                 class="absolute left-0 mt-0 w-fit min-w-[160px] rounded-md shadow-lg ring-1 ring-white/20 overflow-hidden -translate-y-1"
+                                 style="background: linear-gradient(135deg, rgba(30,58,138,0.92) 0%, rgba(16,185,129,0.92) 100%); backdrop-filter: blur(12px);">
+                                <div class="py-0 mb-1">
+                                    <a href="/services" class="whitespace-nowrap inline-flex text-white hover:text-pastel-red text-[10px] font-bold transition-all duration-200 w-full">
+                                        <span class="px-1.5 py-0.5 rounded-md whitespace-nowrap w-full">Services</span>
+                                    </a>
+                                    <a href="/services/web-design" class="whitespace-nowrap inline-flex text-white hover:text-pastel-red text-[10px] font-bold transition-all duration-200 w-full">
+                                        <span class="px-1.5 py-0.5 rounded-md whitespace-nowrap w-full">Web Design & Development</span>
+                                    </a>
+                                    <a href="/services/branding" class="whitespace-nowrap inline-flex text-white hover:text-pastel-red text-[10px] font-bold transition-all duration-200 w-full">
+                                        <span class="px-1.5 py-0.5 rounded-md whitespace-nowrap w-full">Branding & Digital Identity</span>
+                                    </a>
+                                    <a href="/services/seo" class="whitespace-nowrap inline-flex text-white hover:text-pastel-red text-[10px] font-bold transition-all duration-200 w-full">
+                                        <span class="px-1.5 py-0.5 rounded-md whitespace-nowrap w-full">Search Engine Optimization</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <x-nav-link href="/portfolio" :active="request()->is('portfolio')">
                             {{ __('Portfolio') }}
                         </x-nav-link>
@@ -109,14 +135,37 @@
                             <span class="block text-2xl font-semibold text-white">About</span>
                         </div>
                     </a>
-                    <a href="/services" 
-                       @click="mobileMenuOpen = false"
-                       class="block group relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-                        <div class="relative px-6 py-3 text-center">
-                            <span class="block text-2xl font-semibold text-white">Services</span>
+                    <div class="space-y-4">
+                        <div class="px-6 py-3 text-center">
+                            <span class="block text-2xl font-semibold text-white/80 border-b border-white/30 pb-2 w-[120px] mx-auto">Services</span>
                         </div>
-                    </a>
+                        <div class="space-y-4">
+                            <a href="/services/web-design" 
+                               @click="mobileMenuOpen = false"
+                               class="block group relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                                <div class="relative px-6 py-3">
+                                    <span class="block text-xl font-semibold text-white text-center whitespace-normal max-w-[280px] mx-auto">Web Design & Development</span>
+                                </div>
+                            </a>
+                            <a href="/services/branding" 
+                               @click="mobileMenuOpen = false"
+                               class="block group relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                                <div class="relative px-6 py-3">
+                                    <span class="block text-xl font-semibold text-white text-center whitespace-normal max-w-[280px] mx-auto">Branding & Digital Identity</span>
+                                </div>
+                            </a>
+                            <a href="/services/seo" 
+                               @click="mobileMenuOpen = false"
+                               class="block group relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                                <div class="relative px-6 py-3">
+                                    <span class="block text-xl font-semibold text-white text-center whitespace-normal max-w-[280px] mx-auto">Search Engine Optimization</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                     <a href="/portfolio" 
                        @click="mobileMenuOpen = false"
                        class="block group relative">

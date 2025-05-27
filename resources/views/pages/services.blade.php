@@ -69,6 +69,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mt-8">
+                                <a href="/services/web-design" class="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white font-bold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(59,130,246,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(59,130,246,0.5)] hover:from-blue-400 hover:to-green-400 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                                    View Web Design Packages
+                                </a>
+                            </div>
                         </div>
                         <div class="lg:w-1/3 flex items-center justify-center">
                             <div class="relative group">
@@ -133,12 +138,84 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mt-8">
+                                <a href="/services/branding" class="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-bold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(16,185,129,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(16,185,129,0.5)] hover:from-emerald-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                                    View Branding Packages
+                                </a>
+                            </div>
                         </div>
                         <div class="lg:w-1/3 flex items-center justify-center relative group">
                             <div class="absolute -inset-1 blur-lg rounded-xl blur-2xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                             <img src="{{ asset('images/polaroid.webp') }}" 
                                 alt="Branding Illustration" 
                                 class="relative w-full max-w-md transform transition duration-500 group-hover:scale-[1.03] drop-shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO Services -->
+            <div class="mt-12">
+                <div class="relative bg-gradient-to-br from-purple-800 to-indigo-600 p-8 rounded-tr-[2rem] rounded-bl-[2rem] shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-700/20">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-2/3">
+                            <h2 class="text-3xl font-extrabold bg-gradient-to-r from-purple-200 via-indigo-100 to-purple-200 bg-clip-text text-transparent mb-6">Search Engine Optimization</h2>
+                            <p class="text-purple-100 mb-6 text-lg">
+                                Boost your online visibility and drive organic traffic with our comprehensive SEO services. We combine technical expertise with strategic content optimization to help your business rank higher in search results.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-2">
+                                        <svg class="h-6 w-6 text-purple-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-bold text-purple-100">Technical SEO</h3>
+                                            <p class="text-purple-200">Site structure, speed optimization, and mobile responsiveness</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-2">
+                                        <svg class="h-6 w-6 text-purple-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-bold text-purple-100">Content Strategy</h3>
+                                            <p class="text-purple-200">Keyword research and content optimization</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-2">
+                                        <svg class="h-6 w-6 text-purple-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-bold text-purple-100">Local SEO</h3>
+                                            <p class="text-purple-200">Google Business Profile optimization and local citations</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-2">
+                                        <svg class="h-6 w-6 text-purple-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <div>
+                                            <h3 class="font-bold text-purple-100">Analytics & Reporting</h3>
+                                            <p class="text-purple-200">Performance tracking and actionable insights</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <a href="/services/seo" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-tr-xl rounded-bl-xl shadow-[4px_4px_0px_0px_rgba(147,51,234,0.5)] hover:shadow-[6px_6px_0px_0px_rgba(99,102,241,0.5)] hover:from-purple-400 hover:to-indigo-400 transition-all duration-300 transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                                    View SEO Packages
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 flex items-center justify-center relative group">
+                            <div class="absolute -inset-1 blur-lg rounded-xl blur-2xl opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <img src="{{ asset('images/phone.webp') }}" 
+                                alt="SEO Services Illustration" 
+                                class="relative w-full max-w-md transform -scale-x-100 transition duration-500 group-hover:-scale-x-105 group-hover:scale-y-105 drop-shadow-xl">
                         </div>
                     </div>
                 </div>
