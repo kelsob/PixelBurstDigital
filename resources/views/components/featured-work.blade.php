@@ -15,9 +15,33 @@
 
             <!-- Featured Projects Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Project 1: Kate Howells -->
+                <!-- Project 1: Cosmos Award -->
+                <div class="relative bg-gradient-to-br from-green-900/50 to-red-900/50 rounded-xl p-3 shadow-lg border border-white/10 flex flex-col items-center justify-center">
+                    <div class="relative overflow-hidden rounded-lg mb-4 mt-6">
+                        <img src="{{ asset('images/portfolio-cosmos-award-bill-nye.webp') }}" 
+                             alt="Cosmos Award" 
+                             class="w-full aspect-[5/3] object-cover">
+                    </div>
+                    <div class="flex flex-col flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-blue-200">Cosmos Award</h3>
+                            <div class="flex flex-wrap gap-1.5 justify-end">
+                                <span class="px-2 py-0.5 bg-blue-500/20 text-blue-200 rounded-full text-xs whitespace-nowrap">3D Modeling</span>
+                                <span class="px-2 py-0.5 bg-green-500/20 text-green-200 rounded-full text-xs whitespace-nowrap">Product Design</span>
+                            </div>
+                        </div>
+                        <p class="text-blue-100 pt-2">The Planetary Society Award</p>
+                        <div class="flex justify-end mt-auto pt-2">
+                            <a href="/portfolio#cosmos-award" class="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-green-500/20 text-blue-200 rounded-tr-lg rounded-bl-lg text-xs hover:from-blue-500/30 hover:to-green-500/30 transition-all duration-300">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Kate Howells -->
                 <div class="relative bg-gradient-to-br from-green-900/50 to-red-900/50 rounded-xl p-3 shadow-lg border border-white/10 flex flex-col">
-                    <div class="relative overflow-hidden rounded-lg -mb-6 sm:-mb-8 md:-mb-2">
+                    <div class="relative overflow-hidden rounded-lg -mb-6 sm:-mb-8 md:-mb-4">
                         <img src="{{ asset('images/portfolio-kate-howells-1.webp') }}" 
                              alt="Kate Howells Portfolio" 
                              class="w-full aspect-[4/3] object-contain">
@@ -39,9 +63,9 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Planet Bean -->
+                <!-- Project 3: Planet Bean -->
                 <div class="relative bg-gradient-to-br from-red-900/50 to-blue-900/50 rounded-xl p-3 shadow-lg border border-white/10 flex flex-col">
-                    <div class="relative overflow-hidden rounded-lg -mb-6 sm:-mb-8 md:-mb-2">
+                    <div class="relative overflow-hidden rounded-lg -mb-6 sm:-mb-8 md:-mb-5">
                         <video autoplay muted loop playsinline class="w-full aspect-[4/3] object-contain">
                             <source src="{{ asset('videos/portfolio-planet-bean-1.webm') }}" type="video/webm">
                         </video>
@@ -57,30 +81,6 @@
                         <p class="text-blue-100 pt-2">Space-Themed Animation</p>
                         <div class="flex justify-end mt-auto pt-2">
                             <a href="/portfolio#planet-bean" class="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-green-500/20 text-blue-200 rounded-tr-lg rounded-bl-lg text-xs hover:from-blue-500/30 hover:to-green-500/30 transition-all duration-300">
-                                Learn More →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Ben Reid -->
-                <div class="relative bg-gradient-to-br from-blue-900/50 to-red-900/50 rounded-xl p-3 shadow-lg border border-white/10 flex flex-col">
-                    <div class="relative overflow-hidden rounded-lg -mb-6 sm:-mb-8 md:-mb-2">
-                        <img src="{{ asset('images/portfolio-ben-reid-1.webp') }}" 
-                             alt="Ben Reid Consulting" 
-                             class="w-full aspect-[4/3] object-contain">
-                    </div>
-                    <div class="flex flex-col flex-grow">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-blue-200">Ben Reid Consulting</h3>
-                            <div class="flex flex-wrap gap-1.5 justify-end">
-                                <span class="px-2 py-0.5 bg-blue-500/20 text-blue-200 rounded-full text-xs whitespace-nowrap">Web Design</span>
-                                <span class="px-2 py-0.5 bg-green-500/20 text-green-200 rounded-full text-xs whitespace-nowrap">Branding</span>
-                            </div>
-                        </div>
-                        <p class="text-blue-100 pt-2">Professional Website Design</p>
-                        <div class="flex justify-end mt-auto pt-2">
-                            <a href="/portfolio#ben-reid" class="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-green-500/20 text-blue-200 rounded-tr-lg rounded-bl-lg text-xs hover:from-blue-500/30 hover:to-green-500/30 transition-all duration-300">
                                 Learn More →
                             </a>
                         </div>

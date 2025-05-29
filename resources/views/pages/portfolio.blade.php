@@ -8,6 +8,18 @@
         <div class="w-full h-screen bg-cover bg-center opacity-60" style="background-image: url('{{ asset('images/gradient-bg-blue.webp') }}'); background-size: 100vw 100vh;"></div>
     </div>
 
+    <!-- Lightbox Component -->
+    <div id="lightbox" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 hidden">
+        <div class="relative max-w-7xl max-h-[90vh] mx-auto p-4">
+            <img id="lightbox-image" src="" alt="" class="max-w-full max-h-[85vh] object-contain">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white hover:text-gray-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <div class="relative overflow-hidden pl-4 pt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center pt-4">
@@ -18,18 +30,101 @@
 
             <!-- Project Cards -->
             <div class="mt-12 space-y-16 mb-24">
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: Cosmos Award -->
+                <div id="cosmos-award" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
+                    <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
+                            <!-- Project Images -->
+                            <div class="space-y-4">
+                                <div class="hidden lg:block">
+                                    <img src="{{ asset('images/portfolio-cosmos-award-bill-nye.webp') }}" 
+                                         alt="Cosmos Award 3D Model" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-bill-nye.webp') }}', 'Cosmos Award 3D Model')">
+                                </div>
+                                <div class="hidden lg:flex gap-4">
+                                    <img src="{{ asset('images/portfolio-cosmos-award-components.webp') }}" 
+                                         alt="Cosmos Award Components" 
+                                         class="w-[48.5%] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-components.webp') }}', 'Cosmos Award Components')">
+                                    <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
+                                         alt="Cosmos Award 3D Model" 
+                                         class="w-[48.5%] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                </div>
+                            </div>
+                            
+                            <!-- Project Details -->
+                            <div class="space-y-4 lg:flex lg:flex-col lg:justify-center">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-blue-200">
+                                        The Planetary Society - Cosmos Award
+                                    </h2>
+                                    <div class="mt-2 flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-sm">3D Modeling</span>
+                                        <span class="px-3 py-1 bg-green-500/20 text-green-200 rounded-full text-sm">Product Design</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center">
+                                        <h3 class="text-lg font-semibold text-blue-200 mr-2">Client:</h3>
+                                        <p class="text-blue-100">The Planetary Society</p>
+                                    </div>
+                                </div>
+                                <div class="block lg:hidden mt-4">
+                                    <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
+                                         alt="Cosmos Award 3D Model" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Project Overview</h3>
+                                    <p class="text-blue-100">A sophisticated 3D model of Saturn created for The Planetary Society's prestigious Cosmos Award. This project involved creating a scientifically accurate yet structurally sound 3D model optimized for high-quality 3D printing, replacing their previous handcrafted glass version with a more cost-effective and reproducible solution.</p>
+                                </div>
+                                <!-- Secondary images for mobile view -->
+                                <div class="flex lg:hidden mt-4 grid grid-cols-2 gap-4 justify-center items-center">
+                                    <img src="{{ asset('images/portfolio-cosmos-award-components.webp') }}" 
+                                         alt="Cosmos Award Components" 
+                                         class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-components.webp') }}', 'Cosmos Award Components')">
+                                    <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
+                                         alt="Cosmos Award 3D Model" 
+                                         class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Project Details</h3>
+                                    <p class="text-blue-100">The project involved creating a complex 3D model of Saturn with three main components: the planet itself (hollowed out with a mounting socket), semi-transparent free-floating rings, and a subtle mounting system. The design balanced scientific accuracy with practical considerations for 3D printing, including structural stability and material optimization.
+
+Working with Xometry for production, the model was printed using multi-jet diffusion advanced printing methods and vapor smoothed for a premium finish. The final product was mounted on a plaque and presented as the Cosmos Award at The Planetary Society's 45th annual gala. The design successfully achieved the client's goals of creating a beautiful, scientifically accurate award that was both reproducible and cost-effective.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Kate Howells -->
                 <div id="kate-howells" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
                             <!-- Project Images -->
                             <div class="space-y-4">
                                 <div class="hidden lg:block">
-                                <img src="{{ asset('images/portfolio-kate-howells-1.webp') }}" alt="Kate Howells Homepage" class="w-full h-full object-cover rounded-lg shadow-lg">
+                                <img src="{{ asset('images/portfolio-kate-howells-1.webp') }}" 
+                                     alt="Kate Howells Homepage" 
+                                     class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                     onclick="openLightbox('{{ asset('images/portfolio-kate-howells-1.webp') }}', 'Kate Howells Homepage')">
                                 </div>
                                 <div class="hidden lg:flex gap-4">
-                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-2.webp') }}" alt="Kate Howells Books Links" class="w-[48.5%] object-cover rounded-lg shadow-lg">
-                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-1.webp') }}" alt="Kate Howells Mobile View" class="w-[48.5%] object-cover rounded-lg shadow-lg">
+                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-2.webp') }}" 
+                                         alt="Kate Howells Books Links" 
+                                         class="w-[48.5%] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-kate-howells-mobile-2.webp') }}', 'Kate Howells Books Links')">
+                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-1.webp') }}" 
+                                         alt="Kate Howells Mobile View" 
+                                         class="w-[48.5%] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-kate-howells-mobile-1.webp') }}', 'Kate Howells Mobile View')">
                                 </div>
                             </div>
                             
@@ -54,7 +149,10 @@
                                     </div>
                                 </div>
                                 <div class="block lg:hidden mt-4">
-                                    <img src="{{ asset('images/portfolio-kate-howells-1.webp') }}" alt="Kate Howells Homepage" class="w-full h-full object-cover rounded-lg shadow-lg">
+                                    <img src="{{ asset('images/portfolio-kate-howells-1.webp') }}" 
+                                         alt="Kate Howells Homepage" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-kate-howells-1.webp') }}', 'Kate Howells Homepage')">
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-blue-200">Project Overview</h3>
@@ -62,8 +160,14 @@
                                 </div>
                                 <!-- Secondary images for mobile view -->
                                 <div class="flex lg:hidden mt-4 grid grid-cols-2 gap-4 justify-center items-center">
-                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-2.webp') }}" alt="Kate Howells Books Page" class="h-96 object-contain rounded-lg shadow-lg mx-auto">
-                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-1.webp') }}" alt="Kate Howells Mobile View" class="h-96 object-contain rounded-lg shadow-lg mx-auto">
+                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-2.webp') }}" 
+                                         alt="Kate Howells Books Page" 
+                                         class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-kate-howells-mobile-2.webp') }}', 'Kate Howells Books Page')">
+                                    <img src="{{ asset('images/portfolio-kate-howells-mobile-1.webp') }}" 
+                                         alt="Kate Howells Mobile View" 
+                                         class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-kate-howells-mobile-1.webp') }}', 'Kate Howells Mobile View')">
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-blue-200">Project Details</h3>
@@ -96,11 +200,17 @@ Built with Laravel and Tailwind CSS, the site features responsive design, optimi
                                 <div class="hidden lg:block">
                                     <video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover rounded-lg shadow-lg">
                                         <source src="{{ asset('videos/portfolio-planet-bean-1.webm') }}" type="video/webm">
-                                        <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" alt="Planet Bean Animation" class="w-full h-full object-cover rounded-lg shadow-lg">
+                                        <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" 
+                                             alt="Planet Bean Animation" 
+                                             class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/portfolio-planet-bean-1.webp') }}', 'Planet Bean Animation')">
                                     </video>
                                 </div>
                                 <div class="hidden lg:block">
-                                    <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" alt="Project Design Process" class="w-full h-full object-cover rounded-lg shadow-lg">
+                                    <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" 
+                                         alt="Project Design Process" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-planet-bean-1.webp') }}', 'Project Design Process')">
                                 </div>
                             </div>
                             
@@ -122,7 +232,10 @@ Built with Laravel and Tailwind CSS, the site features responsive design, optimi
                                 <div class="block lg:hidden mt-4">
                                     <video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover rounded-lg shadow-lg">
                                         <source src="{{ asset('videos/portfolio-planet-bean-1.webm') }}" type="video/webm">
-                                        <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" alt="Planet Bean Animation" class="w-full h-full object-cover rounded-lg shadow-lg">
+                                        <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" 
+                                             alt="Planet Bean Animation" 
+                                             class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/portfolio-planet-bean-1.webp') }}', 'Planet Bean Animation')">
                                     </video>  
                                 </div>
                                 <div>
@@ -131,7 +244,10 @@ Built with Laravel and Tailwind CSS, the site features responsive design, optimi
                                 </div>
                                                         <!-- Secondary image for mobile view -->
                                 <div class="block lg:hidden mt-4">
-                                    <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" alt="Project Design Process" class="w-full h-full object-cover rounded-lg shadow-lg">
+                                    <img src="{{ asset('images/portfolio-planet-bean-1.webp') }}" 
+                                         alt="Project Design Process" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/portfolio-planet-bean-1.webp') }}', 'Project Design Process')">
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-blue-200">Project Details</h3>
@@ -210,4 +326,26 @@ I developed a cohesive content strategy, ensuring his philosophy, past projects,
             </div>
         </div>
     </div>
-</x-app-layout> 
+</x-app-layout>
+
+<script>
+function openLightbox(imageSrc, imageAlt) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    lightboxImage.src = imageSrc;
+    lightboxImage.alt = imageAlt;
+    lightbox.classList.remove('hidden');
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.add('hidden');
+}
+
+// Close lightbox when clicking outside the image
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+</script> 
