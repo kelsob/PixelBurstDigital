@@ -104,7 +104,84 @@ Working with Xometry for production, the model was printed using multi-jet diffu
                     </div>
                 </div>
 
-                <!-- Project Card 2: Kate Howells -->
+                <!-- Project Card 2: Nat Sanderson Coach -->
+                <div id="nat-sanderson" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
+                    <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
+                            <!-- Project Images -->
+                            <div class="space-y-4">
+                                <div class="hidden lg:block">
+                                    <img src="{{ asset('images/natsanderson-coach.webp') }}" 
+                                         alt="Nat Sanderson Coach Website" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/natsanderson-coach.webp') }}', 'Nat Sanderson Coach Website')">
+                                </div>
+                            </div>
+                            
+                            <!-- Project Details -->
+                            <div class="space-y-4 lg:flex lg:flex-col lg:justify-center">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-blue-200">
+                                        <a href="https://natsanderson.ca" target="_blank" class="hover:text-blue-300 transition-colors duration-200">
+                                            Nat Sanderson - ADHD Autism Coach
+                                        </a>
+                                    </h2>
+                                    <div class="mt-2 flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-sm">Web Design</span>
+                                        <span class="px-3 py-1 bg-green-500/20 text-green-200 rounded-full text-sm">Brand Strategy</span>
+                                        <span class="px-3 py-1 bg-purple-500/20 text-purple-200 rounded-full text-sm">Content Strategy</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center">
+                                        <h3 class="text-lg font-semibold text-blue-200 mr-2">Client:</h3>
+                                        <p class="text-blue-100">Nat Sanderson</p>
+                                    </div>
+                                </div>
+                                <div class="block lg:hidden mt-4">
+                                    <img src="{{ asset('images/natsanderson-coach.webp') }}" 
+                                         alt="Nat Sanderson Coach Website" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/natsanderson-coach.webp') }}', 'Nat Sanderson Coach Website')">
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Project Overview</h3>
+                                    <p class="text-blue-100">A fast-turnaround website project for an ADHD autism coach, delivered in time for the school year. Focused on creating a clean, professional online presence with clear brand messaging and service offerings.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Key Deliverables</h3>
+                                    <ul class="text-blue-100 space-y-1">
+                                        <li>• Custom color palette and typography selection</li>
+                                        <li>• Brand messaging clarification and service delineation</li>
+                                        <li>• Clean, professional layout design</li>
+                                        <li>• Fast turnaround to meet school year deadline</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Project Impact</h3>
+                                    <p class="text-blue-100">Successfully delivered a professional website that clearly communicates the coach's services and expertise, providing a strong foundation for client acquisition during the critical school year period.</p>
+                                </div>
+                                <div class="flex items-center justify-between pt-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium flex items-center gap-2">
+                                            Live
+                                            <div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_2px_rgba(74,222,128,0.6)]"></div>
+                                        </span>
+                                    </div>
+                                    <a href="https://natsanderson.ca" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow-lg">
+                                        <span>Visit Website</span>
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Kate Howells -->
                 <div id="kate-howells" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
@@ -326,7 +403,7 @@ I developed a cohesive content strategy, ensuring his philosophy, past projects,
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-app-layout> 
 
 <script>
 function openLightbox(imageSrc, imageAlt) {

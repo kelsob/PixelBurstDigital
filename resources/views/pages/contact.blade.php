@@ -72,6 +72,13 @@
                             @endif
                             <form action="{{ route('contact.submit') }}" method="POST" class="space-y-4">
                                 @csrf
+                                
+                                <!-- Honeypot field - invisible to humans, bots will fill it -->
+                                <div style="display: none;">
+                                    <label for="website">Website (leave this field blank)</label>
+                                    <input type="text" name="website" id="website" autocomplete="off" tabindex="-1">
+                                </div>
+                                
                                 <div>
                                     <label for="name" class="block text-xs font-medium text-red-100">Name</label>
                                     <div class="mt-1">

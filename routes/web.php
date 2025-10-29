@@ -16,6 +16,7 @@ Route::get('/services/seo', [ServicesController::class, 'seo'])->name('services.
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/thank-you', [ContactController::class, 'thankYou'])->name('thank-you');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -27,6 +28,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit')->middleware('throttle:5,1');
 
 require __DIR__.'/auth.php';
