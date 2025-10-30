@@ -30,7 +30,117 @@
 
             <!-- Project Cards -->
             <div class="mt-12 space-y-16 mb-24">
-                <!-- Project Card 1: Cosmos Award -->
+                <!-- Project Card 1: Mastershake Roofing -->
+                <div id="mastershake-roofing" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
+                    <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
+                            <!-- Project Images -->
+                            <div class="space-y-4">
+                                <div class="hidden lg:block">
+                                    <img src="{{ asset('images/mastershake-service-areas.webp') }}" 
+                                         alt="Mastershake Roofing Service Areas" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/mastershake-service-areas.webp') }}', 'Mastershake Roofing Service Areas')">
+                                </div>
+                                <div class="hidden lg:flex gap-4">
+                                    <div class="w-[48.5%]">
+                                        <img src="{{ asset('images/mastershake-search-position.webp') }}" 
+                                             alt="Mastershake Roofing Search Position" 
+                                             class="w-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/mastershake-search-position.webp') }}', 'Mastershake Roofing Search Position')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">Google Search Rankings</p>
+                                    </div>
+                                    <div class="w-[48.5%]">
+                                        <img src="{{ asset('images/mastershake-ctr.webp') }}" 
+                                             alt="Mastershake Roofing CTR Performance" 
+                                             class="w-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/mastershake-ctr.webp') }}', 'Mastershake Roofing CTR Performance')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">Google Search CTR Performance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Details -->
+                            <div class="space-y-4 lg:flex lg:flex-col lg:justify-center">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-blue-200">
+                                        <a href="https://www.mastershakeroofing.com" target="_blank" class="hover:text-blue-300 transition-colors duration-200">
+                                            Mastershake Roofing - SEO & Digital Marketing
+                                        </a>
+                                    </h2>
+                                    <div class="mt-2 flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-500/20 text-blue-200 rounded-full text-sm">SEO Strategy</span>
+                                        <span class="px-3 py-1 bg-green-500/20 text-green-200 rounded-full text-sm">Performance Optimization</span>
+                                        <span class="px-3 py-1 bg-purple-500/20 text-purple-200 rounded-full text-sm">Google Ads</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center">
+                                        <h3 class="text-lg font-semibold text-blue-200 mr-2">Client:</h3>
+                                        <p class="text-blue-100">Mastershake Roofing</p>
+                                    </div>
+                                </div>
+                                <div class="block lg:hidden mt-4">
+                                    <img src="{{ asset('images/mastershake-service-areas.webp') }}" 
+                                         alt="Mastershake Roofing Service Areas" 
+                                         class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                         onclick="openLightbox('{{ asset('images/mastershake-service-areas.webp') }}', 'Mastershake Roofing Service Areas')">
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Project Overview</h3>
+                                    <p class="text-blue-100">Ongoing SEO and digital marketing management for a Southern Ontario roofing company. Led technical optimization, content strategy, and Google Ads management to drive qualified leads and improve local search visibility across Southwestern Ontario — focused on Huron County, Perth County, and Kitchener–Waterloo.</p>
+                                </div>
+                                <!-- Secondary images for mobile view -->
+                                <div class="flex lg:hidden mt-4 grid grid-cols-2 gap-4 justify-center items-center">
+                                    <div>
+                                        <img src="{{ asset('images/mastershake-search-position.webp') }}" 
+                                             alt="Mastershake Roofing Search Position" 
+                                             class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/mastershake-search-position.webp') }}', 'Mastershake Roofing Search Position')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">Google Search Rankings</p>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/mastershake-ctr.webp') }}" 
+                                             alt="Mastershake Roofing CTR Performance" 
+                                             class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/mastershake-ctr.webp') }}', 'Mastershake Roofing CTR Performance')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">Google Search CTR Performance</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Key Results</h3>
+                                    <ul class="text-blue-100 space-y-1">
+                                        <li>• 38% increase in organic sessions over 3 months</li>
+                                        <li>• Improved average search position from ~55 to ~25 across target service keywords</li>
+                                        <li>• Improved CTR from 0.5% to 1.8% since starting</li>
+                                        <li>• 62% reduction in average page load time</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Services Delivered</h3>
+                                    <p class="text-blue-100">Technical SEO cleanup, keyword-driven content strategy, Google Ads management with conversion tracking, analytics setup, and brand development for sister business expansion. Focused on targeting high-value local keywords like "metal roofing Kitchener" and "roof replacement Waterloo."</p>
+                                </div>
+                                <div class="flex items-center justify-between pt-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-4 py-2 bg-green-500/20 text-green-200 rounded-full text-sm font-medium flex items-center gap-2">
+                                            Live
+                                            <div class="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_2px_rgba(74,222,128,0.6)]"></div>
+                                        </span>
+                                    </div>
+                                    <a href="https://www.mastershakeroofing.com" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-lg shadow-lg">
+                                        <span>Visit Website</span>
+                                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Cosmos Award -->
                 <div id="cosmos-award" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
@@ -181,7 +291,7 @@ Working with Xometry for production, the model was printed using multi-jet diffu
                     </div>
                 </div>
 
-                <!-- Project Card 3: Kate Howells -->
+                <!-- Project Card 4: Kate Howells -->
                 <div id="kate-howells" class="relative bg-gradient-to-br from-blue-600 to-green-600 p-1 rounded-tr-[2rem] rounded-bl-[2rem] shadow-[-6px_6px_0px_0px_rgba(59,130,246,0.3)] scroll-mt-32">
                     <div class="bg-gradient-to-br from-blue-900 to-green-900 p-4 rounded-tr-[1.9rem] rounded-bl-[1.9rem]">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
