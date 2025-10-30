@@ -147,20 +147,27 @@
                             <!-- Project Images -->
                             <div class="space-y-4">
                                 <div class="hidden lg:block">
-                                    <img src="{{ asset('images/portfolio-cosmos-award-bill-nye.webp') }}" 
-                                         alt="Cosmos Award 3D Model" 
+                                    <img src="{{ asset('images/cosmos-award-bill-nye-dava-sobel.webp') }}" 
+                                         alt="Bill Nye presents the Cosmos Award to Dava Sobel" 
                                          class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-bill-nye.webp') }}', 'Cosmos Award 3D Model')">
+                                         onclick="openLightbox('{{ asset('images/cosmos-award-bill-nye-dava-sobel.webp') }}', 'Bill Nye presents the Cosmos Award to Dava Sobel')">
+                                    <p class="text-base text-blue-200 mt-2 text-center">Bill Nye presenting the Cosmos Award to Dava Sobel</p>
                                 </div>
                                 <div class="hidden lg:flex gap-4">
-                                    <img src="{{ asset('images/portfolio-cosmos-award-components.webp') }}" 
-                                         alt="Cosmos Award Components" 
-                                         class="w-[48.5%] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-components.webp') }}', 'Cosmos Award Components')">
-                                    <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
-                                         alt="Cosmos Award 3D Model" 
-                                         class="w-[48.5%] object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                    <div class="w-[48.5%]">
+                                        <img src="{{ asset('images/portfolio-cosmos-award-components.webp') }}" 
+                                             alt="Cosmos Award Components" 
+                                             class="w-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-components.webp') }}', 'Cosmos Award Components')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">3D Model Components</p>
+                                    </div>
+                                    <div class="w-[48.5%]">
+                                        <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
+                                             alt="Cosmos Award 3D Model" 
+                                             class="w-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">Final 3D Model</p>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -183,10 +190,11 @@
                                     </div>
                                 </div>
                                 <div class="block lg:hidden mt-4">
-                                    <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
-                                         alt="Cosmos Award 3D Model" 
+                                    <img src="{{ asset('images/cosmos-award-bill-nye-dava-sobel.webp') }}" 
+                                         alt="Cosmos Award Presentation" 
                                          class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:opacity-90 transition-opacity"
-                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                         onclick="openLightbox('{{ asset('images/cosmos-award-bill-nye-dava-sobel.webp') }}', 'Cosmos Award Presentation')">
+                                    <p class="text-base text-blue-200 mt-2 text-center">Award Presentation to Dava Sobel</p>
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-blue-200">Project Overview</h3>
@@ -194,20 +202,30 @@
                                 </div>
                                 <!-- Secondary images for mobile view -->
                                 <div class="flex lg:hidden mt-4 grid grid-cols-2 gap-4 justify-center items-center">
-                                    <img src="{{ asset('images/portfolio-cosmos-award-components.webp') }}" 
-                                         alt="Cosmos Award Components" 
-                                         class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
-                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-components.webp') }}', 'Cosmos Award Components')">
-                                    <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
-                                         alt="Cosmos Award 3D Model" 
-                                         class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
-                                         onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                    <div>
+                                        <img src="{{ asset('images/portfolio-cosmos-award-components.webp') }}" 
+                                             alt="Cosmos Award Components" 
+                                             class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-components.webp') }}', 'Cosmos Award Components')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">3D Model Components</p>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}" 
+                                             alt="Cosmos Award 3D Model" 
+                                             class="h-96 object-contain rounded-lg shadow-lg mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                             onclick="openLightbox('{{ asset('images/portfolio-cosmos-award-3dmodel.webp') }}', 'Cosmos Award 3D Model')">
+                                        <p class="text-base text-blue-200 mt-2 text-center">Final 3D Model</p>
+                                    </div>
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-blue-200">Project Details</h3>
                                     <p class="text-blue-100">The project involved creating a complex 3D model of Saturn with three main components: the planet itself (hollowed out with a mounting socket), semi-transparent free-floating rings, and a subtle mounting system. The design balanced scientific accuracy with practical considerations for 3D printing, including structural stability and material optimization.
 
 Working with Xometry for production, the model was printed using multi-jet diffusion advanced printing methods and vapor smoothed for a premium finish. The final product was mounted on a plaque and presented as the Cosmos Award at The Planetary Society's 45th annual gala. The design successfully achieved the client's goals of creating a beautiful, scientifically accurate award that was both reproducible and cost-effective.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-blue-200">Award Presentation</h3>
+                                    <p class="text-blue-100">The 2025 Cosmos Award was presented to acclaimed author Dava Sobel by Planetary Society CEO Bill Nye, recognizing her outstanding contributions to science communication. <a href="https://www.planetary.org/articles/2025-cosmos-award-dava-sobel" target="_blank" class="text-blue-300 hover:text-blue-200 underline">Read more about the award and recipient here.</a></p>
                                 </div>
                             </div>
                         </div>
